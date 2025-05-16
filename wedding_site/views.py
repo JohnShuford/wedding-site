@@ -1,0 +1,16 @@
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
+
+def our_story(request):
+    return render(request, 'our_story.html')
+
+def itinerary(request):
+    return render(request, 'itinerary.html')
+
+def rsvp(request):
+    return render(request, 'rsvp.html')
+
+def honeymoon_fund(request):
+    return render(request, 'honeymoon_fund.html')
