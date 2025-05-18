@@ -14,3 +14,6 @@ def rsvp(request):
 
 def honeymoon_fund(request):
     return render(request, 'wedding/honeymoon_fund.html')
+
+def gallery(request):
+    return render(request, 'wedding/gallery.html')

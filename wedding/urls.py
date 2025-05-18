@@ -1,6 +1,7 @@
-# wedding/urls.py
-from django.urls import path
+from django.urls import path, include
 from . import views
+
+app_name = 'wedding'
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -8,5 +9,5 @@ urlpatterns = [
     path('itinerary/', views.itinerary, name='itinerary'),
     path('rsvp/', views.rsvp, name='rsvp'),
     path('honeymoon-fund/', views.honeymoon_fund, name='honeymoon_fund'),
+    path('gallery/', views.gallery, name='gallery'),
 ]
-
