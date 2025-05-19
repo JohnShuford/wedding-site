@@ -1,6 +1,98 @@
 {% extends "wedding/base.html" %}
 
 {% block content %}
-<h1>Welcome to Our Wedding Site!</h1>
-<p>This is the home page. 💍</p>
+{% load static%}
+
+<div class="itinerary">
+    <h1>Itinerary</h1>
+
+    <div class="row">
+        <div class="col-2">
+            <img src="{% static '/images/itinerary/wildFlowerMountain.png' %}" class="img-fluid" alt="description">
+        </div>
+        <div class=" col-4 text-start">
+            <h2>Wednesday, July 8, 2026</h2>
+            <h3>John and Kelly get eloped in Crested Butte, Co</h3>
+        </div>
+        <div class="col-6"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-6"></div>
+        <div class=" col-4 text-end">
+            <h2>Thursday, July 9th 2026</h2>
+            <h3>Kelly &amp; John return to Denver!</h3> 
+            <h3>Family meets for a welcome dinner in Westminster.</h3>
+        </div>
+        <div class="col-2">
+            <img src="{% static '/images/itinerary/hotel.png' %}" class="img-fluid" alt="description">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <img src="{% static '/images/itinerary/greenhouse.png' %}" class="img-fluid" alt="description">
+        </div>
+        <div class=" col-4 text-start">
+            <h2>Friday, July 10th 2026</h2>
+            <h3>Denver Botanic Gardens | Woodland Mosaic &amp; Solarium</h3>
+            <h3>Wedding ceremony - 11:00am</h3>
+            <h3>Family photos &amp; Cocktail hour - 11:30am</h3>
+        </div>
+        <div class="col-6"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <img src="{% static '/images/itinerary/dinner.png' %}" class="img-fluid" alt="description">
+        </div>
+        <div class=" col-4 text-start">
+            <h2>Friday, July 10th 2026</h2>
+            <h3>El Five
+            <h3>Dinner celebration - 5:00pm</h3>
+        </div>
+        <div class="col-6"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-6"></div>
+        <div class=" col-4 text-end">
+            <h2>Saturday, July 11th 2026</h2>
+            <h3>Acreage | Lafayette, CO </h3> 
+            <h3>Lunch &amp; drinks - 11:00am - 2:00pm</h3>
+            <h4>feel free to stop by anytime during these hours </h4>
+            <h4>or do your own thing &amp; meet us back for dinner</h4>
+        </div>
+        <div class="col-2">
+            <img src="{% static '/images/itinerary/drinks.png' %}" class="img-fluid" alt="description">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6"></div>
+        <div class=" col-4 text-end">
+            <h2>Saturday, July 11th 2026</h2>
+            <h3>Aspire Apartement Club Room </h3> 
+            <h4>Dinner: 4pm - 6pm </h4>
+        </div>
+        <div class="col-2">
+            <img src="{% static '/images/itinerary/tongs.png' %}" class="img-fluid" alt="description">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <img src="{% static '/images/itinerary/airplane.png' %}" class="img-fluid" alt="description">
+        </div>
+        <div class=" col-4 text-start">
+            <h2>Sunday, July 12th 2026</h2>
+            <h3>Departure </h3>
+            <h3>Thank you for joining us this weekend!</h3>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</div>
+
+<script src="{% static 'js/itinerary.js' %}"></script>
+
 {% endblock %}

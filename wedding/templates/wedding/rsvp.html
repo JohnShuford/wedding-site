@@ -1,37 +1,27 @@
 {% extends "wedding/base.html" %}
 
 {% block content %}
-<div class="container mt-5">
-  <h1 class="mb-4">RSVP</h1>
-
-  <section class="mb-4">
-    <h3>Name</h3>
-    <p></p>
-  </section>
-
-  <section class="mb-4">
-    <h3>Contact Information</h3>
-    <p></p>
-  </section>
-
-  <section class="mb-4">
-    <h3>Response</h3>
-    <p></p>
-  </section>
-
-  <section class="mb-4">
-    <h3>Dietary Restrictions</h3>
-    <p></p>
-  </section>
-
-  <section class="mb-4">
-    <h3>Accommodations</h3>
-    <p></p>
-  </section>
-
-  <section class="mb-4">
-    <h3>Advice for the Couple</h3>
-    <p></p>
-  </section>
-</div>
+{% load static%}
+<div class="rsvp">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+<div>
 {% endblock %}

@@ -116,7 +116,115 @@ header img {
 .ourstory h1{
   color: #efcebd;
   text-align: center;
-  font-size: 4rem;
+  font-size: 6rem;
+}
+
+.ourstory .row {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.ourstory .row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.itinerary {
+  background-image: url('/static/images/backgrounds/itinerary.png');
+  background-size: cover;         /* makes it fill the section */
+  background-position: center;    /* centers the image */
+  background-repeat: no-repeat;
+  padding: 20px;
+  border: #2e2e2e;
+  color: white;                   /* optional: if the bg is dark */
+}
+
+.itinerary h1{
+  color: #efcebd;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.itinerary h2{
+  color: #efcebd;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.itinerary h3{
+  color: #efcebd;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.itinerary h4{
+  color: #efcebd;
+  font-size: 1.5rem;
+}
+
+.itinerary .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 2500px;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  align-items: flex-start;
+}
+
+.itinerary .col-4.text-start {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 3rem;
+}
+
+.itinerary .col-4.text-end {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.itinerary .row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 60px; /* adjust to your vine's width */
+  transform: translateX(-50%);
+  background-image: url('/static/images/itinerary/vine.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
+}
+
+.itinerary .row {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.itinerary .row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rsvp {
+  background-image: url('/static/images/backgrounds/RSVP.png');
+  background-size: cover;         /* makes it fill the section */
+  background-position: center;    /* centers the image */
+  background-repeat: no-repeat;
+  padding: 20px;
+  border: #2e2e2e;
+  color: white;                   /* optional: if the bg is dark */
 }
 
 .photo-gallery {
