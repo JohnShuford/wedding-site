@@ -1,5 +1,6 @@
 from django.urls import path, include
 from . import views
+from .views import StoryEntryViewSet
 
 app_name = 'wedding'
 
@@ -10,4 +11,5 @@ urlpatterns = [
     path('rsvp/', views.rsvp, name='rsvp'),
     path('honeymoon-fund/', views.honeymoon_fund, name='honeymoon_fund'),
     path('gallery/', views.gallery, name='gallery'),
+    path('story-entries/', StoryEntryViewSet.as_view({'get': 'list'}), name='story_entries'),
 ]

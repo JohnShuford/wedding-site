@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from rest_framework import viewsets
+from .models import StoryEntry
+from .serializers import StoryEntrySerializer
+class StoryEntryViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = StoryEntry.objects.all()
+    serializer_class = StoryEntrySerializer
 
 def home(request):
     return render(request, 'wedding/home.html')
