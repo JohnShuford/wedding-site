@@ -15,7 +15,7 @@
         </div>
       {% endfor %}
     </div>
-    <div class="row">
+    {% comment %} <div class="row">
       <div class="col-sm-3">
         <img src="{% static '/images/ourStory/blueMoon.png' %}" alt="blueMoon" height="350">
       </div>
@@ -73,7 +73,7 @@
       <div class="col-sm-4">
         <img src="{% static '/images/ourStory/engagement.png' %}" alt="engagement" height="550">
       </div>
-    </div>
+    </div> {% endcomment %}
   </div>
 </div>
 
@@ -81,11 +81,19 @@
   <div id="modal" class="modal hidden">
     <div class="modal-content">
       <span class="close-button">&times;</span>
-      <img id="modal-img" src="" alt="">
       <h2 id="modal-title"></h2>
-      <h3 id="modal-subtitle"></h3>
-      <p id="modal-date"></p>
-      <p id="modal-description"></p>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <img id="modal-img" src="" alt="" height="300">
+          </div>
+          <div class="col-8">
+            <h3 id="modal-subtitle"></h3>
+            <p id="modal-date"></p>
+            <p id="modal-description"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

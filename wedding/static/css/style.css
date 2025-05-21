@@ -130,12 +130,12 @@ header img {
   font-size: 3rem;
 }
 
-.ourstory h3 {
+/* .ourstory h3 {
   color: #efcebd;
   text-align: center;
   font-size: 2rem;
   font-family: 'Luxurious Script', cursive;
-}
+} */
 
 .ourstory p {
   color: #efcebd;
@@ -369,11 +369,65 @@ header img {
 .modal-content {
   background-color: #7b2c44;
   padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
+  border-radius: 20px;
+  max-width: 1600px;
   width: 90%;
-  text-align: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.modal .col-4 {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal .col-8 {
+  flex: 0 0 60%;
+  text-align: left;
+  color: #fce1d6;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+#modal-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #fce1d6;
+}
+
+#modal-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fce1d6;
+}
+
+#modal-date {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #fce1d6;
+}
+
+#modal-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fce1d6;
 }
 
 .hidden {
