@@ -166,7 +166,7 @@ header img {
 }
 
 .itinerary h1 {
-  color: #efcebdb;
+  color: #efcebd;
   text-align: center;
   font-size: 6rem;
 }
@@ -239,6 +239,40 @@ header img {
   z-index: 0;
 }
 
+/* Downtown Westminster */
+
+.downtown_westminster {
+  background-image: url('/static/images/backgrounds/itinerary.png');
+  background-size: cover;         /* makes it fill the section */
+  background-position: center;    /* centers the image */
+  background-repeat: no-repeat;
+  padding: 20px;
+  border: #2e2e2e;
+  color: white;                   /* optional: if the bg is dark */
+}
+
+.downtown_westminster h1{
+  color: #efcebd;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.downtown_westminster h2{
+  color: #efcebd;
+  text-align: center;
+  font-size: 3rem;
+} 
+
+.faq {
+  background-image: url('/static/images/backgrounds/itinerary.png');
+  background-size: cover;         /* makes it fill the section */
+  background-position: center;    /* centers the image */
+  background-repeat: no-repeat;
+  padding: 20px;
+  border: #2e2e2e;
+  color: white;                   /* optional: if the bg is dark */
+}
+
 /* RSVP */
 .rsvp {
   background-image: url('/static/images/backgrounds/RSVP.png');
@@ -248,6 +282,45 @@ header img {
   padding: 20px;
   border: #2e2e2e;
   color: white;                   /* optional: if the bg is dark */
+}
+
+.rsvp .container-xxl {
+  background-color: #fce1d6; /* soft blush tone to match your theme */
+  border-radius: 30px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* soft shadow for separation */
+}
+
+.rsvp h1 {
+  color: #7b2c44;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.rsvp h2 {
+  color: #7b2c44;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.rsvp .form-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.rsvp .form-check-label {
+  font-size: 1.5rem;
+  color: #7b2c44;
+}
+
+.rsvp .form-label {
+  font-size: 1.5rem;
+  color: #7b2c44;
 }
 
 /* Photo Gallery */

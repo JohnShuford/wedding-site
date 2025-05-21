@@ -3,25 +3,45 @@
 {% block content %}
 {% load static%}
 <div class="rsvp">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  <h1> RSVP </h1>
+  <div class="container-xxl">
+    <h2>Can you join us?</h2>
+    <div class="row">
+      <div class="col">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+          <label class="form-check-label" for="checkDefault">
+            I'll be there!
+          </label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+          <label class="form-check-label" for="checkDefault">
+            I can't make it...
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <div class="container-xxl">
+    <div class="mb-3">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Dietary Restrictions">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Message for the Couple</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
   </div>
 <div>
 {% endblock %}
