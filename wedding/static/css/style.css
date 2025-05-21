@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  color: #efcebd;
+  color: black;
   text-align: center;
 }
 
@@ -166,7 +166,7 @@ header img {
 }
 
 .itinerary h1 {
-  color: #efcebd;
+  color: #efcebdb;
   text-align: center;
   font-size: 6rem;
 }

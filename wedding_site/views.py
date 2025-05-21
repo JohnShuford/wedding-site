@@ -12,5 +12,14 @@ def itinerary(request):
 def rsvp(request):
     return render(request, 'rsvp.html')
 
+def gallery(request):
+    return render(request, 'gallery.html')
+
 def honeymoon_fund(request):
     return render(request, 'honeymoon_fund.html')
+
+def downtown_westminster(request):
+    return render(request, 'downtown_westminster.html')
+
+def faq(request):
+    return render(request, 'faq.html')
