@@ -23,3 +23,12 @@ def honeymoon_fund(request):
 
 def gallery(request):
     return render(request, 'wedding/gallery.html')
+
+def our_story(request):
+    entries = StoryEntry.objects.all()
+    return render(request, 'wedding/our_story.html', {
+        'story_entries': entries
+    })
+
+print('Hello World')
+print(StoryEntry.objects.all())

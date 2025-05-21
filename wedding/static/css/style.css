@@ -1,8 +1,10 @@
 /* style.css */
 
+/* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
 
+/* Base styles */
 body {
   font-family: 'Lora', serif;
   background-color: #efcebd;
@@ -12,7 +14,6 @@ body {
 h1 {
   color: #efcebd;
   text-align: center;
-
 }
 
 h2 {
@@ -21,8 +22,10 @@ h2 {
 
 h3 {
   color: #7b2c44;
+  text-align: center;
 }
 
+/* Navbar */
 .navbar {
   background: linear-gradient(to right, #f8f5f2, #eae3db);
   font-family: 'Lora', serif;
@@ -48,75 +51,96 @@ header img {
   border-radius: 50%;
 }
 
+/* Video background */
 .video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
+/* Overlay text */
 .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    color: #c64e45;
-    text-align: center;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.75);
-    font-family: 'Luxurious Script', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #c64e45;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.75);
+  font-family: 'Luxurious Script', cursive;
 }
 
 .overlay-text h1 {
-    font-size: 12rem;
-    margin: 0;
-    font-family: 'Luxurious Script', cursive;
-    text-shadow: 2px 2px 6px #efcebd;
-    color: #c64e45;
+  font-size: 12rem;
+  margin: 0;
+  font-family: 'Luxurious Script', cursive;
+  text-shadow: 2px 2px 6px #efcebd;
+  color: #c64e45;
 }
 
 .overlay-text h2 {
-    font-size: 5rem;
-    margin: 0;
-    margin: -60px 0;
-    font-family: 'Luxurious Script', cursive;
-    color: #f7918e;
+  font-size: 5rem;
+  margin: 0;
+  margin: -60px 0;
+  font-family: 'Luxurious Script', cursive;
+  color: #f7918e;
 }
 
 .overlay-text h3 {
-    font-size: .5 rem;
-    margin: 0;
-    font-family: 'Lora', serif;
-    color: #efcebd
+  font-size: 0.5rem;
+  margin: 0;
+  font-family: 'Lora', serif;
+  color: #efcebd;
 }
 
+/* Our Story */
 .ourstory {
   background-image: url('/static/images/backgrounds/ourStory.png');
   background-size: cover;         /* makes it fill the section */
   background-position: center;    /* centers the image */
   background-repeat: no-repeat;
   padding: 20px;
-  border: #2e2e2e;
-  color: white;                   /* optional: if the bg is dark */
+  border: #2e2e2e;                /* optional: if the bg is dark */
 }
 
-.ourstory h1{
+.ourstory h1 {
   color: #efcebd;
   text-align: center;
   font-size: 6rem;
+}
+
+.ourstory h2 {
+  color: #efcebd;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.ourstory h3 {
+  color: #efcebd;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Luxurious Script', cursive;
+}
+
+.ourstory p {
+  color: #efcebd;
+  text-align:justify;
+  font-size: 1rem;
 }
 
 .ourstory .row {
@@ -130,6 +154,7 @@ header img {
   transform: translateY(0);
 }
 
+/* Itinerary */
 .itinerary {
   background-image: url('/static/images/backgrounds/itinerary.png');
   background-size: cover;         /* makes it fill the section */
@@ -140,25 +165,25 @@ header img {
   color: white;                   /* optional: if the bg is dark */
 }
 
-.itinerary h1{
+.itinerary h1 {
   color: #efcebd;
   text-align: center;
   font-size: 6rem;
 }
 
-.itinerary h2{
+.itinerary h2 {
   color: #efcebd;
   font-size: 3rem;
   font-weight: 800;
 }
 
-.itinerary h3{
+.itinerary h3 {
   color: #efcebd;
   font-size: 1.5rem;
   font-style: italic;
 }
 
-.itinerary h4{
+.itinerary h4 {
   color: #efcebd;
   font-size: 1.5rem;
 }
@@ -171,6 +196,14 @@ header img {
   margin: 0 auto 2rem auto;
   position: relative;
   align-items: flex-start;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.itinerary .row.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .itinerary .col-4.text-start {
@@ -206,17 +239,7 @@ header img {
   z-index: 0;
 }
 
-.itinerary .row {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease-out;
-}
-
-.itinerary .row.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* RSVP */
 .rsvp {
   background-image: url('/static/images/backgrounds/RSVP.png');
   background-size: cover;         /* makes it fill the section */
@@ -227,6 +250,7 @@ header img {
   color: white;                   /* optional: if the bg is dark */
 }
 
+/* Photo Gallery */
 .photo-gallery {
   max-width: 2500px;
   margin: 0 auto;    /* centers the whole block */
@@ -253,4 +277,49 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* Modal and responsive images */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #7b2c44;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #efcebd;
+  cursor: pointer;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Optional: cap height if needed */
+  object-fit: cover; /* Crop and center instead of stretching */
+  border-radius: 10px;
 }
