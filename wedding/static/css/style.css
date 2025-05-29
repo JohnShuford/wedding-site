@@ -102,7 +102,7 @@ header img {
 }
 
 .overlay-text h3 {
-  font-size: 0.5rem;
+  font-size: 3rem;
   margin: 0;
   font-family: 'Lora', serif;
   color: #efcebd;
@@ -372,7 +372,7 @@ header img {
   border-radius: 20px;
   max-width: 1600px;
   width: 90%;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  /* box-shadow: 0 0 20px rgba(0,0,0,0.3); */
   display: flex;
   flex-direction: column;
 }
@@ -401,8 +401,8 @@ header img {
 .modal img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.4); */
 }
 
 #modal-title {
