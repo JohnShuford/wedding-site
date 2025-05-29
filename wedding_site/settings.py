@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'wedding',
     'rest_framework',
+    'rsvp'
 ]
 
 MIDDLEWARE = [
