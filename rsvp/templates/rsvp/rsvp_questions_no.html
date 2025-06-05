@@ -1,0 +1,11 @@
+<h2>Awh man! We're sorry to hear that, but we understand.</h2>
+<p>We’d still love to keep in touch. Please leave us a note:</p>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.email.label_tag }} {{ form.email }}
+  <br>
+  {{ form.message_for_couple.label_tag }} {{ form.message_for_couple }}
+  <br>
+  <button type="submit">Submit RSVP</button>
+</form>

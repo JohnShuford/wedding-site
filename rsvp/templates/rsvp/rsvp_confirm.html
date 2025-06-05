@@ -1,0 +1,8 @@
+<h2>Awesome! Now for headcount.</h2>
+<p>Will you be able to attend?</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" name="attending" value="yes">Yes</button>
+  <button type="submit" name="attending" value="no">No</button>
+</form>

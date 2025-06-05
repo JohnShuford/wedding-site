@@ -1,0 +1,7 @@
+<h2>Is this you?</h2>
+<p>{{ guest.first_name }} {{ guest.last_name }}</p>
+<form method="post" action="{% url 'rsvp_confirm_attendance' guest.id %}">
+  {% csrf_token %}
+  <button type="submit" name="confirm" value="yes">Yes</button>
+  <button type="submit" name="confirm" value="no">No</button>
+</form>
