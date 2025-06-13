@@ -1,3 +1,6 @@
+{% extends "rsvp/base.html" %}
+
+{% block content %}
 <h2>We couldn’t find your name.</h2>
 <p>Try again?</p>
 <form method="post">
@@ -5,3 +8,4 @@
   {{ form.as_p }}
   <button type="submit">Search Again</button>
 </form>
+{% endblock %}

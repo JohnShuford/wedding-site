@@ -1,23 +1,11 @@
 from .forms import GuestLookupForm
-from .forms import RSVPTypeForm
+# from .forms import RSVPTypeForm
 from .forms import RSVPDetailsForm
 from .models import Guest
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render, get_object_or_404
-
-def rsvp_start(request):
-    if request.method == 'POST':
-        form = RSVPTypeForm(request.POST)
-        if form.is_valid():
-            # Store in session so we can access later
-            request.session['rsvp_type'] = form.cleaned_data['rsvp_type']
-            return HttpResponseRedirect(reverse('rsvp'))
-    else:
-        form = RSVPTypeForm()
-
-    return render(request, 'rsvp/rsvp_start.html', {'form': form})
 
 def rsvp_entry_point(request):
     if request.method == 'POST':
@@ -42,12 +30,19 @@ def rsvp_entry_point(request):
 
 def confirm_guest(request, guest_id):
     guest = get_object_or_404(Guest, pk=guest_id)
+
     if request.method == 'POST':
         confirm = request.POST.get('confirm')
         if confirm == 'yes':
-            return HttpResponseRedirect(reverse('rsvp_questions', args=[guest.id]))
+            group_guests = Guest.objects.filter(group_id=guest.group_id)
+            if group_guests.count() == 1:
+                return HttpResponseRedirect(reverse('rsvp_confirm_attendance', args=[guest.id]))
+            else:
+                return HttpResponseRedirect(reverse('confirm_group_attendance', args=[guest.group_id]))
         else:
-            return render(request, 'rsvp/not_found.html', {'form': GuestLookupForm()})
+            return HttpResponseRedirect(reverse('rsvp'))
+
+    return render(request, 'rsvp/confirm_guest.html', {'guest': guest})
         
 # RSVP Confirm Page - Choose Yes or No
 
@@ -90,3 +85,22 @@ def rsvp_questions_no(request, guest_id):
     else:
         form = RSVPDetailsForm(instance=guest)
     return render(request, 'rsvp/rsvp_questions_no.html', {'form': form, 'guest': guest})
+
+def confirm_group_attendance(request, group_id):
+    guests = Guest.objects.filter(group_id=group_id)
+    if not guests.exists():
+        return HttpResponseRedirect(reverse('rsvp'))
+
+    if request.method == 'POST':
+        for guest in guests:
+            attending = request.POST.get(f"attending_{guest.id}")
+            if attending == 'yes':
+                guest.attending = True
+                guest.save()
+                return HttpResponseRedirect(reverse('rsvp_questions_yes', args=[guest.id]))
+            elif attending == 'no':
+                guest.attending = False
+                guest.save()
+                return HttpResponseRedirect(reverse('rsvp_questions_no', args=[guest.id]))
+
+    return render(request, 'rsvp/group_confirm.html', {'guests': guests})
