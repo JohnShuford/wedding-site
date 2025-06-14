@@ -1,7 +1,7 @@
 {% extends "rsvp/base.html" %}
 
 {% block content %}
-<h2>We couldn’t find your name.</h2>
+<h2 class="error-message">We couldn’t find your name.</h2>
 <p>Try again?</p>
 <form method="post">
   {% csrf_token %}

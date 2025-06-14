@@ -7,8 +7,10 @@
 
 <form method="post">
   {% csrf_token %}
-  <button type="submit" name="attending" value="yes">Yes</button>
-  <button type="submit" name="attending" value="no">No</button>
+  <div class="button-container">
+    <button type="submit" name="attending" value="yes">Yes</button>
+    <button type="submit" name="attending" value="no">No</button>
+  </div>
 </form>
 
 {% endblock %}

@@ -5,7 +5,9 @@
 <p>{{ guest.first_name }} {{ guest.last_name }}</p>
 <form method="post" action="{% url 'confirm_guest' guest.id %}">
   {% csrf_token %}
-  <button type="submit" name="confirm" value="yes">Yes</button>
-  <button type="submit" name="confirm" value="no">No</button>
+  <div class="button-container">
+    <button type="submit" name="confirm" value="yes">Yes</button>
+    <button type="submit" name="confirm" value="no">No</button>
+  </div>
 </form>
 {% endblock %}

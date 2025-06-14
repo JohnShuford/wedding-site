@@ -1,0 +1,159 @@
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Layout */
+body {
+  background-image: url('/static/images/backgrounds/rsvp.png');
+  /* background-color: #f5c9b8; peach background */
+  font-family: 'Lora', serif;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Form Container */
+.form-container {
+  background-color: white; /* Darker peach for container */
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title */
+h2 {
+  color: #7b2c44;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+p {
+  color: black;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* Updated Input Fields with Borders */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e88d85; /* Coral pink border to match your theme */
+  background-color: #ffffff;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+/* Focus state for input fields */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7b2c44; /* Darker color when focused */
+  box-shadow: 0 0 0 3px rgba(232, 141, 133, 0.2); /* Subtle glow effect */
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  color: #666;
+}
+
+/* Submit Button */
+button,
+button[type="submit"],
+input[type="submit"] {
+  background-color: #e88d85; /* Coral pink button */
+  color: #333;
+  font-size: 1.125rem;
+  padding: 0.625rem 2.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #dc7871;
+  transform: translateY(-1px);
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #d85c4f;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .form-container {
+    padding: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    max-width: 100%;
+  }
+}
+
+/* Button Container for side-by-side buttons */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure buttons in container don't take full width */
+.button-container button {
+  flex: 0 0 auto;
+  min-width: 120px;
+}
