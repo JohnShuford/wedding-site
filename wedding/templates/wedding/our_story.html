@@ -1,79 +1,146 @@
-{% extends "wedding/base.html" %}
-
-{% block content %}
-{% load static %}
+{% extends "wedding/base.html" %} {% block content %} {% load static %}
 <div class="ourstory">
   <h1>Our Story</h1>
 
   <div class="photo-gallery">
     <div class="row">
       {% for entry in story_entries %}
-        <div class="col-sm-3">
-          <div class="story-thumbnail" data-id="{{ entry.id }}">
-            <img src="{{ entry.image.url }}" alt="{{ entry.title }}" class="responsive-image">
-          </div>
+      <div class="col-sm-3">
+        <div class="story-thumbnail" data-id="{{ entry.id }}">
+          <img
+            src="{{ entry.image.url }}"
+            alt="{{ entry.title }}"
+            class="responsive-image"
+          />
         </div>
+      </div>
       {% endfor %}
     </div>
-    {% comment %} <div class="row">
+    {% comment %}
+    <div class="row">
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/blueMoon.png' %}" alt="blueMoon" height="350">
+        <img
+          src="{% static '/images/ourStory/blueMoon.png' %}"
+          alt="blueMoon"
+          height="350"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/RMNP.png' %}" alt="Rocky Mountain National Park" height="250">
+        <img
+          src="{% static '/images/ourStory/RMNP.png' %}"
+          alt="Rocky Mountain National Park"
+          height="250"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/coSprings.png' %}" alt="The Springs" height="350">
+        <img
+          src="{% static '/images/ourStory/coSprings.png' %}"
+          alt="The Springs"
+          height="350"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/leafPeeping.png' %}" alt="Leaf Peeping" height="250">
+        <img
+          src="{% static '/images/ourStory/leafPeeping.png' %}"
+          alt="Leaf Peeping"
+          height="250"
+        />
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/broncos.png' %}" alt="Season Ticket Holders for the Broncos!" height="300">
+        <img
+          src="{% static '/images/ourStory/broncos.png' %}"
+          alt="Season Ticket Holders for the Broncos!"
+          height="300"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/oneYear.png' %}" alt="One Year Anniversary" height="350">
+        <img
+          src="{% static '/images/ourStory/oneYear.png' %}"
+          alt="One Year Anniversary"
+          height="350"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/14er.png' %}" alt="Our first 14er!" height="250">
+        <img
+          src="{% static '/images/ourStory/14er.png' %}"
+          alt="Our first 14er!"
+          height="250"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/mexico.png' %}" alt="Mecico!" height="350">
+        <img
+          src="{% static '/images/ourStory/mexico.png' %}"
+          alt="Mecico!"
+          height="350"
+        />
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-3">
         <div class="stacked-images">
-          <img src="{% static '/images/ourStory/skiing.png' %}" alt="Skiing" height="300">
-          <img src="{% static '/images/ourStory/redRocks.png' %}" alt="Red Rocks" height="200">
+          <img
+            src="{% static '/images/ourStory/skiing.png' %}"
+            alt="Skiing"
+            height="300"
+          />
+          <img
+            src="{% static '/images/ourStory/redRocks.png' %}"
+            alt="Red Rocks"
+            height="200"
+          />
         </div>
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/twoYear.png' %}" alt="Second Anniversary" height="500">
+        <img
+          src="{% static '/images/ourStory/twoYear.png' %}"
+          alt="Second Anniversary"
+          height="500"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/newZealand.png' %}" alt="New Zealand!" height="350">
+        <img
+          src="{% static '/images/ourStory/newZealand.png' %}"
+          alt="New Zealand!"
+          height="350"
+        />
       </div>
       <div class="col-sm-3">
-        <img src="{% static '/images/ourStory/threeYear.png' %}" alt="Third Anniversary" height="450">
+        <img
+          src="{% static '/images/ourStory/threeYear.png' %}"
+          alt="Third Anniversary"
+          height="450"
+        />
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-4">
-        <img src="{% static '/images/ourStory/nye.png' %}" alt="nye" height="400">
+        <img
+          src="{% static '/images/ourStory/nye.png' %}"
+          alt="nye"
+          height="400"
+        />
       </div>
       <div class="col-sm-4">
-        <img src="{% static '/images/ourStory/fourYear.png' %}" alt="fourYear" height="350">
+        <img
+          src="{% static '/images/ourStory/fourYear.png' %}"
+          alt="fourYear"
+          height="350"
+        />
       </div>
       <div class="col-sm-4">
-        <img src="{% static '/images/ourStory/engagement.png' %}" alt="engagement" height="550">
+        <img
+          src="{% static '/images/ourStory/engagement.png' %}"
+          alt="engagement"
+          height="550"
+        />
       </div>
-    </div> {% endcomment %}
+    </div>
+    {% endcomment %}
   </div>
 </div>
 
@@ -85,7 +152,7 @@
       <div class="container">
         <div class="row">
           <div class="col-4">
-            <img id="modal-img" src="" alt="" height="300">
+            <img id="modal-img" src="" alt="" height="300" />
           </div>
           <div class="col-8">
             <h3 id="modal-subtitle"></h3>

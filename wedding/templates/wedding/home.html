@@ -1,17 +1,14 @@
-{% extends "wedding/base.html" %}
-
-{% block content %}
-{% load static %}
+{% extends "wedding/base.html" %} {% block content %} {% load static %}
 <div class="video-container">
-    <video autoplay muted loop playsinline>
-        <source src="{% static 'videos/DeltaandEmber02.mp4' %}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="overlay-text">        
-        <h1>Kelly</h1>
-        <h2> &amp; </h2>
-        <h1>John</h1>
-        <h3>07.08.2026</h3>
-    </div>
+  <video autoplay muted loop playsinline>
+    <source src="{% static 'videos/DeltaandEmber02.mp4' %}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay-text">
+    <h1>Kelly</h1>
+    <h2>&amp;</h2>
+    <h1>John</h1>
+    <h3>07.08.2026</h3>
+  </div>
 </div>
 {% endblock %}

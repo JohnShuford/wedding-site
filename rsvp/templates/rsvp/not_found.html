@@ -1,11 +1,8 @@
-{% extends "rsvp/base.html" %}
-
-{% block content %}
+{% extends "rsvp/base.html" %} {% block content %}
 <h2 class="error-message">We couldn’t find your name.</h2>
 <p>Try again?</p>
 <form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
+  {% csrf_token %} {{ form.as_p }}
   <button type="submit">Search Again</button>
 </form>
 {% endblock %}

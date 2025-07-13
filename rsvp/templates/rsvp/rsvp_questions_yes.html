@@ -1,13 +1,10 @@
-{% extends "rsvp/base.html" %}
-
-{% block content %}
+{% extends "rsvp/base.html" %} {% block content %}
 
 <h2>Yay! We can't wait to celebrate!</h2>
 <p>Just a few questions before you go:</p>
 
 <form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
+  {% csrf_token %} {{ form.as_p }}
   <button type="submit">Submit RSVP</button>
 </form>
 

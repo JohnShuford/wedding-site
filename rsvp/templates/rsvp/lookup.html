@@ -1,10 +1,7 @@
-{% extends "rsvp/base.html" %}
-
-{% block content %}
-  <h2>Who's RSVPing?</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Search</button>
-  </form>
+{% extends "rsvp/base.html" %} {% block content %}
+<h2>Who's RSVPing?</h2>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Search</button>
+</form>
 {% endblock %}

@@ -1,10 +1,11 @@
-{% extends "rsvp/base.html" %}
-
-{% block content %}
+{% extends "rsvp/base.html" %} {% block content %}
 <h2>Thank you for your RSVP!</h2>
 {% for guest in guests %}
-    <h2>{{ guest.first_name }} {{ guest.last_name }}</h2>
-    <p>{% if guest.attending %}We can't wait to party with you!{% else %}It's okay, but were really gonna miss you!{% endif %}</p>
+<h2>{{ guest.first_name }} {{ guest.last_name }}</h2>
+<p>
+  {% if guest.attending %}We can't wait to party with you!{% else %}It's okay,
+  but were really gonna miss you!{% endif %}
+</p>
 {% endfor %}
 <p>We appreciate you taking the time to respond.</p>
 {% endblock %}
