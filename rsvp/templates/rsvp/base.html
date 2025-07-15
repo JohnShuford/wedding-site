@@ -10,11 +10,22 @@
       href="{% static 'images/header/favicon.png' %}"
       type="image/png"
     />
-    <link rel="stylesheet" href="{% static 'css/rsvp_style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
   </head>
-  <body>
-    <div class="container">
-      <div class="form-container">{% block content %}{% endblock %}</div>
+  <body
+    class="min-h-screen bg-cover bg-center p-8 font-serif"
+    style="
+      background-image: url('/static/images/backgrounds/rsvp.png');
+      font-family: 'Lora', serif;
+    "
+  >
+    <div class="bg-emerald-700 text-white text-2xl p-6 rounded-xl">
+      🎉 Tailwind is officially working inside Django!
+    </div>
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-white p-12 rounded-3xl shadow-lg text-center">
+        {% block content %}{% endblock %}
+      </div>
     </div>
 
     <script>

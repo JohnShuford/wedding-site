@@ -1,0 +1,13 @@
+{
+  "name": "wedding-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./wedding/static/css/tailwind-src.css -o ./wedding/static/css/tailwind.css",
+    "watch-css": "tailwindcss -i ./wedding/static/css/tailwind-src.css -o ./wedding/static/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
