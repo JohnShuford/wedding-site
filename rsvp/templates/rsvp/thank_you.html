@@ -1,7 +1,9 @@
-{% extends "rsvp/base.html" %} {% block content %}
+{% extends "rsvp/base.html" %}
 
-<h2 class="text-3xl text-rose-800 mb-8 font-normal">Thank you for your RSVP, {{ guest.first_name }}!</h2>
+{% block content %}
 
-<p class="text-black text-xl mb-4">We appreciate you taking the time to respond.</p>
+<h2>Thank you for your RSVP, {{ guest.first_name }}!</h2>
+
+<p>We appreciate you taking the time to respond.</p>
 
 {% endblock %}

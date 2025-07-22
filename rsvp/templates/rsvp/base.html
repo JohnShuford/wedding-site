@@ -1,44 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>{% block title %}Kelly and John - 2026{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="{% static 'images/header/favicon.png' %}"
-      type="image/png"
-    />
-    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
-  </head>
-  <body
-    class="min-h-screen bg-cover bg-center p-8 font-serif"
-    style="
-      background-image: url('/static/images/backgrounds/rsvp.png');
-      font-family: 'Lora', serif;
-    "
-  >
-    <div class="bg-emerald-700 text-white text-2xl p-6 rounded-xl">
-      🎉 Tailwind is officially working inside Django!
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/header/favicon.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/rsvp_style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      {% block content %}{% endblock %}
     </div>
-    <div class="max-w-3xl mx-auto">
-      <div class="bg-white p-12 rounded-3xl shadow-lg text-center">
-        {% block content %}{% endblock %}
-      </div>
-    </div>
+  </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Set placeholders based on field names
-        const firstNameField = document.querySelector(
-          'input[name="first_name"]'
-        );
-        const lastNameField = document.querySelector('input[name="last_name"]');
-
-        if (firstNameField) firstNameField.placeholder = "First Name";
-        if (lastNameField) lastNameField.placeholder = "Last Name";
-      });
-    </script>
-  </body>
-</html>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Set placeholders based on field names
+    const firstNameField = document.querySelector('input[name="first_name"]');
+    const lastNameField = document.querySelector('input[name="last_name"]');
+    
+    if (firstNameField) firstNameField.placeholder = 'First Name';
+    if (lastNameField) lastNameField.placeholder = 'Last Name';
+});
+</script>
+</body>

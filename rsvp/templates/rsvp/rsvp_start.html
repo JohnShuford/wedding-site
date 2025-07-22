@@ -1,15 +1,16 @@
 <h2>Who would you like to RSVP for?</h2>
 
 <form method="post" id="rsvp-type-form">
-  {% csrf_token %} {{ form.rsvp_type }}
+  {% csrf_token %}
+  {{ form.rsvp_type }}
 </form>
 
 <script>
   // Automatically submit the form when an option is selected
   const radios = document.querySelectorAll('input[name="rsvp_type"]');
-  radios.forEach((radio) => {
-    radio.addEventListener("change", () => {
-      document.getElementById("rsvp-type-form").submit();
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.getElementById('rsvp-type-form').submit();
     });
   });
 </script>
