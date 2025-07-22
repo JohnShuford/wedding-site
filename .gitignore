@@ -1,0 +1,19 @@
+# Python garbage
+__pycache__/
+*.pyc
+
+# Node junk
+node_modules/
+
+# Django artifacts
+db.sqlite3
+
+# VS Code workspace settings
+.vscode/
+
+# Environment files
+venv/
+.env
+
+# Static build artifacts (optional, depending on your flow)
+wedding/static/css/tailwind-compiled.css
