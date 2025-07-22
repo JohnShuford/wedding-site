@@ -12,67 +12,64 @@
       href="{% static 'images/header/favicon.png' %}"
       type="image/png"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-=======
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/wedding_style.css' %}" />
->>>>>>> a38bacd (Replace style.css with tailwind.css and update templates)
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img
-            src="{% static 'images/header/FandALogo.png' %}"
-            alt="F and A Logo"
-            height="125"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/our-story/">Our Story</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/itinerary/">Itinerary</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="/rsvp/">RSVP</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="/gallery/">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/honeymoon-fund/">Honeymoon Fund</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/downtown_westminster/"
-                >Downtown Westminster</a
-              >
-            </li>
-            <li class="nav-item"><a class="nav-link" href="/faq/">FAQ</a></li>
+  <body class="font-lora bg-wedding-peach text-wedding-dark">
+    <nav class="bg-gradient-to-r from-stone-50 to-stone-200 font-lora">
+      <div class="w-full max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex-shrink-0">
+            <img
+              src="{% static 'images/header/FandALogo.png' %}"
+              alt="F and A Logo"
+              class="h-32 rounded-full"
+            />
+          </a>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex">
+            <ul class="flex justify-evenly space-x-8">
+              <li><a href="/our-story/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Our Story</a></li>
+              <li><a href="/itinerary/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Itinerary</a></li>
+              <li><a href="/rsvp/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">RSVP</a></li>
+              <li><a href="/gallery/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Gallery</a></li>
+              <li><a href="/honeymoon-fund/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Honeymoon Fund</a></li>
+              <li><a href="/downtown_westminster/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Downtown Westminster</a></li>
+              <li><a href="/faq/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">FAQ</a></li>
+            </ul>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-button" class="lg:hidden p-2">
+            <span class="block w-6 h-0.5 bg-wedding-dark-red mb-1"></span>
+            <span class="block w-6 h-0.5 bg-wedding-dark-red mb-1"></span>
+            <span class="block w-6 h-0.5 bg-wedding-dark-red"></span>
+          </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="lg:hidden hidden">
+          <ul class="flex flex-col space-y-4 pb-4">
+            <li><a href="/our-story/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Our Story</a></li>
+            <li><a href="/itinerary/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Itinerary</a></li>
+            <li><a href="/rsvp/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">RSVP</a></li>
+            <li><a href="/gallery/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Gallery</a></li>
+            <li><a href="/honeymoon-fund/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Honeymoon Fund</a></li>
+            <li><a href="/downtown_westminster/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Downtown Westminster</a></li>
+            <li><a href="/faq/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">FAQ</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div>{% block content %}{% endblock %}</div>
-    <!-- Bootstrap Bundle with Popper (REQUIRED for accordion) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    
+    <script>
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>

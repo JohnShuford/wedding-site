@@ -1,11 +1,27 @@
 {% extends "rsvp/base.html" %} {% block content %}
-<h2>Is this you?</h2>
-<p>{{ guest.first_name }} {{ guest.last_name }}</p>
+<h2 class="text-3xl text-rose-800 mb-8 font-normal">Is this you?</h2>
+<p class="text-black text-xl mb-4">
+  {{ guest.first_name }} {{ guest.last_name }}
+</p>
 <form method="post" action="{% url 'confirm_guest' guest.id %}">
   {% csrf_token %}
-  <div class="button-container">
-    <button type="submit" name="confirm" value="yes">Yes</button>
-    <button type="submit" name="confirm" value="no">No</button>
+  <div class="flex flex-row gap-4 justify-center items-center">
+    <button
+      type="submit"
+      name="confirm"
+      value="yes"
+      class="bg-rose-300 text-gray-800 text-lg py-3 px-10 border-none rounded-3xl cursor-pointer font-serif uppercase tracking-wider transition-all hover:bg-rose-400 hover:-translate-y-0.5 flex-none min-w-[120px]"
+    >
+      Yes
+    </button>
+    <button
+      type="submit"
+      name="confirm"
+      value="no"
+      class="bg-rose-300 text-gray-800 text-lg py-3 px-10 border-none rounded-3xl cursor-pointer font-serif uppercase tracking-wider transition-all hover:bg-rose-400 hover:-translate-y-0.5 flex-none min-w-[120px]"
+    >
+      No
+    </button>
   </div>
 </form>
 {% endblock %}

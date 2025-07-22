@@ -1,20 +1,20 @@
 {% extends "rsvp/base.html" %} {% block content %}
-<div class="declined-message">
-  <h2>Awh man! We'll miss you! 😢</h2>
+<div>
+  <h2 class="text-3xl text-rose-800 mb-8 font-normal">Awh man! We'll miss you! 😢</h2>
 
-  <p>
+  <p class="text-black text-xl mb-4">
     We're sad you can't make it to our special day, but we completely
     understand. We'd still love to stay in touch and share some photos with you
     after the wedding!
   </p>
 
-  <form method="post">
+  <form method="post" class="space-y-6">
     {% csrf_token %} {% for guest in guests %}
-    <div class="guest-contact-section">
-      <h3>{{ guest.first_name }} {{ guest.last_name }}</h3>
+    <div class="space-y-4">
+      <h3 class="text-xl text-rose-700 font-medium">{{ guest.first_name }} {{ guest.last_name }}</h3>
 
-      <div class="form-group">
-        <label for="email_{{ guest.id }}"
+      <div>
+        <label for="email_{{ guest.id }}" class="block text-gray-700 mb-2"
           >Email (so we can send you photos!):</label
         >
         <input
@@ -23,11 +23,12 @@
           name="email_{{ guest.id }}"
           value="{{ guest.email }}"
           placeholder="your.email@example.com"
+          class="w-full max-w-md px-4 py-3 border-2 border-rose-300 bg-white text-base rounded-md font-serif transition-colors focus:outline-none focus:border-rose-800 focus:ring-4 focus:ring-rose-300/20"
         />
       </div>
 
-      <div class="form-group">
-        <label for="message_{{ guest.id }}"
+      <div>
+        <label for="message_{{ guest.id }}" class="block text-gray-700 mb-2"
           >Any message for the happy couple?</label
         >
         <textarea
@@ -35,6 +36,7 @@
           name="message_{{ guest.id }}"
           rows="3"
           placeholder="We'd love to hear from you..."
+          class="w-full max-w-md px-4 py-3 border-2 border-rose-300 bg-white text-base rounded-md font-serif transition-colors focus:outline-none focus:border-rose-800 focus:ring-4 focus:ring-rose-300/20"
         >
 {{ guest.message }}</textarea
         >
@@ -42,10 +44,10 @@
     </div>
     {% endfor %}
 
-    <button type="submit" class="btn-primary">Send Love & Best Wishes</button>
+    <button type="submit" class="bg-rose-300 text-gray-800 text-lg py-3 px-10 border-none rounded-3xl cursor-pointer font-serif uppercase tracking-wider transition-all hover:bg-rose-400 hover:-translate-y-0.5">Send Love & Best Wishes</button>
   </form>
 
-  <p class="small-text">
+  <p class="text-sm text-gray-600 mt-6">
     <em
       >P.S. - If your plans change and you can attend after all, just let us
       know!</em
