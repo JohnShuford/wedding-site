@@ -1,15 +1,11 @@
-{% extends "rsvp/base.html" %} {% block content %}
-<h2 class="text-3xl text-rose-600 mb-8 font-normal">We couldn't find your name.</h2>
-<p class="text-black text-xl mb-4">Try again?</p>
-<form method="post" class="flex flex-col items-center gap-4">
+{% extends "rsvp/base.html" %}
+
+{% block content %}
+<h2 class="error-message">We couldn’t find your name.</h2>
+<p>Try again?</p>
+<form method="post">
   {% csrf_token %}
-  <div class="w-full max-w-md space-y-4">
-    {% for field in form %}
-      <div>
-        {{ field|add_class:"w-full px-4 py-3 border-2 border-rose-300 bg-white text-base rounded-md font-serif transition-colors focus:outline-none focus:border-rose-800 focus:ring-4 focus:ring-rose-300/20" }}
-      </div>
-    {% endfor %}
-  </div>
-  <button type="submit" class="bg-rose-300 text-gray-800 text-lg py-3 px-10 border-none rounded-3xl cursor-pointer font-serif uppercase tracking-wider transition-all hover:bg-rose-400 hover:-translate-y-0.5">Search Again</button>
+  {{ form.as_p }}
+  <button type="submit">Search Again</button>
 </form>
 {% endblock %}

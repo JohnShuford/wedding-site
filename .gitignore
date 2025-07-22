@@ -3,9 +3,11 @@ node_modules/
 
 # Tailwind build artifacts
 wedding/static/css/tailwind-compiled.css
-wedding/static/css/tailwind-src.css
 rsvp/static/css/tailwind.css
 
 # Python cache
 __pycache__/
 *.pyc
+
+# macOS system files
+.DS_Store
