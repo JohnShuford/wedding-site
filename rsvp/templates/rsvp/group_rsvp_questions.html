@@ -1,19 +1,85 @@
 {% extends "rsvp/base.html" %}
 
 {% block rsvp_content %}
-<div class="mixed-group-rsvp">
+<div class="mixed-group-rsvp" x-data="familyEmailShare()">
     
     <!-- Section for attending guests -->
     {% if attending_guest_forms %}
         <div class="attending-section">
             <h2>RSVP Details for Attending Guests</h2>
-            <form method="post">
+            
+            <!-- Family Email Sharing Feature -->
+            {% if attending_guest_forms|length > 1 %}
+                <div class="family-email-helper">
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" 
+                                   x-model="useSharedEmail"
+                                   @change="toggleSharedEmail()">
+                            Use the same email for all attending family members
+                        </label>
+                        <small class="form-text text-muted">
+                            This will fill in the same email address for everyone who's attending
+                        </small>
+                    </div>
+                    
+                    <div x-show="useSharedEmail" class="shared-email-input">
+                        <label for="shared_email">Family Email Address *</label>
+                        <input type="email" 
+                               id="shared_email"
+                               x-model="sharedEmailValue"
+                               @input="updateAllEmails()"
+                               placeholder="family.email@example.com"
+                               class="form-control">
+                    </div>
+                </div>
+            {% endif %}
+            
+            <form method="post" novalidate>
                 {% csrf_token %}
                 
                 {% for guest, form in attending_guest_forms %}
                     <div class="guest-section">
                         <h3>{{ guest.first_name }} {{ guest.last_name }} ✅</h3>
-                        {{ form.as_p }}
+                        
+                        <div class="form-group">
+                            <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+                            {{ form.email }}
+                            {% if form.email.help_text %}
+                                <small class="form-text text-muted">{{ form.email.help_text }}</small>
+                            {% endif %}
+                            {% if form.email.errors %}
+                                <div class="error-message">
+                                    {% for error in form.email.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.dietary_restrictions.id_for_label }}">{{ form.dietary_restrictions.label }}</label>
+                            {{ form.dietary_restrictions }}
+                            {% if form.dietary_restrictions.errors %}
+                                <div class="error-message">
+                                    {% for error in form.dietary_restrictions.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.message_for_couple.id_for_label }}">{{ form.message_for_couple.label }}</label>
+                            {{ form.message_for_couple }}
+                            {% if form.message_for_couple.errors %}
+                                <div class="error-message">
+                                    {% for error in form.message_for_couple.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
                     </div>
                 {% endfor %}
     {% endif %}
@@ -29,12 +95,14 @@
                     <h3>{{ guest.first_name }} {{ guest.last_name }}</h3>
                     
                     <div class="form-group">
-                        <label for="email_{{ guest.id }}">Email (for photos!):</label>
+                        <label for="email_{{ guest.id }}">Email Address *</label>
                         <input type="email" 
                                id="email_{{ guest.id }}" 
                                name="email_{{ guest.id }}" 
                                value="{{ guest.email }}"
-                               placeholder="your.email@example.com">
+                               placeholder="your.email@example.com"
+                               class="form-control"
+                               required>
                     </div>
                     
                     <div class="form-group">
@@ -42,7 +110,8 @@
                         <textarea id="message_{{ guest.id }}" 
                                   name="message_{{ guest.id }}" 
                                   rows="3" 
-                                  placeholder="Send your love...">{{ guest.message }}</textarea>
+                                  placeholder="Send your love..."
+                                  class="form-control">{{ guest.message }}</textarea>
                     </div>
                 </div>
             {% endfor %}
@@ -55,4 +124,35 @@
     {% endif %}
     
 </div>
+
+<script>
+function familyEmailShare() {
+    return {
+        useSharedEmail: false,
+        sharedEmailValue: '',
+        
+        toggleSharedEmail() {
+            if (this.useSharedEmail) {
+                // If enabling shared email, get the first email as default
+                const firstEmailField = document.querySelector('input[type="email"][id*="-email"]');
+                if (firstEmailField && firstEmailField.value) {
+                    this.sharedEmailValue = firstEmailField.value;
+                    this.updateAllEmails();
+                }
+            }
+        },
+        
+        updateAllEmails() {
+            if (this.useSharedEmail && this.sharedEmailValue) {
+                // Update all email fields for attending guests
+                const emailFields = document.querySelectorAll('input[type="email"][id*="-email"]');
+                emailFields.forEach(field => {
+                    field.value = this.sharedEmailValue;
+                });
+            }
+        }
+    }
+}
+</script>
+
 {% endblock %}

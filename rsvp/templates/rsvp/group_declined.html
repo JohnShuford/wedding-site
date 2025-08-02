@@ -1,26 +1,55 @@
 {% extends "rsvp/base.html" %}
 
 {% block rsvp_content %}
-<div class="declined-message">
+<div class="declined-message" x-data="familyEmailShare()">
     <h2>Awh man! We'll miss you! 😢</h2>
     
     <p>We're sad you can't make it to our special day, but we completely understand. 
     We'd still love to stay in touch and share some photos with you after the wedding!</p>
     
-    <form method="post">
+    <!-- Family Email Sharing Feature for declined guests -->
+    {% if guests|length > 1 %}
+        <div class="family-email-helper">
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" 
+                           x-model="useSharedEmail"
+                           @change="toggleSharedEmail()">
+                    Use the same email for all family members
+                </label>
+                <small class="form-text text-muted">
+                    This will fill in the same email address for everyone
+                </small>
+            </div>
+            
+            <div x-show="useSharedEmail" class="shared-email-input">
+                <label for="shared_email">Family Email Address *</label>
+                <input type="email" 
+                       id="shared_email"
+                       x-model="sharedEmailValue"
+                       @input="updateAllEmails()"
+                       placeholder="family.email@example.com"
+                       class="form-control">
+            </div>
+        </div>
+    {% endif %}
+    
+    <form method="post" novalidate>
         {% csrf_token %}
         
         {% for guest in guests %}
-            <div class="guest-contact-section">
+            <div class="declined-guest-section">
                 <h3>{{ guest.first_name }} {{ guest.last_name }}</h3>
                 
                 <div class="form-group">
-                    <label for="email_{{ guest.id }}">Email (so we can send you photos!):</label>
+                    <label for="email_{{ guest.id }}">Email Address * (so we can send you photos!)</label>
                     <input type="email" 
                            id="email_{{ guest.id }}" 
                            name="email_{{ guest.id }}" 
                            value="{{ guest.email }}"
-                           placeholder="your.email@example.com">
+                           placeholder="your.email@example.com"
+                           class="form-control"
+                           required>
                 </div>
                 
                 <div class="form-group">
@@ -28,7 +57,8 @@
                     <textarea id="message_{{ guest.id }}" 
                               name="message_{{ guest.id }}" 
                               rows="3" 
-                              placeholder="We'd love to hear from you...">{{ guest.message }}</textarea>
+                              placeholder="We'd love to hear from you..."
+                              class="form-control">{{ guest.message }}</textarea>
                 </div>
             </div>
         {% endfor %}
@@ -40,4 +70,35 @@
         <em>P.S. - If your plans change and you can attend after all, just let us know!</em>
     </p>
 </div>
+
+<script>
+function familyEmailShare() {
+    return {
+        useSharedEmail: false,
+        sharedEmailValue: '',
+        
+        toggleSharedEmail() {
+            if (this.useSharedEmail) {
+                // If enabling shared email, get the first email as default
+                const firstEmailField = document.querySelector('input[type="email"][id^="email_"]');
+                if (firstEmailField && firstEmailField.value && !firstEmailField.value.includes('placeholder.com')) {
+                    this.sharedEmailValue = firstEmailField.value;
+                    this.updateAllEmails();
+                }
+            }
+        },
+        
+        updateAllEmails() {
+            if (this.useSharedEmail && this.sharedEmailValue) {
+                // Update all email fields for declined guests
+                const emailFields = document.querySelectorAll('input[type="email"][id^="email_"]');
+                emailFields.forEach(field => {
+                    field.value = this.sharedEmailValue;
+                });
+            }
+        }
+    }
+}
+</script>
+
 {% endblock %}

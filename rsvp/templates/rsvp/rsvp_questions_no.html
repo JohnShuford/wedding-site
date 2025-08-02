@@ -3,14 +3,38 @@
 {% block rsvp_content %}
 
 <h2>Awh man! We're sorry to hear that, but we understand.</h2>
-<p>We’d still love to keep in touch. Please leave us a note:</p>
+<p>We'd still love to keep in touch. Please leave us a note:</p>
 
-<form method="post">
+<form method="post" novalidate>
   {% csrf_token %}
-  {{ form.email.label_tag }} {{ form.email }}
-  <br>
-  {{ form.message_for_couple.label_tag }} {{ form.message_for_couple }}
-  <br>
+  
+  <div class="form-group">
+    <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+    {{ form.email }}
+    {% if form.email.help_text %}
+      <small class="form-text text-muted">{{ form.email.help_text }}</small>
+    {% endif %}
+    {% if form.email.errors %}
+      <div class="error-message">
+        {% for error in form.email.errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.message_for_couple.id_for_label }}">{{ form.message_for_couple.label }}</label>
+    {{ form.message_for_couple }}
+    {% if form.message_for_couple.errors %}
+      <div class="error-message">
+        {% for error in form.message_for_couple.errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
   <button type="submit">Submit RSVP</button>
 </form>
 
