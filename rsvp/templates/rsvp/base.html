@@ -3,15 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Kelly and John - 2026{% endblock %}</title>
+    <title>{% block title %}RSVP - Kelly and John - 2026{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{% static 'images/header/favicon.png' %}" type="image/png">
     <link rel="stylesheet" href="{% static 'css/rsvp_style.css' %}">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="form-container">
-      {% block content %}{% endblock %}
+      {% block rsvp_content %}{% endblock %}
     </div>
   </div>
 
@@ -23,6 +24,7 @@
     
     if (firstNameField) firstNameField.placeholder = 'First Name';
     if (lastNameField) lastNameField.placeholder = 'Last Name';
-});
-</script>
+  });
+  </script>
 </body>
+</html>

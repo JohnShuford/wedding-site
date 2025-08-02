@@ -1,6 +1,57 @@
 {% extends "rsvp/base.html" %}
 
-{% block content %}
+{% block rsvp_content %}
+  <!-- Save the Date Video Modal -->
+  <div x-data="{ showModal: true }" 
+       x-show="showModal" 
+       x-transition:enter="transition ease-out duration-300"
+       x-transition:enter-start="opacity-0"
+       x-transition:enter-end="opacity-100"
+       x-transition:leave="transition ease-in duration-200"
+       x-transition:leave-start="opacity-100"
+       x-transition:leave-end="opacity-0"
+       class="modal-backdrop"
+       @click.self="showModal = false"
+       @keydown.escape.window="showModal = false"
+       x-cloak>
+    
+    <div class="modal-container"
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 transform scale-95"
+         x-transition:enter-end="opacity-100 transform scale-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 transform scale-100"
+         x-transition:leave-end="opacity-0 transform scale-95">
+      
+      <!-- Close Button -->
+      <button @click="showModal = false" 
+              class="modal-close-btn"
+              aria-label="Close modal">
+        ×
+      </button>
+      
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="modal-title">Save the Date!</h2>
+        <p class="modal-subtitle">Watch Kelly & John's Save the Date Video</p>
+        
+        <!-- YouTube Video Embed -->
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/vIbH9nR37o4?autoplay=0&rel=0&modestbranding=1"
+                  title="Kelly & John Save the Date Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+          </iframe>
+        </div>
+        
+        <p style="color: #666; font-size: 1rem; margin-top: 1rem;">
+          Close this window to continue with your RSVP
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RSVP Form Content -->
   <h2>Who's RSVPing?</h2>
   <form method="post">
     {% csrf_token %}

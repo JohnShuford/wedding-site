@@ -1,6 +1,6 @@
 {% extends "rsvp/base.html" %}
 
-{% block content %}
+{% block rsvp_content %}
 <h2>Is this you?</h2>
 <p>{{ guest.first_name }} {{ guest.last_name }}</p>
 <form method="post" action="{% url 'confirm_guest' guest.id %}">
