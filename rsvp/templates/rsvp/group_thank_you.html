@@ -1,6 +1,6 @@
 {% extends "rsvp/base.html" %}
 
-{% block content %}
+{% block rsvp_content %}
 <h2>Thank you for your RSVP!</h2>
 {% for guest in guests %}
     <h2>{{ guest.first_name }} {{ guest.last_name }}</h2>
