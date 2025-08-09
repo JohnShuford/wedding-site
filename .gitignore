@@ -8,6 +8,31 @@ rsvp/static/css/tailwind.css
 # Python cache
 __pycache__/
 *.pyc
+*.py[cod]
+*.pyo
+*.pyd
 
 # macOS system files
 .DS_Store
+
+# Virtualenv / local env
+.venv/
+venv/
+ENV/
+.env
+.env.*
+
+# Django
+db.sqlite3
+*.sqlite3
+local_settings.py
+
+# Logs
+*.log
+rsvp_emails.log
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
