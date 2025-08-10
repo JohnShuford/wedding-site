@@ -1,5 +1,20 @@
 /* Reset */
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Beth+Ellen&display=swap");
+
+/* CSS Custom Properties */
+:root {
+  /* Primary Colors */
+  --primary-dark: #b22158; /* Main headings, search text */
+  --primary-medium: #d46b8c; /* Secondary headings, celebration text */
+  --primary-light: #ebb6c2; /* Buttons, accents */
+  --primary-pale: #eed4e2; /* Background boxes, containers */
+  --backgroung-green: #64763c;
+
+  /* Neutral Colors */
+  --white: #ffffff; /* Alternative background */
+  --text-dark: #666666; /* Body text - charcoal grey */
+  --text-muted: #666666; /* Helper text */
+}
 
 * {
   margin: 0;
@@ -9,9 +24,9 @@
 
 /* Base Layout */
 body {
-  background-image: url('/static/images/backgrounds/rsvp.png');
-  /* background-color: #f5c9b8; peach background */
-  font-family: 'Lora', serif;
+  background-color: var(--backgroung-green);
+  background-image: url('/static/images/backgrounds/RSVP_Background.png');
+  font-family: "Lora", serif;
   min-height: 100vh;
   padding: 2rem;
 }
@@ -29,7 +44,7 @@ body {
 
 /* Form Container */
 .form-container {
-  background-color: white; /* Darker peach for container */
+  background-color: var(--white);
   padding: 3rem;
   border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -38,14 +53,14 @@ body {
 
 /* Title */
 h2 {
-  color: #7b2c44;
+  color: var(--primary-dark);
   font-size: 1.75rem;
   margin-bottom: 2rem;
   font-weight: normal;
 }
 
 p {
-  color: black;
+  color: var(--text-dark);
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
@@ -58,7 +73,6 @@ form {
   gap: 1rem;
 }
 
-
 /* Updated Input Fields with Borders */
 input[type="text"],
 input[type="email"],
@@ -69,8 +83,8 @@ textarea {
   width: 100%;
   max-width: 400px;
   padding: 0.75rem 1rem;
-  border: 2px solid #e88d85; /* Coral pink border to match your theme */
-  background-color: #ffffff;
+  border: 2px solid var(--primary-medium);
+  background-color: var(--white);
   font-size: 1rem;
   border-radius: 0.375rem;
   font-family: inherit;
@@ -85,22 +99,22 @@ input[type="number"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: #7b2c44; /* Darker color when focused */
-  box-shadow: 0 0 0 3px rgba(232, 141, 133, 0.2); /* Subtle glow effect */
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgba(212, 107, 140, 0.2);
 }
 
 /* Placeholder styling */
 input::placeholder,
 textarea::placeholder {
-  color: #666;
+  color: var(--text-muted);
 }
 
 /* Submit Button */
 button,
 button[type="submit"],
 input[type="submit"] {
-  background-color: #e88d85; /* Coral pink button */
-  color: #333;
+  background-color: var(--primary-light);
+  color: var(--text-dark);
   font-size: 1.125rem;
   padding: 0.625rem 2.5rem;
   border: none;
@@ -114,7 +128,7 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-  background-color: #dc7871;
+  background-color: var(--primary-medium);
   transform: translateY(-1px);
 }
 
@@ -131,19 +145,19 @@ input[type="submit"]:hover {
   body {
     padding: 1rem;
   }
-  
+
   .container {
     min-height: calc(100vh - 2rem);
   }
-  
+
   .form-container {
     padding: 2rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   input[type="text"],
   input[type="email"],
   select,
@@ -184,20 +198,21 @@ input[type="submit"]:hover {
 }
 
 .modal-container {
-  background-color: white;
+  background-color: var(--primary-pale);
   border-radius: 1rem;
   max-width: 90vw;
   max-height: 90vh;
   width: 100%;
   position: relative;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .modal-close-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: #e88d85;
+  background-color: var(--primary-light);
   color: white;
   border: none;
   border-radius: 50%;
@@ -215,7 +230,7 @@ input[type="submit"]:hover {
 }
 
 .modal-close-btn:hover {
-  background-color: #dc7871;
+  background-color: var(--primary-medium);
   transform: scale(1.05);
 }
 
@@ -225,14 +240,14 @@ input[type="submit"]:hover {
 }
 
 .modal-title {
-  color: #7b2c44;
+  color: var(--primary-dark);
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
 }
 
 .modal-subtitle {
-  color: #666;
+  color: var(--primary-medium);
   font-size: 1.125rem;
   margin-bottom: 2rem;
 }
@@ -268,7 +283,7 @@ input[type="submit"]:hover {
   .modal-container {
     max-width: 640px;
   }
-  
+
   .modal-title {
     font-size: 2.25rem;
   }
@@ -291,15 +306,15 @@ input[type="submit"]:hover {
   .modal-backdrop {
     padding: 0.5rem;
   }
-  
+
   .modal-content {
     padding: 1.5rem;
   }
-  
+
   .modal-title {
     font-size: 1.75rem;
   }
-  
+
   .modal-close-btn {
     width: 2.5rem;
     height: 2.5rem;
@@ -317,14 +332,14 @@ input[type="submit"]:hover {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #7b2c44;
+  color: var(--primary-dark);
   font-weight: normal;
 }
 
 .form-text {
   font-size: 0.875rem;
   margin-top: 0.5rem;
-  color: #666;
+  color: var(--text-muted);
   display: block;
 }
 
@@ -341,7 +356,7 @@ input[type="submit"]:hover {
 /* Family email sharing styles */
 .family-email-helper {
   background-color: #f8f9fa;
-  border: 2px solid #e88d85;
+  border: 2px solid var(--primary-medium);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -362,25 +377,25 @@ input[type="submit"]:hover {
 .shared-email-input {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #e88d85;
+  border-top: 1px solid var(--primary-medium);
 }
 
 .shared-email-input label {
   font-weight: bold;
-  color: #7b2c44;
+  color: var(--primary-dark);
 }
 
 /* Guest section styling */
 .guest-section {
-  border: 1px solid #e88d85;
+  border: 1px solid var(--primary-medium);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .guest-section h3 {
-  color: #7b2c44;
+  color: var(--primary-dark);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
@@ -394,14 +409,14 @@ input[type="submit"]:hover {
 }
 
 .declined-guest-section h3 {
-  color: #666;
+  color: var(--text-muted);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 .attending-section h2,
 .declined-section h2 {
-  color: #7b2c44;
+  color: var(--primary-dark);
   margin-bottom: 1.5rem;
 }
 
@@ -410,8 +425,8 @@ input[type="submit"]:hover {
   width: 100%;
   max-width: 400px;
   padding: 0.75rem 1rem;
-  border: 2px solid #e88d85;
-  background-color: #ffffff;
+  border: 2px solid var(--primary-medium);
+  background-color: var(--white);
   font-size: 1rem;
   border-radius: 0.375rem;
   font-family: inherit;
@@ -420,14 +435,14 @@ input[type="submit"]:hover {
 
 .form-control:focus {
   outline: none;
-  border-color: #7b2c44;
-  box-shadow: 0 0 0 3px rgba(232, 141, 133, 0.2);
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgba(212, 107, 140, 0.2);
 }
 
 /* Button improvements */
 .btn-primary {
-  background-color: #e88d85;
-  color: #333;
+  background-color: var(--primary-light);
+  color: var(--text-dark);
   font-size: 1.125rem;
   padding: 0.75rem 2rem;
   border: none;
@@ -441,25 +456,25 @@ input[type="submit"]:hover {
 }
 
 .btn-primary:hover {
-  background-color: #dc7871;
+  background-color: var(--primary-medium);
   transform: translateY(-1px);
 }
 
 /* Email label parenthetical wraps to new line on small screens */
-.email-note { 
-  font-weight: normal; 
+.email-note {
+  font-weight: normal;
 }
 
 @media (max-width: 576px) {
-  .email-note { 
-    display: block; 
-    margin-top: 2px; 
+  .email-note {
+    display: block;
+    margin-top: 2px;
   }
 }
 
 @media (min-width: 577px) {
-  .email-note { 
-    display: inline; 
+  .email-note {
+    display: inline;
   }
 }
 
@@ -470,10 +485,16 @@ input[type="submit"]:hover {
 
 /* Celebration text styling */
 .celebration-text {
-  color: #e88d85;
-  font-size: 1.25rem;
+  color: var(--primary-medium);
+  font-family: "Beth Ellen", cursive;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   font-weight: normal;
+}
+
+/* Guest name display styling */
+.guest-name-display {
+  color: var(--text-muted);
 }
 
 /* Desktop-specific styles */
@@ -481,7 +502,7 @@ input[type="submit"]:hover {
   .container {
     max-width: 1100px;
   }
-  
+
   .celebration-text {
     font-size: 3rem;
   }

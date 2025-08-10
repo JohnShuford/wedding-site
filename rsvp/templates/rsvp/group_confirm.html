@@ -7,7 +7,7 @@
 <form method="post">
   {% csrf_token %}
   {% for guest in guests %}
-    <p><strong>{{ guest.first_name }} {{ guest.last_name }}</strong></p>
+    <p class="guest-name-display"><strong>{{ guest.first_name }} {{ guest.last_name }}</strong></p>
     <div class="radio-group">
       <label>
         <input type="radio" name="attending_{{ guest.id }}" value="yes" required> Yes

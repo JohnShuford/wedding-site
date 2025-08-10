@@ -2,7 +2,7 @@
 
 {% block rsvp_content %}
 <h2>Is this you?</h2>
-<p>{{ guest.first_name }} {{ guest.last_name }}</p>
+<p class="guest-name-display">{{ guest.first_name }} {{ guest.last_name }}</p>
 <form method="post" action="{% url 'confirm_guest' guest.id %}">
   {% csrf_token %}
   <div class="button-container">

@@ -34,13 +34,12 @@
                     </div>
                 </div>
             {% endif %}
-            
+
             <form method="post" novalidate>
                 {% csrf_token %}
-                
                 {% for guest, form in attending_guest_forms %}
                     <div class="guest-section">
-                        <h3>{{ guest.first_name }} {{ guest.last_name }} ✅</h3>
+                        <h3>{{ guest.first_name }} {{ guest.last_name }}</h3>
                         
                         <div class="form-group">
                             <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
@@ -56,7 +55,7 @@
                                 </div>
                             {% endif %}
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="{{ form.dietary_restrictions.id_for_label }}">{{ form.dietary_restrictions.label }}</label>
                             {{ form.dietary_restrictions }}
@@ -68,7 +67,7 @@
                                 </div>
                             {% endif %}
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="{{ form.message_for_couple.id_for_label }}">{{ form.message_for_couple.label }}</label>
                             {{ form.message_for_couple }}
@@ -82,12 +81,13 @@
                         </div>
                     </div>
                 {% endfor %}
+        </div>
     {% endif %}
     
     <!-- Section for declined guests -->
     {% if not_attending_guests %}
         <div class="declined-section">
-            <h2>We'll Miss You! 😢</h2>
+            <h2>We'll Miss You!</h2>
             <p>For those who can't make it - we'd still love to stay in touch!</p>
             
             {% for guest in not_attending_guests %}
@@ -98,7 +98,7 @@
                         <label for="email_{{ guest.id }}">Email Address *</label>
                         <input type="email" 
                                id="email_{{ guest.id }}" 
-                               name="email_{{ guest.id }}" 
+                               name="email_{{ guest.id }}"
                                value="{% if guest.email|slice:'-16:' != '@placeholder.com' %}{{ guest.email }}{% endif %}"
                                placeholder="your.email@example.com"
                                class="form-control"
@@ -108,7 +108,7 @@
                     <div class="form-group">
                         <label for="message_{{ guest.id }}">Message for the couple:</label>
                         <textarea id="message_{{ guest.id }}" 
-                                  name="message_{{ guest.id }}" 
+                                  name="message_{{ guest.id }}"
                                   rows="3" 
                                   placeholder="Send your love..."
                                   class="form-control">{{ guest.message }}</textarea>
@@ -122,7 +122,6 @@
         <button type="submit" class="btn-primary">Submit All RSVPs</button>
         </form>
     {% endif %}
-    
 </div>
 
 <script>
@@ -151,7 +150,7 @@ function familyEmailShare() {
                 });
             }
         }
-    }
+    };
 }
 </script>
 
