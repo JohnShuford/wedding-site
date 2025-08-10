@@ -46,7 +46,7 @@
                     <input type="email" 
                            id="email_{{ guest.id }}" 
                            name="email_{{ guest.id }}" 
-                           value="{{ guest.email }}"
+                           value="{% if guest.email|slice:'-16:' != '@placeholder.com' %}{{ guest.email }}{% endif %}"
                            placeholder="your.email@example.com"
                            class="form-control"
                            required>

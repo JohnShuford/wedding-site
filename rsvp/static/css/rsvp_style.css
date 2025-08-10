@@ -475,3 +475,14 @@ input[type="submit"]:hover {
   margin-bottom: 1.5rem;
   font-weight: normal;
 }
+
+/* Desktop-specific styles */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1100px;
+  }
+  
+  .celebration-text {
+    font-size: 3rem;
+  }
+}

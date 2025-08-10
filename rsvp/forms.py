@@ -36,6 +36,11 @@ class RSVPDetailsForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        
+        # Filter placeholder emails from initial values
+        if self.instance and self.instance.email and self.instance.email.endswith('@placeholder.com'):
+            self.initial['email'] = ''
+        
         # Ensure email is required
         self.fields['email'].required = True
         self.fields['email'].validators.append(EmailValidator())
