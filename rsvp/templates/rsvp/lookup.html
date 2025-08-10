@@ -2,7 +2,28 @@
 
 {% block rsvp_content %}
   <!-- Save the Date Video Modal -->
-  <div x-data="{ showModal: true }" 
+  <div x-data="{ 
+         showModal: (() => {
+           // Check for query parameter bypass
+           const urlParams = new URLSearchParams(window.location.search);
+           if (urlParams.get('skip_sdt') === '1') {
+             console.debug('[RSVP] SDT modal bypassed via query param');
+             return false;
+           }
+           
+           // Check if already seen in this session
+           const alreadySeen = sessionStorage.getItem('rsvp_sdt_modal_seen') === '1';
+           if (alreadySeen) {
+             console.debug('[RSVP] SDT modal seen:', true);
+             return false;
+           }
+           
+           // First visit - show modal and mark as seen
+           sessionStorage.setItem('rsvp_sdt_modal_seen', '1');
+           console.debug('[RSVP] SDT modal seen:', false, '(showing for first time)');
+           return true;
+         })()
+       }" 
        x-show="showModal" 
        x-transition:enter="transition ease-out duration-300"
        x-transition:enter-start="opacity-0"

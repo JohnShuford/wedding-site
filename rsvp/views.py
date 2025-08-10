@@ -40,7 +40,7 @@ def confirm_guest(request, guest_id):
             else:
                 return HttpResponseRedirect(reverse('confirm_group_attendance', args=[guest.group_id]))
         else:
-            return HttpResponseRedirect(reverse('rsvp'))
+            return HttpResponseRedirect(reverse('rsvp') + '?skip_sdt=1')
 
     return render(request, 'rsvp/confirm_guest.html', {'guest': guest})
 
