@@ -20,6 +20,11 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
 }
 
 /* Form Container */
@@ -125,6 +130,10 @@ input[type="submit"]:hover {
 @media (max-width: 576px) {
   body {
     padding: 1rem;
+  }
+  
+  .container {
+    min-height: calc(100vh - 2rem);
   }
   
   .form-container {
@@ -314,8 +323,9 @@ input[type="submit"]:hover {
 
 .form-text {
   font-size: 0.875rem;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   color: #666;
+  display: block;
 }
 
 .error-message {
@@ -433,4 +443,35 @@ input[type="submit"]:hover {
 .btn-primary:hover {
   background-color: #dc7871;
   transform: translateY(-1px);
+}
+
+/* Email label parenthetical wraps to new line on small screens */
+.email-note { 
+  font-weight: normal; 
+}
+
+@media (max-width: 576px) {
+  .email-note { 
+    display: block; 
+    margin-top: 2px; 
+  }
+}
+
+@media (min-width: 577px) {
+  .email-note { 
+    display: inline; 
+  }
+}
+
+/* Red help text for form validation errors */
+.form-text.text-muted {
+  color: #d85c4f !important;
+}
+
+/* Celebration text styling */
+.celebration-text {
+  color: #e88d85;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
 }

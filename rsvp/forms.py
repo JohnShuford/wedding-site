@@ -1,5 +1,6 @@
 from django import forms
 from django.core.validators import EmailValidator
+from django.utils.safestring import mark_safe
 from .models import Guest
 
 class GuestLookupForm(forms.Form):
@@ -28,7 +29,7 @@ class RSVPDetailsForm(forms.ModelForm):
             })
         }
         labels = {
-            'email': 'Email Address *',
+            'email': mark_safe('Email Address * <span class="email-note">(so we can send you photos!)</span>'),
             'dietary_restrictions': 'Dietary Restrictions',
             'message_for_couple': 'Message for the Couple'
         }
