@@ -36,3 +36,32 @@ rsvp_emails.log
 .mypy_cache/
 .coverage
 htmlcov/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Python build / packaging ---
+build/
+dist/
+*.egg-info/
+.eggs/
+.python-version
+
+# --- Django collected static & user uploads (generated at runtime) ---
+/staticfiles/
+/media/
+
+# --- Coverage / test artifacts ---
+.coverage.*
+coverage.xml
+
+# --- Node / JS tooling caches ---
+.parcel-cache/
+.eslintcache
+
+# --- SQLite journals (temp files created by SQLite) ---
+*.sqlite3-journal
+*.sqlite-journal
