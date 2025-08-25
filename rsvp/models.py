@@ -6,8 +6,8 @@ class Guest(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(blank=False)
-    dietary_restrictions = models.TextField(blank=True)
-    message_for_couple = models.TextField(blank=True)
+    dietary_restrictions = models.TextField(blank=True, null=True)
+    message_for_couple = models.TextField(blank=True, null=True)
     attending = models.BooleanField(null=True, blank=True)
 
     def __str__(self):

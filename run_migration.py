@@ -23,6 +23,10 @@ def run_migration():
         print("📋 Creating PostgreSQL tables...")
         execute_from_command_line(['manage.py', 'migrate', '--run-syncdb'])
         
+        # Step 1.5: Run additional migrations for field updates
+        print("🔧 Applying field constraint fixes...")
+        execute_from_command_line(['manage.py', 'migrate', 'rsvp'])
+        
         # Step 2: Load data
         print("📥 Loading wedding data backup...")
         execute_from_command_line(['manage.py', 'loaddata', 'wedding_data_backup.json'])
