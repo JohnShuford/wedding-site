@@ -31,7 +31,11 @@ def run_migration():
         print("📥 Loading wedding data backup...")
         execute_from_command_line(['manage.py', 'loaddata', 'wedding_data_backup.json'])
         
-        # Step 3: Verify
+        # Step 3: Fix family groupings and add new guests
+        print("👨‍👩‍👧‍👦 Fixing family groupings and adding new guests...")
+        execute_from_command_line(['manage.py', 'fix_family_groupings'])
+        
+        # Step 4: Verify
         print("🔍 Verifying migration...")
         from rsvp.models import Guest
         from django.contrib.auth.models import User
@@ -40,7 +44,7 @@ def run_migration():
         user_count = User.objects.count()
         
         print(f"✅ Migration completed successfully!")
-        print(f"   - Guests migrated: {guest_count}")
+        print(f"   - Total guests: {guest_count}")
         print(f"   - Admin users: {user_count}")
         
         # Create a marker file to prevent re-running
