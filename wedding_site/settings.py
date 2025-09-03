@@ -28,9 +28,19 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-3m%_g=c$x2r8iwnavi_ud
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,www.foreverandalways.love', cast=lambda v: [s.strip() for s in v.split(',')])
+# Get allowed hosts from environment or use defaults
+allowed_hosts_str = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,www.foreverandalways.love')
+ALLOWED_HOSTS = [s.strip() for s in allowed_hosts_str.split(',')]
 
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='https://www.foreverandalways.love', cast=lambda v: [s.strip() for s in v.split(',') if s.strip()])
+# Ensure both www and non-www versions are allowed
+if 'www.foreverandalways.love' not in ALLOWED_HOSTS and 'foreverandalways.love' in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append('www.foreverandalways.love')
+elif 'foreverandalways.love' not in ALLOWED_HOSTS and 'www.foreverandalways.love' in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append('foreverandalways.love')
+
+# Get CSRF trusted origins from environment or use defaults
+csrf_origins_str = config('CSRF_TRUSTED_ORIGINS', default='https://www.foreverandalways.love,https://foreverandalways.love')
+CSRF_TRUSTED_ORIGINS = [s.strip() for s in csrf_origins_str.split(',') if s.strip()]
 
 
 # Application definition
