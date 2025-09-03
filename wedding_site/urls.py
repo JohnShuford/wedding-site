@@ -18,12 +18,18 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.shortcuts import redirect
+
+# Redirect root URL to RSVP
+def redirect_to_rsvp(request):
+    return redirect('/rsvp/')
 
 urlpatterns = [
-    path('', include('wedding.urls')),
+    path('', redirect_to_rsvp, name='home_redirect'),
     path('admin/', admin.site.urls),
-    # path('api/', include('wedding.urls')),
     path('rsvp/', include('rsvp.urls')),
+    # Keep wedding pages accessible under /wedding/ path
+    path('wedding/', include('wedding.urls')),
 ]
 
 # Serve media files in development
