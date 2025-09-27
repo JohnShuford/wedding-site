@@ -1,0 +1,25 @@
+{% extends "rsvp/base.html" %}
+
+{% block rsvp_content %}
+<h2>Which one is you?</h2>
+<p>We found multiple guests with that name. Please select which one is you:</p>
+
+<div class="guest-selection">
+{% for guest in matches %}
+  <div class="guest-option">
+    <a href="{% url 'confirm_guest' guest.id %}" class="guest-link">
+      <div class="guest-info">
+        <span class="guest-name">{{ guest.first_name }} {{ guest.last_name }}</span>
+        {% if guest.email %}
+          <span class="guest-email">{{ guest.email }}</span>
+        {% endif %}
+      </div>
+    </a>
+  </div>
+{% endfor %}
+</div>
+
+<div class="button-container">
+  <a href="{% url 'rsvp' %}" class="btn-secondary">Back to Search</a>
+</div>
+{% endblock %}
