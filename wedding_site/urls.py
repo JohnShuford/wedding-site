@@ -22,12 +22,12 @@ from django.shortcuts import redirect
 
 # Redirect root URL to RSVP
 def redirect_to_rsvp(request):
-    return redirect('/rsvp/')
+     return redirect('/wedding/')
 
 urlpatterns = [
     path('', redirect_to_rsvp, name='home_redirect'),
     path('admin/', admin.site.urls),
-    path('rsvp/', include('rsvp.urls')),
+    # path('rsvp/', include('rsvp.urls')),
     # Keep wedding pages accessible under /wedding/ path
     path('wedding/', include('wedding.urls')),
 ]
