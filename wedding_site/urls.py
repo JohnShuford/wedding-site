@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import redirect
 
-# Redirect root URL to RSVP
+# Redirect root URL to Home
 def redirect_to_rsvp(request):
      return redirect('/wedding/')
 
