@@ -1,156 +1,93 @@
-# Wedding Site Cleanup - TODO List
+# Wedding Site - TODO List
 
-**Last Updated**: 2026-01-01
-**Goal**: Remove RSVP app and create clean wedding information site
+**Last Updated**: 2026-01-04
+**Current Goal**: Content & functionality completion before deployment
 
 ---
 
-## 🔴 High Priority - Active Work
+## 🔴 High Priority - Content & Functionality
 
-- [x] **Fix JavaScript API URL** - `wedding/static/js/ourstory-modal.js:7`
-  - Change: `fetch('/story-entries/${storyId}/')`
-  - To: `fetch('/wedding/story-entries/${storyId}/')`
-  - **Impact**: Photo modals on "Our Story" page will 404 without this
+### Home Page
+- [ ] **Replace video with correct wedding video**
+  - Current video needs to be swapped out
+  - Location: `wedding/templates/wedding/home.html` or `wedding/static/videos/`
 
+### Our Story Page
 - [ ] **Add StoryEntry content via Django admin**
   - Database has 0 story entries currently
-  - Need to add photos/content before modals can be tested
+  - Need to add photos/content/dates/descriptions for each story
   - Access: http://127.0.0.1:8000/admin/
+  - Required for modals to work properly
 
-- [ ] **Convert "Our Story" page to TailwindCSS grid**
-  - Currently using Bootstrap classes (row, col-sm-3) - NOT WORKING
-  - Need to convert to Tailwind grid layout
-  - Make images responsive and arranged in proper grid
-  - See options: 4-column grid OR masonry layout
+- [ ] **Fix modal scroll functionality**
+  - Modal should scroll properly when content exceeds viewport
+  - Check: `wedding/templates/wedding/our_story.html` modal styles
+  - May need to add overflow scrolling to modal container
+
+### Itinerary Page
+- [ ] **Confirm/finalize layout**
+  - Review current itinerary page design
+  - Verify timeline, schedule, venue info displays correctly
+  - Make any necessary layout adjustments
+
+### Gallery Page
+- [ ] **Add engagement photos**
+  - Upload engagement photos to media folder
+  - Add to gallery template or via admin
+
+- [ ] **Add Telluride photos**
+  - Upload Telluride photos to media folder
+  - Add to gallery template or via admin
+
+### New Pages
+- [ ] **Create Honeymoon Fund page**
+  - Add content/copy for honeymoon fund information
+  - Include payment/contribution links if applicable
+  - Ensure page matches site design
+
+- [ ] **Create FAQ page**
+  - Write FAQ content (accommodations, dress code, etc.)
+  - Design Q&A layout with site styling
+  - Ensure mobile-friendly accordion or list format
 
 ---
 
-## 🟡 Medium Priority - URL Rewiring
+## ✅ Completed - RSVP Cleanup (Session 2026-01-04)
 
-### Completed ✅
-
-- [x] Updated root redirect from `/rsvp/` to `/wedding/`
-- [x] Commented out RSVP URL include in `wedding_site/urls.py`
-- [x] Fixed desktop navigation links to include `/wedding/` prefix
-- [x] Fixed mobile navigation links to include `/wedding/` prefix
-- [x] Removed/commented RSVP links from navigation
-
-### Still To Do
-
-- [ ] **Clean up outdated comment** in `wedding_site/urls.py:23`
-
-  - Change comment from "Redirect root URL to RSVP"
-  - To: "Redirect root URL to wedding home"
-  - Optionally rename function from `redirect_to_rsvp` to `redirect_to_wedding`
-
-- [ ] **Test all navigation links**
-  - [ ] Desktop: Our Story, Itinerary, Gallery, Honeymoon Fund, FAQ
-  - [ ] Mobile: All links (resize browser or test on phone)
-  - [ ] Verify no 404 errors
+- [x] **Removed 'rsvp' from INSTALLED_APPS**
+- [x] **Removed 'widget_tweaks' from INSTALLED_APPS**
+- [x] **Removed 'rsvp/static' from STATICFILES_DIRS**
+- [x] **Removed RSVP templates from tailwind.config.js**
+- [x] **Fixed outdated comment in wedding_site/urls.py**
+- [x] **Converted "Our Story" page to TailwindCSS grid**
+  - Responsive grid: 1→2→3→4 columns
+  - Images flow left-to-right across rows
+- [x] **Fixed JavaScript API URL** - `wedding/static/js/ourstory-modal.js:7`
+- [x] **All local testing passed**
+  - All pages load without errors
+  - Navigation working (desktop + mobile)
+  - Browser console clean
+  - Responsive design verified
 
 ---
 
-## 🟢 Low Priority - Code Cleanup & Optimization
+## 🟡 Medium Priority - Optional Cleanup
 
-### ⚠️ RSVP Files Status: KEEPING THEM (Not Deleting)
-**Decision:** Keep RSVP files in codebase but disable from active use
-
-### Django Settings Cleanup
-
-- [ ] **Remove 'rsvp' from INSTALLED_APPS** in `wedding_site/settings.py` (Line 58)
-  ```python
-  INSTALLED_APPS = [
-      # ... other apps ...
-      'wedding',
-      'rest_framework',
-      # 'rsvp'  ← Comment out or delete this line
-  ]
-  ```
-
-- [ ] **Remove 'widget_tweaks' from INSTALLED_APPS** in `wedding_site/settings.py` (Line 55)
-  - ✅ Confirmed: NOT used in wedding app
-  - Remove line: `"widget_tweaks",`
-
-- [ ] **Check if 'rsvp/static' is in STATICFILES_DIRS**
-  - If explicitly listed, remove it
-  - Likely not there (implicitly included)
-
-### TailwindCSS Config
-
-- [ ] **Remove RSVP templates from content paths** in `tailwind.config.js` (Line 5)
-  ```javascript
-  content: [
-    "./wedding/templates/**/*.html",
-    // "./rsvp/templates/**/*.html",  ← Remove this line
-    "./wedding/static/js/**/*.js",
-  ],
-  ```
-
-- [ ] **Rebuild CSS after config change**
-  ```bash
-  npm run build-css
-  ```
-  - Watcher will auto-rebuild if running
-  - Or run manually with above command
-
-### Procfile & Deployment
-
-- [ ] **Update Procfile** - Remove reference to `run_migration.py`
-  - Change: `web: python run_migration.py && gunicorn wedding_site.wsgi:application`
-  - To: `web: python manage.py migrate && gunicorn wedding_site.wsgi:application`
-
-### Dependency Cleanup (Optional)
-
+### Dependency Cleanup
 - [ ] **Remove django-widget-tweaks from requirements.txt**
-  - ✅ Confirmed: NOT used in wedding app
   - Optional: Can remove to reduce dependencies
   ```bash
   pip uninstall django-widget-tweaks
   pip freeze > requirements.txt
   ```
 
-### Database Cleanup (Optional - If Removing RSVP from Settings)
-
-- [ ] **After removing 'rsvp' from INSTALLED_APPS, Django may prompt to drop Guest table**
+### Database Cleanup
+- [ ] **Drop Guest table (optional)**
   ```bash
   python manage.py makemigrations
-  # May detect rsvp app removal
+  # May detect rsvp app removal and prompt to drop table
   ```
-  - You can choose to drop the table or leave it (harmless if unused)
-  - Guest table will just sit there unused if you don't drop it
-
----
-
-## 🧪 Testing Checklist
-
-### Local Testing (Before Deploy)
-
-- [ ] **All pages load without errors**
-
-  - [ ] Home: http://127.0.0.1:8000 or http://127.0.0.1:8000/wedding/
-  - [ ] Our Story: http://127.0.0.1:8000/wedding/our-story/
-  - [ ] Itinerary: http://127.0.0.1:8000/wedding/itinerary/
-  - [ ] Gallery: http://127.0.0.1:8000/wedding/gallery/
-  - [ ] Honeymoon Fund: http://127.0.0.1:8000/wedding/honeymoon-fund/
-  - [ ] FAQ: http://127.0.0.1:8000/wedding/faq/
-  - [ ] Admin: http://127.0.0.1:8000/admin/
-
-- [ ] **Static files load correctly**
-
-  - [ ] CSS styles apply
-  - [ ] Images display
-  - [ ] JavaScript works (mobile menu, modals)
-
-- [ ] **Check browser console**
-
-  - [ ] No 404 errors
-  - [ ] No JavaScript errors
-  - [ ] No missing static files
-
-- [ ] **Mobile responsiveness**
-  - [ ] Resize browser to mobile width
-  - [ ] Test mobile navigation menu
-  - [ ] Verify all links work
+  - Guest table is harmless if left unused
 
 ### Production Testing (After Deploy)
 
@@ -279,8 +216,9 @@ _Add any ideas for the site here_
 - ✅ URL rewiring complete
 - ✅ JavaScript API fix complete
 - ✅ Navigation links fixed (desktop + mobile)
-- 🔄 Settings/config cleanup in progress
-- 🔄 "Our Story" grid layout redesign in progress
-- ⏳ RSVP settings removal pending (keeping files)
-- ⏳ Final testing pending
-- ⏳ Deployment pending
+- ✅ Settings/config cleanup complete
+- ✅ "Our Story" grid layout complete (responsive TailwindCSS grid)
+- ✅ RSVP removed from settings (files kept in codebase)
+- ✅ Local testing complete
+- 🔄 Content & functionality work in progress
+- ⏳ Deployment pending (after content complete)
