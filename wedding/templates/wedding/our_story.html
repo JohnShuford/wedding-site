@@ -1,12 +1,15 @@
 {% extends "wedding/base.html" %} {% block content %} {% load static %}
 <div class="bg-our-story bg-cover bg-center bg-no-repeat p-5">
-  <h1 class="text-wedding-peach text-center text-6xl">Our Story</h1>
+  <h1 class="text-wedding-peach text-center text-7xl mb-11 italic">
+    Our Story
+  </h1>
 
   <div class="max-w-full mx-auto px-8">
+    {% comment %} Future: Dynamic story entries from database
     <div
       class="flex flex-wrap justify-center items-center gap-4 mb-8 opacity-0 translate-y-10 transition-all duration-600 ease-out story-row"
     >
-      {% comment %} {% for entry in story_entries %}
+      {% for entry in story_entries %}
       <div class="flex-none w-80">
         <div class="story-thumbnail cursor-pointer" data-id="{{ entry.id }}">
           <img
@@ -16,130 +19,109 @@
           />
         </div>
       </div>
-      {% endfor %} {% endcomment %}
+      {% endfor %}
     </div>
-    <div class="row">
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/blueMoon.png' %}"
-          alt="blueMoon"
-          height="350"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/RMNP.png' %}"
-          alt="Rocky Mountain National Park"
-          height="250"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/coSprings.png' %}"
-          alt="The Springs"
-          height="350"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/leafPeeping.png' %}"
-          alt="Leaf Peeping"
-          height="250"
-        />
-      </div>
-    </div>
+    {% endcomment %}
 
-    <div class="row">
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/broncos.png' %}"
-          alt="Season Ticket Holders for the Broncos!"
-          height="300"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/oneYear.png' %}"
-          alt="One Year Anniversary"
-          height="350"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/14er.png' %}"
-          alt="Our first 14er!"
-          height="250"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/mexico.png' %}"
-          alt="Mecico!"
-          height="350"
-        />
-      </div>
-    </div>
+    <!-- Responsive Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <img
+        src="{% static '/images/ourStory/blueMoon.png' %}"
+        alt="Blue Moon"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
 
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="stacked-images">
-          <img
-            src="{% static '/images/ourStory/skiing.png' %}"
-            alt="Skiing"
-            height="300"
-          />
-          <img
-            src="{% static '/images/ourStory/redRocks.png' %}"
-            alt="Red Rocks"
-            height="200"
-          />
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/twoYear.png' %}"
-          alt="Second Anniversary"
-          height="500"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/newZealand.png' %}"
-          alt="New Zealand!"
-          height="350"
-        />
-      </div>
-      <div class="col-sm-3">
-        <img
-          src="{% static '/images/ourStory/threeYear.png' %}"
-          alt="Third Anniversary"
-          height="450"
-        />
-      </div>
-    </div>
+      <img
+        src="{% static '/images/ourStory/RMNP.png' %}"
+        alt="Rocky Mountain National Park"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
 
-    <div class="row">
-      <div class="col-sm-4">
+      <img
+        src="{% static '/images/ourStory/coSprings.png' %}"
+        alt="The Springs"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/leafPeeping.png' %}"
+        alt="Leaf Peeping"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/broncos.png' %}"
+        alt="Season Ticket Holders for the Broncos!"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/oneYear.png' %}"
+        alt="One Year Anniversary"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/14er.png' %}"
+        alt="Our first 14er!"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/mexico.png' %}"
+        alt="Mexico!"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <!-- Stacked images group -->
+      <div class="mb-4 break-inside-avoid space-y-4">
         <img
-          src="{% static '/images/ourStory/nye.png' %}"
-          alt="nye"
-          height="400"
+          src="{% static '/images/ourStory/skiing.png' %}"
+          alt="Skiing"
+          class="w-full rounded-lg"
+        />
+        <img
+          src="{% static '/images/ourStory/redRocks.png' %}"
+          alt="Red Rocks"
+          class="w-full rounded-lg"
         />
       </div>
-      <div class="col-sm-4">
-        <img
-          src="{% static '/images/ourStory/fourYear.png' %}"
-          alt="fourYear"
-          height="350"
-        />
-      </div>
-      <div class="col-sm-4">
-        <img
-          src="{% static '/images/ourStory/engagement.png' %}"
-          alt="engagement"
-          height="550"
-        />
-      </div>
+
+      <img
+        src="{% static '/images/ourStory/twoYear.png' %}"
+        alt="Second Anniversary"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/newZealand.png' %}"
+        alt="New Zealand!"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/threeYear.png' %}"
+        alt="Third Anniversary"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/nye.png' %}"
+        alt="New Year's Eve"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/fourYear.png' %}"
+        alt="Four Year Anniversary"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
+
+      <img
+        src="{% static '/images/ourStory/engagement.png' %}"
+        alt="Engagement"
+        class="w-full mb-4 rounded-lg break-inside-avoid"
+      />
     </div>
   </div>
 </div>
