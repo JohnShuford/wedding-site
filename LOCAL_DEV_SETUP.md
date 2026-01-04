@@ -4,6 +4,33 @@ Quick reference for running the wedding site locally with real-time changes.
 
 ---
 
+## ⚠️ IMPORTANT: Browser Caching (Read This First!)
+
+**CSS/HTML changes not showing up?**
+
+### YOU MUST DO A HARD REFRESH!
+
+- **Mac**: `Cmd + Shift + R`
+- **Windows**: `Ctrl + F5`
+
+**Regular refresh (Cmd+R) will use CACHED CSS and you won't see your changes!**
+
+This is the #1 reason changes "don't work" - it's just your browser showing you old cached files.
+
+**When to Hard Refresh:**
+- ✅ After ANY CSS/TailwindCSS change
+- ✅ After ANY HTML template change
+- ✅ When text sizing doesn't update (text-9xl → text-8xl)
+- ✅ When colors don't change
+- ✅ When layout doesn't shift
+- ✅ **Basically: ALWAYS hard refresh when testing visual changes!**
+
+**When Regular Refresh is OK:**
+- Python code changes (views, models) - Django auto-reloads the server
+- Content changes that don't affect styling
+
+---
+
 ## Starting Local Development (Every Time)
 
 You need **TWO terminal windows** running simultaneously:

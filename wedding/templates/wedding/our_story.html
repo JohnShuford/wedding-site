@@ -1,12 +1,12 @@
 {% extends "wedding/base.html" %} {% block content %} {% load static %}
 <div class="bg-our-story bg-cover bg-center bg-no-repeat p-5">
-  <h1 class="text-wedding-peach text-center text-10xl">Our Story</h1>
+  <h1 class="text-wedding-peach text-center text-6xl">Our Story</h1>
 
   <div class="max-w-full mx-auto px-8">
     <div
       class="flex flex-wrap justify-center items-center gap-4 mb-8 opacity-0 translate-y-10 transition-all duration-600 ease-out story-row"
     >
-      {% for entry in story_entries %}
+      {% comment %} {% for entry in story_entries %}
       <div class="flex-none w-80">
         <div class="story-thumbnail cursor-pointer" data-id="{{ entry.id }}">
           <img
@@ -16,7 +16,7 @@
           />
         </div>
       </div>
-      {% endfor %}
+      {% endfor %} {% endcomment %}
     </div>
     <div class="row">
       <div class="col-sm-3">
