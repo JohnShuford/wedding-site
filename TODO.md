@@ -1,6 +1,6 @@
 # Wedding Site - TODO List
 
-**Last Updated**: 2026-01-04
+**Last Updated**: 2026-01-06
 **Current Goal**: Content & functionality completion before deployment
 
 ---
@@ -13,16 +13,32 @@
   - Location: `wedding/templates/wedding/home.html` or `wedding/static/videos/`
 
 ### Our Story Page
-- [ ] **Add StoryEntry content via Django admin**
-  - Database has 0 story entries currently
-  - Need to add photos/content/dates/descriptions for each story
-  - Access: http://127.0.0.1:8000/admin/
-  - Required for modals to work properly
+- [x] **Add StoryEntry content via Django admin** ✅ (2026-01-06)
+  - All 16 story entries added with photos/content/dates/descriptions
+  - Admin user: delta / kellyandjohn@foreverandalways.com
+  - Template now uses dynamic DB-driven content
+  - Responsive grid with vertically centered images
+  - Modals working perfectly!
 
-- [ ] **Fix modal scroll functionality**
-  - Modal should scroll properly when content exceeds viewport
-  - Check: `wedding/templates/wedding/our_story.html` modal styles
-  - May need to add overflow scrolling to modal container
+- [ ] **Create backup of StoryEntry database**
+  - Dump all 16 story entries to a JSON fixture file
+  - Store in `wedding/fixtures/story_entries.json`
+  - Easily recoverable if database gets wiped
+  - Commands:
+    ```bash
+    # Create backup
+    python manage.py dumpdata wedding.StoryEntry --indent 2 > wedding/fixtures/story_entries.json
+
+    # Restore from backup
+    python manage.py loaddata wedding/fixtures/story_entries.json
+    ```
+
+- [ ] **Rework modal layout and formatting**
+  - Photo on the left (40% width)
+  - Title centered at the top of the modal
+  - Content on the right (60% width) - subtitle, date, description
+  - Move close 'x' button to top right corner of modal (currently misaligned)
+  - Location: `wedding/templates/wedding/our_story.html:126-161`
 
 ### Itinerary Page
 - [ ] **Confirm/finalize layout**
@@ -49,6 +65,37 @@
   - Write FAQ content (accommodations, dress code, etc.)
   - Design Q&A layout with site styling
   - Ensure mobile-friendly accordion or list format
+
+---
+
+## ✅ Completed - Our Story Database Migration (Session 2026-01-06)
+
+- [x] **Created Django admin superuser**
+  - Username: delta
+  - Email: kellyandjohn@foreverandalways.com
+  - Access: http://127.0.0.1:8000/admin/
+
+- [x] **Added all 16 StoryEntry records via admin**
+  - Blue Moon, RMNP, Colorado Springs, Leaf Peeping
+  - Broncos, One Year Anniversary, First 14er, Mexico
+  - Skiing, Red Rocks, Two Year Anniversary, New Zealand
+  - Three Year Anniversary, NYE, Four Year Anniversary, Engagement
+
+- [x] **Updated Our Story template to use database**
+  - Switched from static hardcoded images to dynamic DB-driven content
+  - Responsive grid: 1→2→3→4 columns with `items-center` for vertical alignment
+  - Images flow left-to-right, varying heights handled gracefully
+  - Static images commented out as backup
+  - `wedding/templates/wedding/our_story.html:8-19`
+
+- [x] **Added chronological ordering to view**
+  - Stories display in date order
+  - `wedding/views.py:13`
+
+- [x] **Modals fully functional**
+  - Click any image to open modal with full story details
+  - JavaScript working properly with API
+  - Smooth hover transitions on thumbnails
 
 ---
 
@@ -206,8 +253,8 @@ _Add any ideas for the site here_
 - **Local Dev**: Two terminals (Django + TailwindCSS watcher)
 - **RSVP Files**: KEEPING in codebase, just removing from settings/config
 - **Hard Refresh**: Always use Cmd+Shift+R after CSS/HTML changes! (See LOCAL_DEV_SETUP.md)
-- **Our Story Issue**: Currently using Bootstrap grid classes but no Bootstrap CSS loaded
-- **StoryEntry Database**: 0 entries currently - need to add via admin
+- **Admin Credentials**: delta / kandj / kellyandjohn@foreverandalways.com
+- **StoryEntry Database**: ✅ All 16 entries added and working!
 
 ---
 
@@ -220,5 +267,8 @@ _Add any ideas for the site here_
 - ✅ "Our Story" grid layout complete (responsive TailwindCSS grid)
 - ✅ RSVP removed from settings (files kept in codebase)
 - ✅ Local testing complete
-- 🔄 Content & functionality work in progress
-- ⏳ Deployment pending (after content complete)
+- ✅ Admin user created (delta)
+- ✅ All 16 StoryEntry records added via admin
+- ✅ Our Story page fully functional with working modals
+- 🔄 Content & functionality work in progress (FAQ, Honeymoon Fund, Gallery)
+- ⏳ Deployment pending (after remaining content complete)

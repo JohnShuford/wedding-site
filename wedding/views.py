@@ -10,7 +10,7 @@ def home(request):
     return render(request, 'wedding/home.html')
 
 def our_story(request):
-    entries = StoryEntry.objects.all()
+    entries = StoryEntry.objects.all().order_by('date')
     return render(request, 'wedding/our_story.html', {
         'story_entries': entries
     })

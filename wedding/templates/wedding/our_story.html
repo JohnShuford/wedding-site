@@ -5,24 +5,20 @@
   </h1>
 
   <div class="max-w-full mx-auto px-8">
-    {% comment %} Future: Dynamic story entries from database
-    <div
-      class="flex flex-wrap justify-center items-center gap-4 mb-8 opacity-0 translate-y-10 transition-all duration-600 ease-out story-row"
-    >
+    <!-- Dynamic story entries from database -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center">
       {% for entry in story_entries %}
-      <div class="flex-none w-80">
-        <div class="story-thumbnail cursor-pointer" data-id="{{ entry.id }}">
-          <img
-            src="{{ entry.image.url }}"
-            alt="{{ entry.title }}"
-            class="w-full h-auto max-h-96 object-cover rounded-lg"
-          />
-        </div>
+      <div class="story-thumbnail cursor-pointer hover:opacity-90 transition-opacity" data-id="{{ entry.id }}">
+        <img
+          src="{{ entry.image.url }}"
+          alt="{{ entry.title }}"
+          class="w-full h-auto object-cover rounded-lg"
+        />
       </div>
       {% endfor %}
     </div>
-    {% endcomment %}
 
+    {% comment %} Static Grid Layout (Backup)
     <!-- Responsive Grid Layout -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       <img
@@ -123,6 +119,7 @@
         class="w-full mb-4 rounded-lg break-inside-avoid"
       />
     </div>
+    {% endcomment %}
   </div>
 </div>
 
