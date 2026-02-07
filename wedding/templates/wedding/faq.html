@@ -1,93 +1,426 @@
 {% extends "wedding/base.html" %} {% block content %}
-<div class="faq">
-  <div class="container-xxl">
-    <h1>FAQ</h1>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseOne"
-            aria-expanded="true"
-            aria-controls="panelsStayOpen-collapseOne"
-          >
-            Accordion Item #1
-          </button>
-        </h2>
-        <div
-          id="panelsStayOpen-collapseOne"
-          class="accordion-collapse collapse show"
+<div class="min-h-screen bg-wedding-peach py-12 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-6xl font-luxurious text-wedding-dark-red text-center mb-12">
+      Frequently Asked Questions
+    </h1>
+
+    <div x-data="{ open: null }" class="space-y-4">
+      <!-- FAQ Item 1: Dress Code -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 1 ? null : 1"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <div class="accordion-body">
-            <strong>This is the first item’s accordion body.</strong> It is
-            shown by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It’s also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
-          </div>
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Dress Code</span
+          >
+          <svg
+            :class="open === 1 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 1"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - What should guests wear? Formal, semi-formal,
+            cocktail attire?]
+          </p>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseTwo"
-            aria-expanded="false"
-            aria-controls="panelsStayOpen-collapseTwo"
-          >
-            Accordion Item #2
-          </button>
-        </h2>
-        <div
-          id="panelsStayOpen-collapseTwo"
-          class="accordion-collapse collapse"
+
+      <!-- FAQ Item 2: Weather -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 2 ? null : 2"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <div class="accordion-body">
-            <strong>This is the second item’s accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It’s also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
-          </div>
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Weather</span
+          >
+          <svg
+            :class="open === 2 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 2"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - What's the weather typically like in July? Should
+            guests prepare for heat/rain? Indoor/outdoor considerations?]
+          </p>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseThree"
-            aria-expanded="false"
-            aria-controls="panelsStayOpen-collapseThree"
-          >
-            Accordion Item #3
-          </button>
-        </h2>
-        <div
-          id="panelsStayOpen-collapseThree"
-          class="accordion-collapse collapse"
+
+      <!-- FAQ Item 3: Ceremony -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 3 ? null : 3"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <div class="accordion-body">
-            <strong>This is the third item’s accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It’s also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
-          </div>
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Ceremony</span
+          >
+          <svg
+            :class="open === 3 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 3"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Where is the ceremony? How long will it be? Any
+            special instructions?]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4: What to Expect -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 4 ? null : 4"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >What to Expect</span
+          >
+          <svg
+            :class="open === 4 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 4"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Overview of the day's flow: cocktail hour, dinner,
+            dancing, etc. What time does each part start?]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5: Transportation -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 5 ? null : 5"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Transportation</span
+          >
+          <svg
+            :class="open === 5 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 5"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Parking info? Shuttle service? Ride share
+            recommendations?]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6: What Time to Arrive -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 6 ? null : 6"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >What Time to Arrive</span
+          >
+          <svg
+            :class="open === 6 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 6"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - When should guests plan to arrive? When do doors
+            open?]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7: Plus Ones -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 7 ? null : 7"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Plus Ones</span
+          >
+          <svg
+            :class="open === 7 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 7"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Policy on plus ones, how to know if invitation
+            includes a guest, who to contact with questions]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 8: Hotel and Accommodations -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 8 ? null : 8"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Hotel and Accommodations</span
+          >
+          <svg
+            :class="open === 8 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 8"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Recommended hotels, room blocks, nearby options,
+            booking info]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 9: Food & Drink -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 9 ? null : 9"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Food & Drink</span
+          >
+          <svg
+            :class="open === 9 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 9"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Meal details, dietary restrictions accommodation,
+            bar info (open bar, cash bar, etc.)]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 10: Things to Do in the Area -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 10 ? null : 10"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >Things to Do in the Area</span
+          >
+          <svg
+            :class="open === 10 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 10"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Local attractions, restaurants, activities for
+            out-of-town guests]
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 11: More Questions? Contact Us! -->
+      <div
+        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
+      >
+        <button
+          @click="open = open === 11 ? null : 11"
+          class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
+        >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
+            >More Questions? Contact Us!</span
+          >
+          <svg
+            :class="open === 11 ? 'rotate-180' : ''"
+            class="w-6 h-6 text-wedding-coral transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          x-show="open === 11"
+          x-collapse
+          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
+        >
+          <p class="text-lg text-wedding-dark">
+            [Answer content - Contact information, how to reach out with
+            additional questions]
+          </p>
         </div>
       </div>
     </div>

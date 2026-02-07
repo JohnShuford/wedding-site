@@ -6,9 +6,14 @@
 
   <div class="max-w-full mx-auto px-8">
     <!-- Dynamic story entries from database -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center"
+    >
       {% for entry in story_entries %}
-      <div class="story-thumbnail cursor-pointer hover:opacity-90 transition-opacity" data-id="{{ entry.id }}">
+      <div
+        class="story-thumbnail cursor-pointer hover:opacity-90 transition-opacity"
+        data-id="{{ entry.id }}"
+      >
         <img
           src="{{ entry.image.url }}"
           alt="{{ entry.title }}"
@@ -20,7 +25,9 @@
 
     {% comment %} Static Grid Layout (Backup)
     <!-- Responsive Grid Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+    >
       <img
         src="{% static '/images/ourStory/blueMoon.png' %}"
         alt="Blue Moon"
