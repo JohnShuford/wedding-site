@@ -22,7 +22,7 @@ module.exports = {
         "10xl": "10rem",
       },
       backgroundImage: {
-        "our-story": 'url("/static/images/backgrounds/ourStory.png")',
+        "our-story": 'url("/static/images/backgrounds/Background-Fuchsia.png")',
         itinerary: 'url("/static/images/backgrounds/itinerary.png")',
         gallery: 'url("/static/images/backgrounds/gallery.png")',
         "vine-repeat": 'url("/static/images/itinerary/vine.png")',

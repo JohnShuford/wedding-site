@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'wedding',
     'rest_framework'
 ]
@@ -194,5 +195,20 @@ LOGGING = {
             'level': config('DJANGO_LOG_LEVEL', default='INFO'),
             'propagate': False,
         },
+    },
+}
+
+# CKEditor Configuration
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ],
+        'height': 300,
+        'width': '100%',
     },
 }

@@ -1,0 +1,178 @@
+[
+{
+  "model": "wedding.storyentry",
+  "pk": 1,
+  "fields": {
+    "title": "Blue Moon Brewery",
+    "subtitle": "Our First Date!",
+    "date": "2020-02-07",
+    "description": "<p>Blue Moon Brewery is where it all began. Kelly and John met the way so many couples do these days, by matching on a dating app <em>(thank you Bumble)</em>. Back then, John had short hair and Kelly rocked a side part.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Over a flight of craft beers, they bonded over their shared time at Texas State, favorite <em>SNL</em> skits, and even talked about COVID, something that, at the time, felt distant and not at all like something that would change the world.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>What started as a great first date turned into a strong friendship, one that carried them through the uncertainty of 2020.</p>",
+    "image": "our_story_photos/blueMoon_618PL2O.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 2,
+  "fields": {
+    "title": "Rocky Mountain National Park",
+    "subtitle": "Kelly & John’s First Adventure",
+    "date": "2021-01-17",
+    "description": "After reconnecting on New Year’s, Kelly and John headed to Rocky Mountain National Park for their first major adventure together. Thanks to their Texan upbringing, neither of them was quite prepared for a cold Colorado hike through the snow. Kelly, however, came prepared with snacks, an essential survival skill.",
+    "image": "our_story_photos/RMNP_Z2JarT3.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 3,
+  "fields": {
+    "title": "Colorado Springs",
+    "subtitle": "Long Distance",
+    "date": "2021-04-21",
+    "description": "<p>After spending nearly every weekend together since New Year&rsquo;s, Kelly and John made it official when John asked Kelly to be his girlfriend. She said yes! (After the longest minute in John&rsquo;s life&hellip;)</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>In 2020, John transitioned away from personal training and completed a data boot camp to break into the tech industry. In the Spring of 2021, after only three months of officially dating Kelly, John received a call from the US Air Force Academy offering him a job he couldn&rsquo;t turn down. For Kelly, that call meant everything was about to change. What had once been a five-minute drive between them became an hour and a half. Kelly hates driving, hates highways, and still makes the trip almost every weekend.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>They filled those weekends in Colorado Springs with hikes at Garden of the Gods, the Manitou Incline, hot springs, camping trips, and plenty of fudge (iykyk). Long distance wasn&rsquo;t easy, but nightly calls, constant FaceTimes, and counting down to the next visit made the distance worth it.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>In the end, being apart only made it clearer that home was wherever they were together.</p>",
+    "image": "our_story_photos/coSprings_orr83S3.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 4,
+  "fields": {
+    "title": "Leaf Peeping",
+    "subtitle": "Our Annual Tradition",
+    "date": "2021-09-24",
+    "description": "<p>This was the first of many leaf peeping trips and the one that started it all. Fall in Colorado is pure magic, so Kelly &amp; John packed up the car at sunrise and set off to chase the changing colors. Their route took them through Golden, Leadville, and Glenwood Springs, soaking in every golden mile along the way.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>What began as a simple road trip quickly became an annual tradition and one they look forward to every fall.</p>",
+    "image": "our_story_photos/leafPeeping_XZsQvOn.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 5,
+  "fields": {
+    "title": "The Denver Broncos",
+    "subtitle": "IN-COM-PLETE",
+    "date": "2021-12-12",
+    "description": "<p>John was born and raised the Dallas Cowboys fan. His family remembers when the Dallas Cowboys had become a team, but the pain and frustration of living through the Tony Romo&nbsp;era (For anyone that&rsquo;s curious stats don&rsquo;t matter playoff wins do) and all of weird management decisions from Jerry the feelings toward the Cowboys had become strained. They still remain his NFC team, and deep, deep, deep down there still is a silver star in his heart, but moving to Denver and knowing that he was going to be in Denver, he decided to start cheering for the home team.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>After moving to Colorado, he found himself surrounded by Broncos fans at work and at the gym and quickly started watching games with friends, feeling right at home. Then, by pure luck, he entered a raffle at work and somehow won Broncos season tickets, a prize with a waitlist rumored to be nearly thirty years long.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>John dragged Kelly along to several games, cheering in the crisp mountain air, yelling &ldquo;incomplete&rdquo; with the crowd, and soaking in the electric atmosphere of game day. From that moment on, John was officially a Broncos fan and plans to stay that way.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>BO-LIEVE!!</p>",
+    "image": "our_story_photos/broncos_MrLQE3D.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 6,
+  "fields": {
+    "title": "1 Year Anniversary",
+    "subtitle": "Our First Anniversary",
+    "date": "2022-01-29",
+    "description": "<p>John was still living in Colorado Springs, and there was an Italian restaurant they had always wanted to try. Kelly loves Italian <strong>{food and men}</strong> and John is Sicilian, so it seemed like the perfect spot for their first anniversary. The restaurant was a more casual version of a sister location in Dallas, which is known for its strict dress code, but they still dressed up for the occasion.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Kelly enjoyed an unforgettable gnocchi, and John looked adorable in his little blazer and black boots to match hers. They celebrated their first year together with a delicious meal and each other, making it a night to remember.</p>",
+    "image": "our_story_photos/oneYear_ynKjYEC.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 7,
+  "fields": {
+    "title": "First 14er",
+    "subtitle": "Mt. Elbert",
+    "date": "2022-08-07",
+    "description": "<p><em>For those who don&rsquo;t know, a 14&rsquo;er is a mountain that rises at least 14,000 feet above sea level, a classic Colorado bucket list hike. </em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>After living in the state for a few years, Kelly and John decided it was time to officially earn their Colorado stripes by hiking their first 14&rsquo;er. They started before sunrise, guided only by the narrow glow of their headlamps, and climbed steadily through quiet forests and open alpine meadows. Eventually, they crossed above the tree line, where the landscape opened up and every step became more deliberate.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>After hours of hiking, heavy breathing, and a fair amount of suffering, they reached the summit of Mount Elbert, the tallest 14&rsquo;er in Colorado. They celebrated the moment, snapped a photo, watched someone casually mountain bike off the summit, and then turned their attention to the long descent ahead, which turned out to be the most challenging part of the day.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>They made it safely back down the mountain. John slowly shook off the altitude sickness, while Kelly confidently declared that this had been both her first and last 14&rsquo;er.</p>",
+    "image": "our_story_photos/14er_c8a34a6.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 8,
+  "fields": {
+    "title": "Mexico Trip",
+    "subtitle": "Our First International Trip: Mexico",
+    "date": "2022-11-02",
+    "description": "<p>Kelly and John went on their first international trip together to Mexico, with stops in Tulum and Oaxaca for D&iacute;a de los Muertos. In Tulum, they embraced a slower pace with beach days, mojitos, and a private yoga session in a cenote that felt peaceful and grounding.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>In Oaxaca City, the energy shifted. The streets came alive with parades, color, and celebration as locals honored their loved ones. Kelly and John enjoyed incredible food, amazing mezcal they may or may not remember consuming, joined in the festivities, got their faces painted, and learned how to make ofrendas and coronas de cempas&uacute;chil.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>It was a vibrant, unforgettable adventure they will always remember.</p>",
+    "image": "our_story_photos/mexico_CEysGdg.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 9,
+  "fields": {
+    "title": "First Ski Trip",
+    "subtitle": "Turns Out We’re Jerrys…",
+    "date": "2022-12-10",
+    "description": "<p>After three years of living in Colorado, Kelly decided to try one of the state&rsquo;s most famous pastimes and went skiing with John for the first time in a while. Although she grew up skiing, she had lost her touch, especially on the turns. They started with a lesson on the bunny slope, where she was absolutely crushing it, the turns came back, and the pizza began to make sense again.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Getting back on a chairlift and looking down the steepness of a blue run was a very different story. Kelly was not a fan. John, on the other hand, had the time of his life. These days, John continues to chase fresh snow in between all of his other responsibilities, while Kelly prefers to stay in the lodge with an ice-cold drink. Please, do not bring her a hot one.</p>",
+    "image": "our_story_photos/skiing_8efySlB.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 10,
+  "fields": {
+    "title": "Second Year Anniversary",
+    "subtitle": "Second Anniversary",
+    "date": "2023-01-29",
+    "description": "For their second anniversary, Kelly and John returned to one of their favorite adventures, hiking in the snow at Rocky Mountain National Park. This time, they were much more prepared with snowshoes, ski pants, and warmer jackets. They did the same hike as their first trip and had an amazing time, enjoying the snowy trails much more comfortably than before.",
+    "image": "our_story_photos/twoYear_adDaXQP.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 11,
+  "fields": {
+    "title": "New Zealand",
+    "subtitle": "Aotearoa",
+    "date": "2023-12-23",
+    "description": "<p>Kelly and John traveled to New Zealand, starting in Auckland with harbor views, amazing edamame, and a winery visit on Waiheke Island. On the South Island, they rented a camper van and explored breathtaking landscapes, kayaking with dolphins in Akaroa, wandering fields of lupine flowers, and hiking Mount Cook. Clouds tried to ruin the summit, but Kelly held out, and they were rewarded with a spectacular view.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Along the way, they stumbled upon a hidden garden with peacocks, had dinner atop a mountain in Queenstown with <em>Lord of the Rings</em>-worthy views, and laughed their way through every adventure. They ended the trip celebrating New Year&rsquo;s in Hamilton with one of Kelly&rsquo;s friends, exploring Hobbiton, and soaking up the sun at Mount Mangonui. It was an unforgettable adventure full of beauty, surprises, and plenty of aloe vera.</p>",
+    "image": "our_story_photos/newZealand_c634a2r.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 12,
+  "fields": {
+    "title": "3 rd Year Anniversary",
+    "subtitle": "3 Years!?",
+    "date": "2024-01-29",
+    "description": "For their third anniversary, Kelly and John celebrated like they did on their first, with an Italian dinner. True to form, they were seated at the worst table in the restaurant, something that always seems to happen no matter where they go. Luckily, the food was delicious, dessert was amazing, and it was the perfect way to escape the cold Colorado winter and celebrate each other. They are especially excited that future anniversaries will be in July, enjoying summer instead of the January chill.",
+    "image": "our_story_photos/threeYear_jvPlvCY.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 13,
+  "fields": {
+    "title": "Red Rocks",
+    "subtitle": "Best Venue on Earth!",
+    "date": "2024-10-24",
+    "description": "<p>Kelly and John <strong>LOVE</strong> live music, and Red Rocks is one of their favorite places to enjoy it.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Over the years, they&rsquo;ve figured out the best way to experience the iconic venue and have seen an incredible lineup together, from Sofi Tukker, Glass Animals, Arctic Monkeys, Anderson.Paak, Portugal.The Man, Lorde, and even Star Wars Film on the Rocks.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Bonding over music has become a special part of their relationship, and Red Rocks will always hold a favorite place in their story.</p>",
+    "image": "our_story_photos/redRocks_NTS36oO.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 14,
+  "fields": {
+    "title": "NYE",
+    "subtitle": null,
+    "date": "2025-01-01",
+    "description": "<p>New Year&rsquo;s has always been special for Kelly and John, it&rsquo;s where they reconnected and their love truly began.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em><strong>2020 &rarr; 2021:</strong></em> Kelly invited John to a small New Year&rsquo;s Eve get-together, a gesture that brought him back into her life. It marked the start of spending every weekend together until John asked Kelly to be his girlfriend.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em><strong>2021 &rarr; 2022:</strong></em> John was in Colorado Springs, so Kelly joined him for a quiet celebration. They ate twelve green grapes, burned slips of paper with things they wanted to leave behind, and shared their first New Year&rsquo;s Eve kiss as a couple.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em><strong>2022 &rarr; 2023:</strong></em> They celebrated with friends in their new Westminster apartment, laughing, joking, and enjoying the start of the year with new friendships.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em><strong>2023 &rarr; 2024:</strong></em> Halfway across the world in New Zealand, they celebrated Kiwi-style with Kelly&rsquo;s friend, sending New Year&rsquo;s messages to family a full day before everyone else.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em><strong>2024 &rarr; 2025: </strong></em>Back in Colorado, they had a cozy party at a friend&rsquo;s apartment, eating twelve grapes in a friendly competition, watching fireworks from the window, and savoring a quiet night together. This was their last New Year&rsquo;s as boyfriend and girlfriend, a perfect end to the year.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em><strong>2025 &rarr; 2026:</strong></em> Now fianc&eacute;s, Kelly and John enjoyed a well-deserved break after a tough fall semester&mdash;John back in school for his master&rsquo;s and Kelly working at CU Boulder. They spent the holiday cozy and content, looking forward to the year ahead.</p>",
+    "image": "our_story_photos/nye_Ga37MNY.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 15,
+  "fields": {
+    "title": "4 Year Anniversary",
+    "subtitle": "Finally the Good Seat!",
+    "date": "2025-01-25",
+    "description": "For their fourth anniversary, Kelly and John celebrated with dinner at Spuntino, an Indian-Italian fusion restaurant they had discovered a few weeks earlier. This time, they scored a great seat by the window and enjoyed amazing wine, food, and desserts. It was the last anniversary they celebrated as a couple before John proposed just a few months later.",
+    "image": "our_story_photos/fourYear_YitqFop.png"
+  }
+},
+{
+  "model": "wedding.storyentry",
+  "pk": 16,
+  "fields": {
+    "title": "Engagement in Moab",
+    "subtitle": "The Start of the Rest of Our Lives",
+    "date": "2025-03-25",
+    "description": "<p>Kelly and John had just saved up for a rooftop tent and were testing it out in Moab for spring break. After exploring the Needles District and Arches National Park, they ended up at a dispersed campsite overlooking the canyon at the edge of Canyonlands.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>As the clouds parted, John seized the moment. While setting up their tripod for a photo, he switched it to video, got down on one knee, and asked Kelly to marry him. She said yes, and John&mdash;feeling a bit of vertigo&mdash;ran off the rock with the ring as Kelly chased after him, laughing. That night they celebrated with a steak dinner under the stars as newly engaged.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The next day, they visited Canyonlands, where a curious onlooker asked if they were in love. They proudly said yes&mdash;they had just gotten engaged the night before! Later, they found a campsite with showers and service, calling friends and family to share the news. Kelly&rsquo;s ring is a beautiful custom piece with both of their birthstones, perfectly symbolizing their love.</p>",
+    "image": "our_story_photos/engagement_MVDju91.png"
+  }
+}
+]

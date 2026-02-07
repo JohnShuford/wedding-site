@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("modal-date").textContent = new Date(
         data.date
       ).toDateString();
-      document.getElementById("modal-description").textContent =
+      document.getElementById("modal-description").innerHTML =
         data.description;
 
       document.getElementById("modal").classList.remove("hidden");
