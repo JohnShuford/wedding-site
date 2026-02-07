@@ -65,3 +65,6 @@ coverage.xml
 # --- SQLite journals (temp files created by SQLite) ---
 *.sqlite3-journal
 *.sqlite-journal
+
+# --- Local planning and development documentation ---
+Planning/

@@ -12,6 +12,10 @@
       href="{% static 'images/header/favicon.png' %}"
       type="image/png"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Luxurious+Script&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
     <script
       defer
@@ -31,8 +35,8 @@
           </a>
 
           <!-- Desktop Navigation -->
-          <div class="hidden lg:flex">
-            <ul class="flex justify-evenly space-x-8">
+          <div class="hidden lg:flex flex-grow justify-end">
+            <ul class="flex justify-between space-x-16 w-full max-w-4xl">
               <li>
                 <a
                   href="/wedding/our-story/"
