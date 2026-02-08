@@ -9,4 +9,5 @@ pillow==11.2.1
 psycopg2-binary==2.9.11
 python-decouple==3.8
 sqlparse==0.5.3
+gunicorn==21.2.0
 whitenoise==6.11.0
