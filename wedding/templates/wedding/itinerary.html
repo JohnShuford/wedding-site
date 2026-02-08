@@ -1,135 +1,115 @@
 {% extends "wedding/base.html" %}
-{% block nav_bg %}bg-[#eed4e2]{% endblock %}
-{% block nav_text %}text-[#781830]{% endblock %}
-{% block nav_text_mobile %}text-[#781830]{% endblock %}
-{% block nav_text_mobile_btn %}text-[#781830]{% endblock %}
+{% block nav_bg %}bg-[#d46b8c]{% endblock %}
+{% block nav_text %}text-[#b22158]{% endblock %}
+{% block nav_text_mobile %}text-[#b22158]{% endblock %}
+{% block nav_text_mobile_btn %}text-[#b22158]{% endblock %}
 {% block content %}
 {% load static %}
 
-<!-- Main container with pink-red background (#CA7884) -->
-<div class="bg-[#CA7884] min-h-screen p-4 text-[#6C0436]">
+<div class="bg-itinerary bg-cover bg-center bg-no-repeat min-h-screen p-3 md:p-6 lg:p-8 text-[#b22158] font-lora italic">
   <!-- Row 1: Header Section -->
-  <div class="mb-12 mx-2 md:mx-6">
+  <div class="mb-8 md:mb-12 mx-2 md:mx-6">
     <div class="text-center">
-      <!-- Wedding Weekend Title -->
-      <h1 class="text-[#FFE4E4] text-5xl md:text-6xl font-bold mb-1">
+      <h1 class="text-[#FFE4E4] text-4xl md:text-5xl lg:text-6xl mb-1 mt-1 md:mt-8">
         Wedding Weekend
       </h1>
-      <!-- Date Range -->
-      <h2 class="text-[#6C0436] text-xl md:text-2xl mb-1 mt-4">
+      <h2 class="text-[#b22158] text-lg md:text-2xl lg:text-3xl mb-1 mt-2 md:mt-4">
         Thursday, July 7<sup>th</sup> 2026 - Sunday, July 12<sup>th</sup>
       </h2>
     </div>
   </div>
 
   <!-- Row 2: Elopement Section -->
-  <div class="mb-12 md:mb-32 mx-2 md:mx-6">
-    <!-- Mountain illustration centered -->
-    <div class="flex justify-center mb-1">
+  <div class="mb-10 md:mb-32 mx-2 md:mx-6">
+    <div class="flex justify-center mb-2">
       <img
-        src="{% static '/images/itinerary/wildFlowerMountain.png' %}"
-        class="w-24 h-auto md:w-32"
+        src="{% static '/images/itinerary/Mountain.png' %}"
+        class="w-28 md:w-40 lg:w-48 h-auto"
         alt="Mountain illustration"
       />
     </div>
 
     <div class="text-center">
-      <!-- Names with mountain backdrop -->
-      <h2 class="text-[#6C0436] text-3xl md:text-4xl font-bold mb-1">
+      <h2 class="text-[#b22158] text-2xl md:text-3xl lg:text-4xl font-bold mb-1">
         Kelly & John Elope
       </h2>
-      <!-- Elopement Date -->
-      <h3 class="text-[#6C0436] text-lg md:text-xl mb-1">
+      <h3 class="text-[#b22158] text-base md:text-xl lg:text-2xl mb-1">
         Thursday, July 7<sup>th</sup>
       </h3>
-      <!-- Location Details -->
-      <p class="text-[#6C0436] text-base md:text-lg mb-1">
+      <p class="text-[#b22158] text-sm md:text-lg lg:text-xl mb-1">
         Private ceremony with just the couple in Crested Butte, CO
       </p>
     </div>
   </div>
 
   <!-- Row 3: Welcome Dinner Section -->
-  <div class="mb-12 md:mb-32 mx-2 md:mx-6">
-    <div
-      class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6"
-    >
-      <!-- Hotel illustration -->
-      <div class="flex-shrink-0">
-        <img
-          src="{% static '/images/itinerary/hotel.png' %}"
-          class="w-24 h-auto md:w-24"
-          alt="Hotel building illustration"
-        />
-      </div>
+  <div class="mb-10 md:mb-32 mx-2 md:mx-6">
+    <div class="flex justify-center mb-2">
+      <img
+        src="{% static '/images/itinerary/Famille.png' %}"
+        class="w-28 md:w-40 lg:w-48 h-auto"
+        alt="Famille restaurant illustration"
+      />
+    </div>
 
-      <!-- Welcome Dinner Content -->
-      <div class="text-center md:text-left">
-        <h2 class="text-[#6C0436] text-2xl md:text-3xl font-bold mb-1">
-          Welcome Dinner
-        </h2>
-        <h3 class="text-[#6C0436] text-lg md:text-xl mb-1">
-          Thursday, July 9<sup>th</sup> 6:00pm
-        </h3>
-        <p class="text-[#6C0436] text-base md:text-lg mb-1">
-          Kelly & John return home to welcome everyone for the weekend at
-          Famille for dinner.
-        </p>
-        <p class="text-[#FFE4E4] text-sm md:text-base underline mb-1">
-          Click here to learn more about our hotel recommendation
-        </p>
-      </div>
+    <div class="text-center">
+      <h2 class="text-[#b22158] text-2xl md:text-3xl lg:text-4xl font-bold mb-1">
+        Welcome Dinner
+      </h2>
+      <h3 class="text-[#b22158] text-base md:text-xl lg:text-2xl mb-1">
+        Thursday, July 9<sup>th</sup> 6:00pm
+      </h3>
+      <p class="text-[#b22158] text-sm md:text-lg lg:text-xl mb-1">
+        Kelly & John return home to welcome everyone for the weekend at
+        Famille for dinner.
+      </p>
     </div>
   </div>
 
   <!-- Row 4: Wedding Day Section -->
-  <div class="mb-12 md:mb-32 mx-2 md:mx-6">
-    <!-- Wedding Day Title -->
-    <div class="text-center mb-2">
-      <h2 class="text-[#6C0436] text-3xl md:text-4xl font-bold mb-1">
+  <div class="mb-10 md:mb-32 mx-2 md:mx-6">
+    <div class="text-center mb-4 md:mb-6">
+      <h2 class="text-[#b22158] text-2xl md:text-3xl lg:text-4xl font-bold mb-1">
         Wedding Day
       </h2>
-      <h3 class="text-[#6C0436] text-lg md:text-xl mb-1">
+      <h3 class="text-[#b22158] text-base md:text-xl lg:text-2xl mb-1">
         Friday, July 10<sup>th</sup>
       </h3>
     </div>
 
-    <!-- Wedding Events Grid - 4 columns on desktop, stacked on mobile -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+    <!-- Wedding Events Grid - 2 columns on mobile, 4 on desktop -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
       <!-- Column 1: Ceremony -->
       <div class="text-center">
         <img
-          src="{% static '/images/itinerary/greenhouse.png' %}"
-          class="w-16 h-auto mx-auto mb-1"
-          alt="Greenhouse ceremony illustration"
+          src="{% static '/images/itinerary/Ceremony.png' %}"
+          class="w-16 md:w-24 lg:w-32 h-auto mx-auto mb-2"
+          alt="Ceremony illustration"
         />
-        <h3 class="text-[#6C0436] text-lg font-bold mb-1">Ceremony</h3>
-        <p class="text-[#6C0436] text-sm mb-1">
+        <h3 class="text-[#b22158] text-base md:text-lg lg:text-xl font-bold mb-1">Ceremony</h3>
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">
           11:00am | Denver Botanic Gardens | Woodland Mosaic & Solarium
         </p>
-        <p class="text-[#6C0436] text-xs mb-1">
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">
           Please arrive early to give yourself enough time to park, find the
           venue, and take your seat
-        </p>
-        <p class="text-[#FFE4E4] text-xs underline mb-1">
-          Click here for more information about the Woodland Botanic Gardens
         </p>
       </div>
 
       <!-- Column 2: Cocktail Hour & Photos -->
       <div class="text-center">
         <img
-          src="{% static '/images/itinerary/drinks.png' %}"
-          class="w-16 h-auto mx-auto mb-1"
-          alt="Cocktail glass illustration"
+          src="{% static '/images/itinerary/Camera.png' %}"
+          class="w-16 md:w-24 lg:w-32 h-auto mx-auto mb-2"
+          alt="Camera illustration"
         />
-        <h3 class="text-[#6C0436] text-lg font-bold mb-1">
+        <h3 class="text-[#b22158] text-base md:text-lg lg:text-xl font-bold mb-1">
           Cocktail Hour & Photos
         </h3>
-        <p class="text-[#6C0436] text-sm mb-1">
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">
           11:30am | Denver Botanic Gardens | Woodland Mosaic & Solarium
         </p>
-        <p class="text-[#6C0436] text-xs mb-1">
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">
           Following the ceremony, please enjoy the cocktail hour and family
           photos
         </p>
@@ -138,31 +118,31 @@
       <!-- Column 3: Brunch -->
       <div class="text-center">
         <img
-          src="{% static '/images/itinerary/dinner.png' %}"
-          class="w-16 h-auto mx-auto mb-1"
-          alt="Dining table illustration"
+          src="{% static '/images/itinerary/Lunch.png' %}"
+          class="w-16 md:w-24 lg:w-32 h-auto mx-auto mb-2"
+          alt="Lunch illustration"
         />
-        <h3 class="text-[#6C0436] text-lg font-bold mb-1">Brunch</h3>
-        <p class="text-[#6C0436] text-sm mb-1">
+        <h3 class="text-[#b22158] text-base md:text-lg lg:text-xl font-bold mb-1">Brunch</h3>
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">
           12:30pm | Denver Botanic Gardens | Woodland Mosaic & Solarium
         </p>
-        <p class="text-[#6C0436] text-xs mb-1">
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">
           Please enjoy the brunch buffet
         </p>
       </div>
 
-      <!-- Column 4: Dinner Celebration -->
+      <!-- Column 4: Dinner Reception -->
       <div class="text-center">
         <img
-          src="{% static '/images/itinerary/tongs.png' %}"
-          class="w-16 h-auto mx-auto mb-1"
-          alt="Dining utensils illustration"
+          src="{% static '/images/itinerary/Reception.png' %}"
+          class="w-16 md:w-24 lg:w-32 h-auto mx-auto mb-2"
+          alt="Dinner reception illustration"
         />
-        <h3 class="text-[#6C0436] text-lg font-bold mb-1">
+        <h3 class="text-[#b22158] text-base md:text-lg lg:text-xl font-bold mb-1">
           Dinner Celebration
         </h3>
-        <p class="text-[#6C0436] text-sm mb-1">5:00pm | Vince</p>
-        <p class="text-[#6C0436] text-xs mb-1">
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">5:00pm Venice</p>
+        <p class="text-[#b22158] text-xs md:text-sm lg:text-base mb-1">
           Please join us for dinner to celebrate
         </p>
       </div>
@@ -170,30 +150,28 @@
   </div>
 
   <!-- Row 5: Saturday Hang Out Section -->
-  <div class="mb-12 md:mb-32 mx-2 md:mx-6">
-    <!-- Saturday Title -->
-    <div class="text-center mb-2">
-      <h2 class="text-[#6C0436] text-3xl md:text-4xl font-bold mb-1">
+  <div class="mb-10 md:mb-32 mx-2 md:mx-6">
+    <div class="text-center mb-4 md:mb-6">
+      <h2 class="text-[#b22158] text-2xl md:text-3xl lg:text-4xl font-bold mb-1">
         Saturday Hang Out
       </h2>
-      <h3 class="text-[#6C0436] text-lg md:text-xl mb-1">
+      <h3 class="text-[#b22158] text-base md:text-xl lg:text-2xl mb-1">
         Saturday, July 11<sup>th</sup>
       </h3>
     </div>
 
-    <!-- Saturday Events Grid - 2 columns on desktop, stacked on mobile -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       <!-- Column 1: Morning Activity -->
       <div class="text-center">
         <img
-          src="{% static '/images/itinerary/drinks.png' %}"
-          class="w-20 h-auto mx-auto mb-1"
-          alt="Drinks illustration"
+          src="{% static '/images/itinerary/Cider.png' %}"
+          class="w-24 md:w-32 lg:w-40 h-auto mx-auto mb-2"
+          alt="Cider illustration"
         />
-        <h3 class="text-[#6C0436] text-xl font-bold mb-1">
+        <h3 class="text-[#b22158] text-base md:text-xl lg:text-2xl font-bold mb-1">
           11:00am-2:00pm | Acreage | Lafayette CO
         </h3>
-        <p class="text-[#6C0436] text-base mb-1">
+        <p class="text-[#b22158] text-sm md:text-base lg:text-lg mb-1">
           Feel free to stop by anytime during these hours for a drink and to
           enjoy the mountain views or do your own thing & meet us back for
           dinner
@@ -203,33 +181,30 @@
       <!-- Column 2: Evening Activity -->
       <div class="text-center">
         <img
-          src="{% static '/images/itinerary/tongs.png' %}"
-          class="w-20 h-auto mx-auto mb-1"
-          alt="BBQ utensils illustration"
+          src="{% static '/images/itinerary/BBQ.png' %}"
+          class="w-24 md:w-32 lg:w-40 h-auto mx-auto mb-2"
+          alt="BBQ illustration"
         />
-        <h3 class="text-[#6C0436] text-xl font-bold mb-1">
+        <h3 class="text-[#b22158] text-base md:text-xl lg:text-2xl font-bold mb-1">
           4:00pm-8:00pm | Aspire Apartments | Club Room
         </h3>
-        <p class="text-[#6C0436] text-base mb-1">BBQ by the pool</p>
+        <p class="text-[#b22158] text-sm md:text-base lg:text-lg mb-1">BBQ by the pool</p>
       </div>
     </div>
   </div>
 
   <!-- Row 6: Departure Section -->
-  <div class="mb-12 md:mb-32 mx-2 md:mx-6">
+  <div class="mb-10 md:mb-32 mx-2 md:mx-6">
     <div class="text-center">
-      <!-- Airplane illustration -->
       <img
-        src="{% static '/images/itinerary/airplane.png' %}"
-        class="w-16 h-auto mx-auto mb-1"
+        src="{% static '/images/itinerary/Airplane.png' %}"
+        class="w-20 md:w-28 lg:w-36 h-auto mx-auto mb-2"
         alt="Airplane departure illustration"
       />
-      <!-- Departure Title -->
-      <h2 class="text-[#6C0436] text-2xl md:text-3xl font-bold mb-1">
+      <h2 class="text-[#b22158] text-xl md:text-2xl lg:text-3xl font-bold mb-1">
         Sunday, July 12<sup>th</sup> 2026 – Departure
       </h2>
-      <!-- Thank you message -->
-      <p class="text-[#6C0436] text-lg md:text-xl mb-1">
+      <p class="text-[#b22158] text-base md:text-lg lg:text-xl mb-1">
         Thank you for joining us this weekend!
       </p>
     </div>

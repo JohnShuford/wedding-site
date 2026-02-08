@@ -6,7 +6,7 @@
 {% block content %}
 {% load static %}
 <div class="bg-our-story bg-cover bg-center bg-no-repeat p-5">
-  <h1 class="text-[#ffe4e4] text-center text-7xl mb-11 mt-8 italic">
+  <h1 class="text-[#ffe4e4] text-center text-4xl md:text-5xl lg:text-7xl mb-6 md:mb-11 mt-1 md:mt-8 italic">
     Our Story
   </h1>
 
@@ -148,6 +148,22 @@
   id="modal"
   class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-60 z-50 hidden p-4"
 >
+  <!-- Previous Button -->
+  <button
+    id="modal-prev"
+    class="absolute left-4 text-white text-5xl leading-none hover:text-wedding-peach transition-colors z-10 select-none"
+  >
+    &#8249;
+  </button>
+
+  <!-- Next Button -->
+  <button
+    id="modal-next"
+    class="absolute right-4 text-white text-5xl leading-none hover:text-wedding-peach transition-colors z-10 select-none"
+  >
+    &#8250;
+  </button>
+
   <div
     class="relative bg-[#b22158] rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] flex flex-col p-6 md:p-8"
   >
