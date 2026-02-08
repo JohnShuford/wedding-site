@@ -1,4 +1,6 @@
 asgiref==3.8.1
+cloudinary
+django-cloudinary-storage
 dj-database-url==3.0.1
 Django==5.2.1
 django-ckeditor==6.7.3
