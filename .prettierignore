@@ -1,0 +1,13 @@
+# Ignore Django template files - Prettier doesn't understand Django template syntax
+wedding/templates/**/*.html
+rsvp/templates/**/*.html
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Static files
+wedding/static/css/tailwind.css
