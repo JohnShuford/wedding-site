@@ -1,4 +1,10 @@
-{% extends "wedding/base.html" %} {% block content %} {% load static %}
+{% extends "wedding/base.html" %}
+{% block nav_bg %}bg-[#d46b8c]{% endblock %}
+{% block nav_text %}text-[#ffe4e4]{% endblock %}
+{% block nav_text_mobile %}text-[#ffe4e4]{% endblock %}
+{% block nav_text_mobile_btn %}text-[#ffe4e4]{% endblock %}
+{% block content %}
+{% load static %}
 <div class="relative w-full h-screen overflow-hidden">
   <video
     autoplay

@@ -1,17 +1,30 @@
-{% extends "wedding/base.html" %} {% block content %} {% load static %}
+{% extends "wedding/base.html" %}
+{% block nav_bg %}bg-[#d46b8c]{% endblock %}
+{% block nav_text %}text-[#ffe4e4]{% endblock %}
+{% block nav_text_mobile %}text-[#ffe4e4]{% endblock %}
+{% block nav_text_mobile_btn %}text-[#ffe4e4]{% endblock %}
+{% block content %}
+{% load static %}
 <div class="bg-our-story bg-cover bg-center bg-no-repeat p-5">
-  <h1 class="text-wedding-peach text-center text-7xl mb-11 italic">
+  <h1 class="text-[#ffe4e4] text-center text-7xl mb-11 mt-8 italic">
     Our Story
   </h1>
 
-  <div class="max-w-full mx-auto px-8">
+  <div class="max-w-full mx-auto px-8 md:px-16 lg:px-24 relative">
+    <!-- Arrow in left margin - only visible on desktop -->
+    <img
+      src="{% static 'images/ourStory/Arrow.png' %}"
+      alt=""
+      class="hidden lg:block absolute left-2 top-4 mt-8 w-28 h-auto"
+    />
+
     <!-- Dynamic story entries from database -->
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center"
     >
       {% for entry in story_entries %}
       <div
-        class="story-thumbnail cursor-pointer hover:opacity-90 transition-opacity"
+        class="story-thumbnail cursor-pointer hover:scale-105 hover:-translate-y-1 transition-transform duration-200"
         data-id="{{ entry.id }}"
       >
         <img
@@ -133,37 +146,50 @@
 <!-- Modal -->
 <div
   id="modal"
-  class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-60 z-50 hidden"
+  class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-60 z-50 hidden p-4"
 >
   <div
-    class="relative bg-wedding-dark-red p-8 rounded-2xl max-w-6xl w-11/12 shadow-2xl"
+    class="relative bg-[#b22158] rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] flex flex-col p-6 md:p-8"
   >
     <!-- Close button - top right corner -->
     <button
-      class="close-button absolute top-4 right-4 text-4xl text-wedding-peach hover:text-wedding-blush cursor-pointer leading-none"
-      >&times;</button
+      class="close-button absolute top-4 right-4 text-4xl text-wedding-peach hover:text-wedding-blush cursor-pointer leading-none z-10"
     >
+      &times;
+    </button>
 
     <!-- Title centered at top -->
     <h2
       id="modal-title"
-      class="text-4xl font-bold italic text-wedding-blush mb-6 text-center pr-8"
+      class="text-2xl md:text-4xl font-bold italic text-[#ffe4e4] mb-4 md:mb-6 text-center pr-8 flex-shrink-0"
     ></h2>
 
-    <!-- Content: Photo left (40%), Details right (60%) -->
-    <div class="flex items-start gap-6">
-      <div class="w-2/5 flex-shrink-0">
-        <img
-          id="modal-img"
-          src=""
-          alt=""
-          class="w-full h-auto rounded-lg object-cover"
-        />
-      </div>
-      <div class="w-3/5 text-left text-wedding-blush">
-        <h3 id="modal-subtitle" class="text-2xl font-semibold mb-3"></h3>
-        <p id="modal-date" class="text-lg mb-4 italic"></p>
-        <p id="modal-description" class="text-lg leading-relaxed"></p>
+    <!-- Scrollable Content Area -->
+    <div class="flex-1 overflow-y-auto pr-2">
+      <!-- Content: Photo left (40%), Details right (60%) on desktop, stacked on mobile -->
+      <div class="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+        <div class="w-full md:w-2/5 flex-shrink-0">
+          <img
+            id="modal-img"
+            src=""
+            alt=""
+            class="w-full h-auto rounded-lg object-cover"
+          />
+        </div>
+        <div class="w-full md:w-3/5 text-left text-[#ffe4e4]">
+          <h3
+            id="modal-subtitle"
+            class="text-xl md:text-2xl font-semibold mb-2 md:mb-3"
+          ></h3>
+          <p
+            id="modal-date"
+            class="text-base md:text-lg mb-3 md:mb-4 italic"
+          ></p>
+          <div
+            id="modal-description"
+            class="text-base md:text-lg leading-relaxed"
+          ></div>
+        </div>
       </div>
     </div>
   </div>
