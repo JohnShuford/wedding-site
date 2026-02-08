@@ -20,15 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import redirect
 
-# Redirect root URL to Home
-def redirect_to_rsvp(request):
-     return redirect('/wedding/')
+
+def redirect_to_home(request):
+    return redirect('/wedding/')
+
 
 urlpatterns = [
-    path('', redirect_to_rsvp, name='home_redirect'),
+    path('', redirect_to_home, name='home_redirect'),
     path('admin/', admin.site.urls),
-    # path('rsvp/', include('rsvp.urls')),
-    # Keep wedding pages accessible under /wedding/ path
     path('wedding/', include('wedding.urls')),
 ]
 
