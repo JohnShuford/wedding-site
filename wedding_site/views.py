@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def home(request):
     return render(request, 'home.html')
 
@@ -8,9 +9,6 @@ def our_story(request):
 
 def itinerary(request):
     return render(request, 'itinerary.html')
-
-def rsvp(request):
-    return render(request, 'rsvp.html')
 
 def gallery(request):
     return render(request, 'gallery.html')

@@ -20,9 +20,6 @@ def our_story(request):
 def itinerary(request):
     return render(request, 'wedding/itinerary.html')
 
-def rsvp(request):
-    return render(request, 'wedding/rsvp.html')
-
 def gallery(request):
     albums = [
         {'slug': 'denver-botanic-gardens', 'name': 'Denver Botanic Gardens'},
