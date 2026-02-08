@@ -1,6 +1,6 @@
 <!-- templates/base.html -->
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,11 +12,20 @@
       href="{% static 'images/header/favicon.png' %}"
       type="image/png"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Luxurious+Script&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
-  <body class="font-lora bg-wedding-peach text-wedding-dark">
-    <nav class="bg-gradient-to-r from-stone-50 to-stone-200 font-lora">
+  <body class="font-lora bg-transparent text-wedding-dark">
+    <nav
+      class="{% block nav_bg %}bg-gradient-to-r from-stone-50 to-stone-200{% endblock %} font-lora"
+    >
       <div class="w-full max-w-7xl mx-auto px-4">
         <div class="flex items-center justify-between">
           <a href="/" class="flex-shrink-0">
@@ -26,51 +35,153 @@
               class="h-32 rounded-full"
             />
           </a>
-          
+
           <!-- Desktop Navigation -->
-          <div class="hidden lg:flex">
-            <ul class="flex justify-evenly space-x-8">
-              <li><a href="/our-story/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Our Story</a></li>
-              <li><a href="/itinerary/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Itinerary</a></li>
-              <li><a href="/rsvp/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">RSVP</a></li>
-              <li><a href="/gallery/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Gallery</a></li>
-              <li><a href="/honeymoon-fund/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Honeymoon Fund</a></li>
-              <li><a href="/downtown_westminster/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">Downtown Westminster</a></li>
-              <li><a href="/faq/" class="text-wedding-dark-red text-2xl hover:underline transition-colors">FAQ</a></li>
+          <div
+            class="hidden lg:flex flex-grow justify-end {% block nav_text %}text-wedding-dark-red{% endblock %}"
+          >
+            <ul class="flex justify-between space-x-16 w-full max-w-4xl">
+              <li>
+                <a
+                  href="/wedding/our-story/"
+                  class="text-2xl hover:underline transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/wedding/itinerary/"
+                  class="text-2xl hover:underline transition-colors"
+                  >Itinerary</a
+                >
+              </li>
+              {% comment %}
+              <li>
+                <a
+                  href="/rsvp/"
+                  class="text-2xl hover:underline transition-colors"
+                  >RSVP</a
+                >
+              </li>
+              {% endcomment %}
+              <li>
+                <a
+                  href="/wedding/gallery/"
+                  class="text-2xl hover:underline transition-colors"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/wedding/honeymoon-fund/"
+                  class="text-2xl hover:underline transition-colors"
+                  >Honeymoon Fund</a
+                >
+              </li>
+              {% comment %}
+              <li>
+                <a
+                  href="/downtown_westminster/"
+                  class="text-2xl hover:underline transition-colors"
+                  >Downtown Westminster</a
+                >
+              </li>
+              {% endcomment %}
+              <li>
+                <a
+                  href="/wedding/faq/"
+                  class="text-2xl hover:underline transition-colors"
+                  >FAQ</a
+                >
+              </li>
             </ul>
           </div>
-          
+
           <!-- Mobile menu button -->
-          <button id="mobile-menu-button" class="lg:hidden p-2">
-            <span class="block w-6 h-0.5 bg-wedding-dark-red mb-1"></span>
-            <span class="block w-6 h-0.5 bg-wedding-dark-red mb-1"></span>
-            <span class="block w-6 h-0.5 bg-wedding-dark-red"></span>
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden p-2 {% block nav_text_mobile_btn %}text-wedding-dark-red{% endblock %}"
+          >
+            <span class="block w-6 h-0.5 bg-current mb-1"></span>
+            <span class="block w-6 h-0.5 bg-current mb-1"></span>
+            <span class="block w-6 h-0.5 bg-current"></span>
           </button>
         </div>
-        
+
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="lg:hidden hidden">
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden {% block nav_text_mobile %}text-wedding-dark-red{% endblock %}"
+        >
           <ul class="flex flex-col space-y-4 pb-4">
-            <li><a href="/our-story/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Our Story</a></li>
-            <li><a href="/itinerary/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Itinerary</a></li>
-            <li><a href="/rsvp/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">RSVP</a></li>
-            <li><a href="/gallery/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Gallery</a></li>
-            <li><a href="/honeymoon-fund/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Honeymoon Fund</a></li>
-            <li><a href="/downtown_westminster/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">Downtown Westminster</a></li>
-            <li><a href="/faq/" class="block text-wedding-dark-red text-xl hover:underline transition-colors">FAQ</a></li>
+            <li>
+              <a
+                href="/wedding/our-story/"
+                class="block text-xl hover:underline transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a
+                href="/wedding/itinerary/"
+                class="block text-xl hover:underline transition-colors"
+                >Itinerary</a
+              >
+            </li>
+            {% comment %}
+            <li>
+              <a
+                href="/rsvp/"
+                class="block text-xl hover:underline transition-colors"
+                >RSVP</a
+              >
+            </li>
+            {% endcomment %}
+            <li>
+              <a
+                href="/wedding/gallery/"
+                class="block text-xl hover:underline transition-colors"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="/wedding/honeymoon-fund/"
+                class="block text-xl hover:underline transition-colors"
+                >Honeymoon Fund</a
+              >
+            </li>
+            {% comment %}
+            <li>
+              <a
+                href="/downtown_westminster/"
+                class="block text-xl hover:underline transition-colors"
+                >Downtown Westminster</a
+              >
+            </li>
+            {% endcomment %}
+            <li>
+              <a
+                href="/wedding/faq/"
+                class="block text-xl hover:underline transition-colors"
+                >FAQ</a
+              >
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div>{% block content %}{% endblock %}</div>
-    
+
     <script>
       // Mobile menu toggle
-      document.getElementById('mobile-menu-button').addEventListener('click', function() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-      });
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
     </script>
   </body>
 </html>

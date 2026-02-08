@@ -1,14 +1,43 @@
-{% extends "wedding/base.html" %} {% block content %} {% load static %}
+{% extends "wedding/base.html" %}
+{% block nav_bg %}bg-[#d46b8c]{% endblock %}
+{% block nav_text %}text-[#ffe4e4]{% endblock %}
+{% block nav_text_mobile %}text-[#ffe4e4]{% endblock %}
+{% block nav_text_mobile_btn %}text-[#ffe4e4]{% endblock %}
+{% block content %}
+{% load static %}
 <div class="relative w-full h-screen overflow-hidden">
-  <video autoplay muted loop playsinline class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto z-10 transform -translate-x-1/2 -translate-y-1/2 object-cover">
-    <source src="{% static 'videos/DeltaandEmber02.mp4' %}" type="video/mp4" />
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto z-10 transform -translate-x-1/2 -translate-y-1/2 object-cover"
+  >
+    <source src="{% static 'videos/KellyandJohn.mp4' %}" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center overlay-text-shadow">
-    <h1 class="text-12xl m-0 font-luxurious peach-text-shadow text-wedding-coral">Kelly</h1>
-    <h2 class="text-10xl m-0 -my-15 font-luxurious text-wedding-light-coral">&amp;</h2>
-    <h1 class="text-12xl m-0 font-luxurious peach-text-shadow text-wedding-coral">John</h1>
-    <h3 class="text-6xl m-0 font-lora text-wedding-peach">07.08.2026</h3>
+  <div
+    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center"
+  >
+    <h1
+      class="text-10xl m-0 font-luxurious text-[#ca7884]"
+      style="text-shadow: 3px 3px 6px #781830"
+    >
+      Kelly
+    </h1>
+    <h2
+      class="text-8xl m-0 -my-20 font-luxurious text-[#ca7884]"
+      style="text-shadow: 3px 3px 6px #781830"
+    >
+      &amp;
+    </h2>
+    <h1
+      class="text-10xl m-0 font-luxurious text-[#ca7884]"
+      style="text-shadow: 3px 3px 6px #781830"
+    >
+      John
+    </h1>
+    <h3 class="text-2xl m-0 font-lora text-wedding-peach">07.10.2026</h3>
   </div>
 </div>
 {% endblock %}

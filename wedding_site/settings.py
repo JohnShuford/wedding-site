@@ -52,10 +52,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "widget_tweaks",
+    'ckeditor',
     'wedding',
-    'rest_framework',
-    'rsvp'
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -138,7 +137,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'wedding', 'static'),
-    os.path.join(BASE_DIR, 'rsvp', 'static'),
 ]
 
 # WhiteNoise configuration for static files
@@ -197,5 +195,20 @@ LOGGING = {
             'level': config('DJANGO_LOG_LEVEL', default='INFO'),
             'propagate': False,
         },
+    },
+}
+
+# CKEditor Configuration
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ],
+        'height': 300,
+        'width': '100%',
     },
 }
