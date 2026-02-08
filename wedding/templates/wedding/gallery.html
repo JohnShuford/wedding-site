@@ -1,16 +1,172 @@
 {% extends "wedding/base.html" %}
+{% load static %}
 {% block nav_bg %}bg-[#64763c]{% endblock %}
 {% block nav_text %}text-[#ffe4e4]{% endblock %}
 {% block nav_text_mobile %}text-[#ffe4e4]{% endblock %}
 {% block nav_text_mobile_btn %}text-[#ffe4e4]{% endblock %}
 {% block content %}
-<h1>
-  This is where we are going to put all of our wedding and elopment photos!
-</h1>
+<div class="min-h-screen bg-faq bg-cover bg-center bg-no-repeat py-12 px-4"
+     x-data="{
+       activeAlbum: '{{ albums.0.slug }}',
+       batchSize: 8,
+       visibleCount: {
+         {% for album in albums %}'{{ album.slug }}': 8{% if not forloop.last %},{% endif %}{% endfor %}
+       },
+       lightbox: false,
+       lightboxAlbum: '',
+       lightboxIndex: 0,
+       lightboxSrc: '',
+       albums: {
+         {% for album in albums %}
+         '{{ album.slug }}': [
+           {% for photo in album.photos %}
+           '{% static 'images/gallery/' %}{{ album.slug }}/{{ photo }}'{% if not forloop.last %},{% endif %}
+           {% endfor %}
+         ]{% if not forloop.last %},{% endif %}
+         {% endfor %}
+       },
+       loadMore(slug) {
+         const total = this.albums[slug].length;
+         if (this.visibleCount[slug] < total) {
+           this.visibleCount[slug] = Math.min(this.visibleCount[slug] + this.batchSize, total);
+         }
+       },
+       hasMore(slug) {
+         return this.visibleCount[slug] < this.albums[slug].length;
+       },
+       initObserver(el, slug) {
+         const observer = new IntersectionObserver((entries) => {
+           if (entries[0].isIntersecting) {
+             this.loadMore(slug);
+           }
+         }, { rootMargin: '200px' });
+         observer.observe(el);
+       },
+       openLightbox(albumSlug, index) {
+         this.lightboxAlbum = albumSlug;
+         this.lightboxIndex = index;
+         this.lightboxSrc = this.albums[albumSlug][index];
+         this.lightbox = true;
+         document.body.style.overflow = 'hidden';
+       },
+       closeLightbox() {
+         this.lightbox = false;
+         document.body.style.overflow = '';
+       },
+       prev() {
+         const photos = this.albums[this.lightboxAlbum];
+         this.lightboxIndex = (this.lightboxIndex - 1 + photos.length) % photos.length;
+         this.lightboxSrc = photos[this.lightboxIndex];
+       },
+       next() {
+         const photos = this.albums[this.lightboxAlbum];
+         this.lightboxIndex = (this.lightboxIndex + 1) % photos.length;
+         this.lightboxSrc = photos[this.lightboxIndex];
+       }
+     }"
+     @keydown.escape.window="closeLightbox()"
+     @keydown.arrow-left.window="if (lightbox) prev()"
+     @keydown.arrow-right.window="if (lightbox) next()">
 
-<div class="bg-red-700 text-white p-4 px-4 rounded-lg text-center">
-  Tailwind is working 🎉
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <h1 class="text-[#ffe4e4] text-center text-6xl mb-8 mt-8 italic">
+      Gallery
+    </h1>
+
+    <!-- Album Tabs -->
+    <div class="flex justify-center flex-wrap gap-3 mb-10">
+      {% for album in albums %}
+      {% if album.photos %}
+      <button
+        @click="activeAlbum = '{{ album.slug }}'"
+        :class="activeAlbum === '{{ album.slug }}'
+          ? 'bg-[#b22158] text-white'
+          : 'bg-white text-[#b22158] border-2 border-[#b22158] hover:bg-wedding-blush'"
+        class="px-6 py-2 rounded-full font-lora text-lg transition-colors duration-200"
+      >
+        {{ album.name }}
+      </button>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Photo Grids -->
+    {% for album in albums %}
+    {% if album.photos %}
+    <div x-show="activeAlbum === '{{ album.slug }}'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+      <div class="columns-2 md:columns-3 lg:columns-4 gap-4">
+        {% for photo in album.photos %}
+        <div class="break-inside-avoid mb-4" x-show="{{ forloop.counter0 }} < visibleCount['{{ album.slug }}']">
+          <img
+            x-bind:src="{{ forloop.counter0 }} < visibleCount['{{ album.slug }}'] ? '{% static 'images/gallery/' %}{{ album.slug }}/{{ photo }}' : ''"
+            alt=""
+            loading="lazy"
+            class="w-full rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
+            @click="openLightbox('{{ album.slug }}', {{ forloop.counter0 }})"
+          />
+        </div>
+        {% endfor %}
+      </div>
+      <!-- Scroll sentinel: triggers loading more photos -->
+      <div
+        x-show="hasMore('{{ album.slug }}')"
+        x-init="initObserver($el, '{{ album.slug }}')"
+        class="h-4"
+      ></div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div
+    x-show="lightbox"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+    @click.self="closeLightbox()"
+    style="display: none;"
+  >
+    <!-- Close Button -->
+    <button
+      @click="closeLightbox()"
+      class="absolute top-4 right-4 text-white text-4xl leading-none hover:text-wedding-peach transition-colors z-10"
+    >
+      &times;
+    </button>
+
+    <!-- Previous Button -->
+    <button
+      @click="prev()"
+      class="absolute left-4 text-white text-5xl leading-none hover:text-wedding-peach transition-colors z-10 select-none"
+    >
+      &#8249;
+    </button>
+
+    <!-- Image -->
+    <img
+      :src="lightboxSrc"
+      alt=""
+      class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+    />
+
+    <!-- Next Button -->
+    <button
+      @click="next()"
+      class="absolute right-4 text-white text-5xl leading-none hover:text-wedding-peach transition-colors z-10 select-none"
+    >
+      &#8250;
+    </button>
+
+    <!-- Counter -->
+    <div class="absolute bottom-4 text-white/70 text-sm font-lora">
+      <span x-text="lightboxIndex + 1"></span> / <span x-text="albums[lightboxAlbum]?.length || 0"></span>
+    </div>
+  </div>
 </div>
-<div class="bg-red-700 text-white p-4 rounded-lg">Tailwind is working 🎉</div>
-
 {% endblock %}

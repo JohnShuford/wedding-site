@@ -25,7 +25,7 @@ module.exports = {
         "our-story": 'url("/static/images/backgrounds/Background-Fuchsia.png")',
         faq: 'url("/static/images/backgrounds/Background-Pink.png")',
         itinerary: 'url("/static/images/backgrounds/itinerary.png")',
-        gallery: 'url("/static/images/backgrounds/gallery.png")',
+        gallery: 'url("/static/images/backgrounds/Background_Pink_Long.png")',
         "vine-repeat": 'url("/static/images/itinerary/vine.png")',
       },
       backgroundSize: {
