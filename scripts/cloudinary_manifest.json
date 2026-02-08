@@ -1,0 +1,1065 @@
+{
+  "images/backgrounds/Background-Fuchsia.png": {
+    "public_id": "wedding-site/backgrounds/Background-Fuchsia",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589260/wedding-site/backgrounds/Background-Fuchsia.jpg",
+    "format": "jpg",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 235929
+  },
+  "images/backgrounds/Background-LightPink.png": {
+    "public_id": "wedding-site/backgrounds/Background-LightPink",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589261/wedding-site/backgrounds/Background-LightPink.jpg",
+    "format": "jpg",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 179229
+  },
+  "images/backgrounds/Background-Pink.png": {
+    "public_id": "wedding-site/backgrounds/Background-Pink",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589261/wedding-site/backgrounds/Background-Pink.jpg",
+    "format": "jpg",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 172123
+  },
+  "images/backgrounds/Background_Pink_Long.png": {
+    "public_id": "wedding-site/backgrounds/Background_Pink_Long",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589262/wedding-site/backgrounds/Background_Pink_Long.jpg",
+    "format": "jpg",
+    "width": 868,
+    "height": 2000,
+    "bytes": 138849
+  },
+  "images/backgrounds/gallery.png": {
+    "public_id": "wedding-site/backgrounds/gallery",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589262/wedding-site/backgrounds/gallery.jpg",
+    "format": "jpg",
+    "width": 1366,
+    "height": 1035,
+    "bytes": 94581
+  },
+  "images/backgrounds/honeymoonFund.png": {
+    "public_id": "wedding-site/backgrounds/honeymoonFund",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589263/wedding-site/backgrounds/honeymoonFund.jpg",
+    "format": "jpg",
+    "width": 1366,
+    "height": 973,
+    "bytes": 151538
+  },
+  "images/backgrounds/itinerary.png": {
+    "public_id": "wedding-site/backgrounds/itinerary",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589264/wedding-site/backgrounds/itinerary.jpg",
+    "format": "jpg",
+    "width": 1366,
+    "height": 1302,
+    "bytes": 209280
+  },
+  "images/backgrounds/ourStory.png": {
+    "public_id": "wedding-site/backgrounds/ourStory",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589265/wedding-site/backgrounds/ourStory.jpg",
+    "format": "jpg",
+    "width": 1366,
+    "height": 1671,
+    "bytes": 259932
+  },
+  "images/itinerary/Airplane.png": {
+    "public_id": "wedding-site/itinerary/Airplane",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589266/wedding-site/itinerary/Airplane.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 82922
+  },
+  "images/itinerary/BBQ.png": {
+    "public_id": "wedding-site/itinerary/BBQ",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589267/wedding-site/itinerary/BBQ.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 203898
+  },
+  "images/itinerary/Camera.png": {
+    "public_id": "wedding-site/itinerary/Camera",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589268/wedding-site/itinerary/Camera.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 207277
+  },
+  "images/itinerary/Ceremony.png": {
+    "public_id": "wedding-site/itinerary/Ceremony",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589269/wedding-site/itinerary/Ceremony.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 352127
+  },
+  "images/itinerary/Cider.png": {
+    "public_id": "wedding-site/itinerary/Cider",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589269/wedding-site/itinerary/Cider.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 739616
+  },
+  "images/itinerary/Famille.png": {
+    "public_id": "wedding-site/itinerary/Famille",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589270/wedding-site/itinerary/Famille.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 409178
+  },
+  "images/itinerary/Lunch.png": {
+    "public_id": "wedding-site/itinerary/Lunch",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589272/wedding-site/itinerary/Lunch.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 292256
+  },
+  "images/itinerary/Mountain.png": {
+    "public_id": "wedding-site/itinerary/Mountain",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589272/wedding-site/itinerary/Mountain.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 128477
+  },
+  "images/itinerary/Reception.png": {
+    "public_id": "wedding-site/itinerary/Reception",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589273/wedding-site/itinerary/Reception.png",
+    "format": "png",
+    "width": 1200,
+    "height": 927,
+    "bytes": 206432
+  },
+  "images/ourStory/14er.png": {
+    "public_id": "wedding-site/our-story/14er",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589442/wedding-site/our-story/14er.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 4682405
+  },
+  "images/ourStory/Arrow.png": {
+    "public_id": "wedding-site/our-story/Arrow",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589443/wedding-site/our-story/Arrow.png",
+    "format": "png",
+    "width": 1545,
+    "height": 1999,
+    "bytes": 93714
+  },
+  "images/ourStory/RMNP.png": {
+    "public_id": "wedding-site/our-story/RMNP",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589444/wedding-site/our-story/RMNP.png",
+    "format": "png",
+    "width": 1600,
+    "height": 1236,
+    "bytes": 3105548
+  },
+  "images/ourStory/blueMoon.png": {
+    "public_id": "wedding-site/our-story/blueMoon",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589447/wedding-site/our-story/blueMoon.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 3377523
+  },
+  "images/ourStory/broncos.png": {
+    "public_id": "wedding-site/our-story/broncos",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589449/wedding-site/our-story/broncos.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 2244098
+  },
+  "images/ourStory/coSprings.png": {
+    "public_id": "wedding-site/our-story/coSprings",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589452/wedding-site/our-story/coSprings.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 4422799
+  },
+  "images/ourStory/engagement.png": {
+    "public_id": "wedding-site/our-story/engagement",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589454/wedding-site/our-story/engagement.png",
+    "format": "png",
+    "width": 1600,
+    "height": 1236,
+    "bytes": 3002605
+  },
+  "images/ourStory/fourYear.png": {
+    "public_id": "wedding-site/our-story/fourYear",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589456/wedding-site/our-story/fourYear.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 3834698
+  },
+  "images/ourStory/leafPeeping.png": {
+    "public_id": "wedding-site/our-story/leafPeeping",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589458/wedding-site/our-story/leafPeeping.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 1146679
+  },
+  "images/ourStory/mexico.png": {
+    "public_id": "wedding-site/our-story/mexico",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589460/wedding-site/our-story/mexico.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 3990668
+  },
+  "images/ourStory/newZealand.png": {
+    "public_id": "wedding-site/our-story/newZealand",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589463/wedding-site/our-story/newZealand.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 3936405
+  },
+  "images/ourStory/nye.png": {
+    "public_id": "wedding-site/our-story/nye",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589465/wedding-site/our-story/nye.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 2933629
+  },
+  "images/ourStory/oneYear.png": {
+    "public_id": "wedding-site/our-story/oneYear",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589467/wedding-site/our-story/oneYear.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 3836682
+  },
+  "images/ourStory/redRocks.png": {
+    "public_id": "wedding-site/our-story/redRocks",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589469/wedding-site/our-story/redRocks.png",
+    "format": "png",
+    "width": 1600,
+    "height": 1236,
+    "bytes": 2451226
+  },
+  "images/ourStory/skiing.png": {
+    "public_id": "wedding-site/our-story/skiing",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589470/wedding-site/our-story/skiing.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 3500422
+  },
+  "images/ourStory/threeYear.png": {
+    "public_id": "wedding-site/our-story/threeYear",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589473/wedding-site/our-story/threeYear.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 3785139
+  },
+  "images/ourStory/twoYear.png": {
+    "public_id": "wedding-site/our-story/twoYear",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589474/wedding-site/our-story/twoYear.png",
+    "format": "png",
+    "width": 1545,
+    "height": 2000,
+    "bytes": 2357891
+  },
+  "images/header/FandALogo.png": {
+    "public_id": "wedding-site/header/FandALogo",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589475/wedding-site/header/FandALogo.png",
+    "format": "png",
+    "width": 1545,
+    "height": 1999,
+    "bytes": 115737
+  },
+  "images/header/favicon.png": {
+    "public_id": "wedding-site/header/favicon",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589476/wedding-site/header/favicon.jpg",
+    "format": "jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 310581
+  },
+  "honeymoon_fund/Postcard.png": {
+    "public_id": "wedding-site/honeymoon-fund/Postcard",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589476/wedding-site/honeymoon-fund/Postcard.png",
+    "format": "png",
+    "width": 1600,
+    "height": 1236,
+    "bytes": 508050
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-102.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-102",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589804/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-102.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1333,
+    "bytes": 501121,
+    "original_filename": "Kelly&John-102.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-106.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-106",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589806/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-106.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 796136,
+    "original_filename": "Kelly&John-106.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-11.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-11",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589807/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-11.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 621958,
+    "original_filename": "Kelly&John-11.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-112.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-112",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589808/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-112.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1186181,
+    "original_filename": "Kelly&John-112.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-115.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-115",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589809/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-115.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1267847,
+    "original_filename": "Kelly&John-115.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-125.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-125",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589810/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-125.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 519940,
+    "original_filename": "Kelly&John-125.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-126.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-126",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589811/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-126.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1333,
+    "bytes": 779812,
+    "original_filename": "Kelly&John-126.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-13.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-13",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589814/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-13.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1620480,
+    "original_filename": "Kelly&John-13.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-143.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-143",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589815/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-143.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1222136,
+    "original_filename": "Kelly&John-143.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-146.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-146",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589816/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-146.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1086007,
+    "original_filename": "Kelly&John-146.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-150.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-150",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589818/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-150.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 728967,
+    "original_filename": "Kelly&John-150.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-152.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-152",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589819/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-152.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 945361,
+    "original_filename": "Kelly&John-152.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-154.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-154",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589820/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-154.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 1202865,
+    "original_filename": "Kelly&John-154.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-162.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-162",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589821/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-162.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 878638,
+    "original_filename": "Kelly&John-162.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-167.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-167",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589821/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-167.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1333,
+    "bytes": 252615,
+    "original_filename": "Kelly&John-167.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-169.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-169",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589822/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-169.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1136289,
+    "original_filename": "Kelly&John-169.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-17.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-17",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589823/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-17.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1197243,
+    "original_filename": "Kelly&John-17.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-174.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-174",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589824/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-174.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 641308,
+    "original_filename": "Kelly&John-174.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-179.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-179",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589825/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-179.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 921381,
+    "original_filename": "Kelly&John-179.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-182.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-182",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589826/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-182.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1333,
+    "bytes": 556637,
+    "original_filename": "Kelly&John-182.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-22.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-22",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589828/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-22.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1529101,
+    "original_filename": "Kelly&John-22.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-23.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-23",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589829/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-23.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1242554,
+    "original_filename": "Kelly&John-23.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-30.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-30",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589830/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-30.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1122101,
+    "original_filename": "Kelly&John-30.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-31.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-31",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589831/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-31.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1123713,
+    "original_filename": "Kelly&John-31.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-4.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-4",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589832/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-4.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1191725,
+    "original_filename": "Kelly&John-4.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-41.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-41",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589833/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-41.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 1042821,
+    "original_filename": "Kelly&John-41.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-44.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-44",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589834/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-44.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 782505,
+    "original_filename": "Kelly&John-44.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-47.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-47",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589835/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-47.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 1138025,
+    "original_filename": "Kelly&John-47.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-5.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-5",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589836/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-5.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 1555910,
+    "original_filename": "Kelly&John-5.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-55.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-55",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589839/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-55.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1565692,
+    "original_filename": "Kelly&John-55.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-59.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-59",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589840/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-59.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1250099,
+    "original_filename": "Kelly&John-59.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-62.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-62",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589842/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-62.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1247312,
+    "original_filename": "Kelly&John-62.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-63.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-63",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589843/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-63.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1451865,
+    "original_filename": "Kelly&John-63.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-67.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-67",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589845/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-67.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 1279247,
+    "original_filename": "Kelly&John-67.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-76.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-76",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589846/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-76.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1245226,
+    "original_filename": "Kelly&John-76.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-81.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-81",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589847/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-81.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1308475,
+    "original_filename": "Kelly&John-81.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-82.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-82",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589847/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-82.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1333,
+    "bytes": 530887,
+    "original_filename": "Kelly&John-82.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-85.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-85",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589848/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-85.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 880090,
+    "original_filename": "Kelly&John-85.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-87.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-87",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589849/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-87.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 687001,
+    "original_filename": "Kelly&John-87.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-89.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-89",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589850/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-89.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 775951,
+    "original_filename": "Kelly&John-89.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-94.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-94",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589851/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-94.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 1196946,
+    "original_filename": "Kelly&John-94.jpg"
+  },
+  "images/gallery/denver-botanic-gardens/Kelly&John-99.jpg": {
+    "public_id": "wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-99",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589852/wedding-site/gallery/denver-botanic-gardens/Kelly_and_John-99.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 2999,
+    "bytes": 986308,
+    "original_filename": "Kelly&John-99.jpg"
+  },
+  "images/gallery/telluride/K&J_1.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_1",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589852/wedding-site/gallery/telluride/K_and_J_1.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 723502,
+    "original_filename": "K&J_1.jpeg"
+  },
+  "images/gallery/telluride/K&J_10.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_10",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589853/wedding-site/gallery/telluride/K_and_J_10.jpg",
+    "format": "jpg",
+    "width": 1539,
+    "height": 2040,
+    "bytes": 565687,
+    "original_filename": "K&J_10.jpeg"
+  },
+  "images/gallery/telluride/K&J_11.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_11",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589854/wedding-site/gallery/telluride/K_and_J_11.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 608276,
+    "original_filename": "K&J_11.jpeg"
+  },
+  "images/gallery/telluride/K&J_12.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_12",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589855/wedding-site/gallery/telluride/K_and_J_12.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1396,
+    "bytes": 637236,
+    "original_filename": "K&J_12.jpeg"
+  },
+  "images/gallery/telluride/K&J_13.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_13",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589855/wedding-site/gallery/telluride/K_and_J_13.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 243716,
+    "original_filename": "K&J_13.jpeg"
+  },
+  "images/gallery/telluride/K&J_14.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_14",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589856/wedding-site/gallery/telluride/K_and_J_14.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 371288,
+    "original_filename": "K&J_14.jpeg"
+  },
+  "images/gallery/telluride/K&J_15.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_15",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589857/wedding-site/gallery/telluride/K_and_J_15.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 630864,
+    "original_filename": "K&J_15.jpeg"
+  },
+  "images/gallery/telluride/K&J_16.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_16",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589857/wedding-site/gallery/telluride/K_and_J_16.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 706317,
+    "original_filename": "K&J_16.jpeg"
+  },
+  "images/gallery/telluride/K&J_17.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_17",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589858/wedding-site/gallery/telluride/K_and_J_17.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 543264,
+    "original_filename": "K&J_17.jpeg"
+  },
+  "images/gallery/telluride/K&J_18.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_18",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589858/wedding-site/gallery/telluride/K_and_J_18.jpg",
+    "format": "jpg",
+    "width": 898,
+    "height": 875,
+    "bytes": 217197,
+    "original_filename": "K&J_18.jpeg"
+  },
+  "images/gallery/telluride/K&J_19.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_19",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589859/wedding-site/gallery/telluride/K_and_J_19.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 322868,
+    "original_filename": "K&J_19.jpeg"
+  },
+  "images/gallery/telluride/K&J_2.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_2",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589860/wedding-site/gallery/telluride/K_and_J_2.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 587537,
+    "original_filename": "K&J_2.jpeg"
+  },
+  "images/gallery/telluride/K&J_20.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_20",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589860/wedding-site/gallery/telluride/K_and_J_20.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 306333,
+    "original_filename": "K&J_20.jpeg"
+  },
+  "images/gallery/telluride/K&J_21.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_21",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589861/wedding-site/gallery/telluride/K_and_J_21.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 377788,
+    "original_filename": "K&J_21.jpeg"
+  },
+  "images/gallery/telluride/K&J_22.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_22",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589863/wedding-site/gallery/telluride/K_and_J_22.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 417779,
+    "original_filename": "K&J_22.jpeg"
+  },
+  "images/gallery/telluride/K&J_23.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_23",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589864/wedding-site/gallery/telluride/K_and_J_23.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 336319,
+    "original_filename": "K&J_23.jpeg"
+  },
+  "images/gallery/telluride/K&J_24.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_24",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589864/wedding-site/gallery/telluride/K_and_J_24.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 630960,
+    "original_filename": "K&J_24.jpeg"
+  },
+  "images/gallery/telluride/K&J_25.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_25",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589866/wedding-site/gallery/telluride/K_and_J_25.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 374835,
+    "original_filename": "K&J_25.jpeg"
+  },
+  "images/gallery/telluride/K&J_26.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_26",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589868/wedding-site/gallery/telluride/K_and_J_26.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 295455,
+    "original_filename": "K&J_26.jpeg"
+  },
+  "images/gallery/telluride/K&J_27.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_27",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589869/wedding-site/gallery/telluride/K_and_J_27.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 375752,
+    "original_filename": "K&J_27.jpeg"
+  },
+  "images/gallery/telluride/K&J_28.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_28",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589870/wedding-site/gallery/telluride/K_and_J_28.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 296206,
+    "original_filename": "K&J_28.jpeg"
+  },
+  "images/gallery/telluride/K&J_29.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_29",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589871/wedding-site/gallery/telluride/K_and_J_29.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 408272,
+    "original_filename": "K&J_29.jpeg"
+  },
+  "images/gallery/telluride/K&J_3.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_3",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589872/wedding-site/gallery/telluride/K_and_J_3.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 605837,
+    "original_filename": "K&J_3.jpeg"
+  },
+  "images/gallery/telluride/K&J_30.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_30",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589872/wedding-site/gallery/telluride/K_and_J_30.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 482278,
+    "original_filename": "K&J_30.jpeg"
+  },
+  "images/gallery/telluride/K&J_31.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_31",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589873/wedding-site/gallery/telluride/K_and_J_31.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 456275,
+    "original_filename": "K&J_31.jpeg"
+  },
+  "images/gallery/telluride/K&J_32.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_32",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589874/wedding-site/gallery/telluride/K_and_J_32.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 551917,
+    "original_filename": "K&J_32.jpeg"
+  },
+  "images/gallery/telluride/K&J_33.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_33",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589875/wedding-site/gallery/telluride/K_and_J_33.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 364367,
+    "original_filename": "K&J_33.jpeg"
+  },
+  "images/gallery/telluride/K&J_34.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_34",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589876/wedding-site/gallery/telluride/K_and_J_34.jpg",
+    "format": "jpg",
+    "width": 1460,
+    "height": 2154,
+    "bytes": 488247,
+    "original_filename": "K&J_34.jpeg"
+  },
+  "images/gallery/telluride/K&J_35.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_35",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589880/wedding-site/gallery/telluride/K_and_J_35.jpg",
+    "format": "jpg",
+    "width": 1418,
+    "height": 2218,
+    "bytes": 972931,
+    "original_filename": "K&J_35.jpeg"
+  },
+  "images/gallery/telluride/K&J_36.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_36",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589880/wedding-site/gallery/telluride/K_and_J_36.jpg",
+    "format": "jpg",
+    "width": 1439,
+    "height": 2186,
+    "bytes": 821882,
+    "original_filename": "K&J_36.jpeg"
+  },
+  "images/gallery/telluride/K&J_37.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_37",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589881/wedding-site/gallery/telluride/K_and_J_37.jpg",
+    "format": "jpg",
+    "width": 760,
+    "height": 1036,
+    "bytes": 245927,
+    "original_filename": "K&J_37.jpeg"
+  },
+  "images/gallery/telluride/K&J_38.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_38",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589882/wedding-site/gallery/telluride/K_and_J_38.jpg",
+    "format": "jpg",
+    "width": 1483,
+    "height": 2120,
+    "bytes": 831469,
+    "original_filename": "K&J_38.jpeg"
+  },
+  "images/gallery/telluride/K&J_39.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_39",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589882/wedding-site/gallery/telluride/K_and_J_39.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 457604,
+    "original_filename": "K&J_39.jpeg"
+  },
+  "images/gallery/telluride/K&J_4.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_4",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589883/wedding-site/gallery/telluride/K_and_J_4.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 403601,
+    "original_filename": "K&J_4.jpeg"
+  },
+  "images/gallery/telluride/K&J_40.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_40",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589883/wedding-site/gallery/telluride/K_and_J_40.jpg",
+    "format": "jpg",
+    "width": 1545,
+    "height": 1024,
+    "bytes": 282697,
+    "original_filename": "K&J_40.jpeg"
+  },
+  "images/gallery/telluride/K&J_41.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_41",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589884/wedding-site/gallery/telluride/K_and_J_41.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 456834,
+    "original_filename": "K&J_41.jpeg"
+  },
+  "images/gallery/telluride/K&J_42.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_42",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589885/wedding-site/gallery/telluride/K_and_J_42.jpg",
+    "format": "jpg",
+    "width": 1024,
+    "height": 1545,
+    "bytes": 535957,
+    "original_filename": "K&J_42.jpeg"
+  },
+  "images/gallery/telluride/K&J_5.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_5",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589886/wedding-site/gallery/telluride/K_and_J_5.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 637047,
+    "original_filename": "K&J_5.jpeg"
+  },
+  "images/gallery/telluride/K&J_6.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_6",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589886/wedding-site/gallery/telluride/K_and_J_6.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 683868,
+    "original_filename": "K&J_6.jpeg"
+  },
+  "images/gallery/telluride/K&J_7.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_7",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589887/wedding-site/gallery/telluride/K_and_J_7.jpg",
+    "format": "jpg",
+    "width": 1842,
+    "height": 1706,
+    "bytes": 425265,
+    "original_filename": "K&J_7.jpeg"
+  },
+  "images/gallery/telluride/K&J_8.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_8",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589888/wedding-site/gallery/telluride/K_and_J_8.jpg",
+    "format": "jpg",
+    "width": 1445,
+    "height": 2172,
+    "bytes": 608943,
+    "original_filename": "K&J_8.jpeg"
+  },
+  "images/gallery/telluride/K&J_9.jpeg": {
+    "public_id": "wedding-site/gallery/telluride/K_and_J_9",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/image/upload/v1770589889/wedding-site/gallery/telluride/K_and_J_9.jpg",
+    "format": "jpg",
+    "width": 2000,
+    "height": 1330,
+    "bytes": 535965,
+    "original_filename": "K&J_9.jpeg"
+  },
+  "videos/KellyandJohn.mp4": {
+    "public_id": "wedding-site/video/KellyandJohn",
+    "url": "https://res.cloudinary.com/ddyvvm4ql/video/upload/v1770590028/wedding-site/video/KellyandJohn.mp4",
+    "optimized_url": "https://res.cloudinary.com/ddyvvm4ql/video/upload/q_auto,f_auto/v1770590028/wedding-site/video/KellyandJohn.mp4",
+    "poster_url": "https://res.cloudinary.com/ddyvvm4ql/video/upload/so_0,f_jpg,q_85,w_1920/v1770590028/wedding-site/video/KellyandJohn.mp4",
+    "format": "mp4",
+    "width": 3840,
+    "height": 2160,
+    "duration": 14.0,
+    "bytes": 72254338
+  }
+}

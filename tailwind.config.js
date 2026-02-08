@@ -22,11 +22,10 @@ module.exports = {
         "10xl": "10rem",
       },
       backgroundImage: {
-        "our-story": 'url("/static/images/backgrounds/Background-Fuchsia.png")',
-        faq: 'url("/static/images/backgrounds/Background-Pink.png")',
-        itinerary: 'url("/static/images/backgrounds/Background-LightPink.png")',
-        gallery: 'url("/static/images/backgrounds/Background_Pink_Long.png")',
-        "vine-repeat": 'url("/static/images/itinerary/vine.png")',
+        "our-story": 'url("https://res.cloudinary.com/ddyvvm4ql/image/upload/q_auto,f_auto/wedding-site/backgrounds/Background-Fuchsia")',
+        faq: 'url("https://res.cloudinary.com/ddyvvm4ql/image/upload/q_auto,f_auto/wedding-site/backgrounds/Background-Pink")',
+        itinerary: 'url("https://res.cloudinary.com/ddyvvm4ql/image/upload/q_auto,f_auto/wedding-site/backgrounds/Background-LightPink")',
+        gallery: 'url("https://res.cloudinary.com/ddyvvm4ql/image/upload/q_auto,f_auto/wedding-site/backgrounds/Background_Pink_Long")',
       },
       backgroundSize: {
         vine: "contain",

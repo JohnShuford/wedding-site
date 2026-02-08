@@ -1,5 +1,4 @@
 {% extends "wedding/base.html" %}
-{% load static %}
 {% block nav_bg %}bg-[#64763c]{% endblock %}
 {% block nav_text %}text-[#ffe4e4]{% endblock %}
 {% block nav_text_mobile %}text-[#ffe4e4]{% endblock %}
@@ -16,14 +15,21 @@
        lightboxAlbum: '',
        lightboxIndex: 0,
        lightboxSrc: '',
+       cdnBase: 'https://res.cloudinary.com/ddyvvm4ql/image/upload',
        albums: {
          {% for album in albums %}
          '{{ album.slug }}': [
            {% for photo in album.photos %}
-           '{% static 'images/gallery/' %}{{ album.slug }}/{{ photo }}'{% if not forloop.last %},{% endif %}
+           '{{ photo }}'{% if not forloop.last %},{% endif %}
            {% endfor %}
          ]{% if not forloop.last %},{% endif %}
          {% endfor %}
+       },
+       thumbUrl(slug, id) {
+         return this.cdnBase + '/c_limit,w_600,q_auto,f_auto/wedding-site/gallery/' + slug + '/' + id;
+       },
+       fullUrl(slug, id) {
+         return this.cdnBase + '/c_limit,w_1600,q_auto,f_auto/wedding-site/gallery/' + slug + '/' + id;
        },
        loadMore(slug) {
          const total = this.albums[slug].length;
@@ -45,7 +51,7 @@
        openLightbox(albumSlug, index) {
          this.lightboxAlbum = albumSlug;
          this.lightboxIndex = index;
-         this.lightboxSrc = this.albums[albumSlug][index];
+         this.lightboxSrc = this.fullUrl(albumSlug, this.albums[albumSlug][index]);
          this.lightbox = true;
          document.body.style.overflow = 'hidden';
        },
@@ -56,12 +62,12 @@
        prev() {
          const photos = this.albums[this.lightboxAlbum];
          this.lightboxIndex = (this.lightboxIndex - 1 + photos.length) % photos.length;
-         this.lightboxSrc = photos[this.lightboxIndex];
+         this.lightboxSrc = this.fullUrl(this.lightboxAlbum, photos[this.lightboxIndex]);
        },
        next() {
          const photos = this.albums[this.lightboxAlbum];
          this.lightboxIndex = (this.lightboxIndex + 1) % photos.length;
-         this.lightboxSrc = photos[this.lightboxIndex];
+         this.lightboxSrc = this.fullUrl(this.lightboxAlbum, photos[this.lightboxIndex]);
        }
      }"
      @keydown.escape.window="closeLightbox()"
@@ -99,7 +105,7 @@
         {% for photo in album.photos %}
         <div class="break-inside-avoid mb-4" x-show="{{ forloop.counter0 }} < visibleCount['{{ album.slug }}']">
           <img
-            x-bind:src="{{ forloop.counter0 }} < visibleCount['{{ album.slug }}'] ? '{% static 'images/gallery/' %}{{ album.slug }}/{{ photo }}' : ''"
+            x-bind:src="{{ forloop.counter0 }} < visibleCount['{{ album.slug }}'] ? thumbUrl('{{ album.slug }}', '{{ photo }}') : ''"
             alt=""
             loading="lazy"
             class="w-full rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
