@@ -170,6 +170,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Security settings for production
 if not DEBUG:
+    # Tell Django to trust Railway's proxy SSL header (prevents redirect loops)
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
     # HTTPS settings
     SECURE_SSL_REDIRECT = True
     SECURE_HSTS_SECONDS = 31536000
