@@ -1,8 +1,8 @@
-{% extends "wedding/base.html" %} 
-{% block nav_bg %}bg-[#eed4e2]{% endblock %} 
-{% block nav_text %}text-[#b22158]{% endblock %} 
-{%block nav_text_mobile%}text-[#b22158]{% endblock %} 
-{% block nav_text_mobile_btn%}text-[#b22158]{%endblock %} 
+{% extends "wedding/base.html" %}
+{% block nav_bg %}bg-[#eed4e2]{% endblock %}
+{% block nav_text %}text-[#b22158]{% endblock %}
+{%block nav_text_mobile%}text-[#b22158]{% endblock %}
+{% block nav_text_mobile_btn%}text-[#b22158]{%endblock %}
 {% block content %}
 <div class="min-h-screen bg-faq bg-cover bg-center bg-no-repeat py-12 px-4">
   <div class="max-w-4xl mx-auto">
@@ -11,17 +11,14 @@
     </h1>
 
     <div x-data="{ open: null }" class="space-y-4">
+
       <!-- FAQ Item 1: Dress Code -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 1 ? null : 1"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Dress Code</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Dress Code</span>
           <svg
             :class="open === 1 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -29,37 +26,25 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 1"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - What should guests wear? Formal, semi-formal,
-            cocktail attire?]
-          </p>
+        <div x-show="open === 1" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>The dress code is semi-formal garden attire — think elevated, comfortable, and outdoor-friendly. Flowy silhouettes, light fabrics, subtle patterns, and polished looks are encouraged.</li>
+            <li>Guests are welcome to wear our wedding colors or any outfit that fits the garden setting. <em>Kindly avoid wearing white or navy blue.</em></li>
+            <li><em>Click here for outfit inspiration.</em></li>
+          </ul>
         </div>
       </div>
 
       <!-- FAQ Item 2: Weather -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 2 ? null : 2"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Weather</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Weather</span>
           <svg
             :class="open === 2 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -67,37 +52,25 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 2"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - What's the weather typically like in July? Should
-            guests prepare for heat/rain? Indoor/outdoor considerations?]
-          </p>
+        <div x-show="open === 2" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>Colorado weather can be unpredictable. In July it is typically hot with highs around 90 degrees and sunny, but brief afternoon showers are common.</li>
+            <li>In the evening you can expect lows around 60 degrees so evening layers are also recommended.</li>
+            <li>The ceremony will take place in the morning in a shaded area of the gardens.</li>
+          </ul>
         </div>
       </div>
 
-      <!-- FAQ Item 3: Ceremony -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <!-- FAQ Item 3: What to Expect -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 3 ? null : 3"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Ceremony</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">What to Expect</span>
           <svg
             :class="open === 3 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -105,37 +78,56 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 3"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Where is the ceremony? How long will it be? Any
-            special instructions?]
-          </p>
+        <div x-show="open === 3" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>We have a full weekend planned and cannot wait to celebrate with you!</li>
+            <li><strong>Thursday</strong>
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li><strong>Family Only</strong></li>
+                <li>Welcome Dinner at the Origin Hotel (5:00pm–10:00pm).</li>
+                <li>This is a come-and-go buffet style dinner in the hotel restaurant's meeting space.</li>
+              </ul>
+            </li>
+            <li><strong>Friday</strong>
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li><strong>Morning – Family Only</strong></li>
+                <li>Ceremony at 11:00am.</li>
+                <li>Family photos and lunch to follow.</li>
+                <li>Afterward, transportation will return everyone to the hotel for free time before the evening reception.</li>
+                <li><strong>Evening – Family &amp; Friends Invited</strong></li>
+                <li>Reception Dinner at Venice Ristorante.</li>
+                <li>We have the back room of the restaurant reserved for a private dinner celebration.</li>
+                <li>Dinner begins at 7:00pm and includes a set menu and open bar, please arrive by 6:30pm.</li>
+              </ul>
+            </li>
+            <li><strong>Saturday</strong>
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li><strong>Family, Friends &amp; Plus Ones Invited</strong></li>
+                <li>If you would like to explore or relax, the day is flexible, but we would love for you to join us!</li>
+                <li>Afternoon: Join us at the lawn at Acreage in Lafayette to enjoy local cider and mountain views.</li>
+                <li>Evening: Casual BBQ Dinner at our apartment complex club room (pool access available if anyone wants to swim!).</li>
+                <li>(We are happy to coordinate carpools or Ubers if you want to go to Acreage)</li>
+              </ul>
+            </li>
+            <li><strong>Sunday</strong>
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li>We would love to say goodbye to everyone in the morning and will depart for our honeymoon and have no formal events planned.</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- FAQ Item 4: What to Expect -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <!-- FAQ Item 4: Ceremony -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 4 ? null : 4"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >What to Expect</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Ceremony</span>
           <svg
             :class="open === 4 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -143,37 +135,26 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 4"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Overview of the day's flow: cocktail hour, dinner,
-            dancing, etc. What time does each part start?]
-          </p>
+        <div x-show="open === 4" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li><strong>Please note: The ceremony is family only.</strong></li>
+            <li>The ceremony will take place in the Woodland Mosaic &amp; Solarium at the Denver Botanic Gardens.</li>
+            <li>Guests will have complimentary access to the gardens and are welcome to explore between events. A map of the gardens is linked here to help you find the venue.</li>
+            <li>As you know, we will have already eloped before this celebration. The garden ceremony will be a symbolic gathering to bring our two families together in a meaningful and intimate way.</li>
+          </ul>
         </div>
       </div>
 
       <!-- FAQ Item 5: Transportation -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 5 ? null : 5"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Transportation</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Transportation</span>
           <svg
             :class="open === 5 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -181,37 +162,31 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 5"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Parking info? Shuttle service? Ride share
-            recommendations?]
-          </p>
+        <div x-show="open === 5" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>Transportation will be provided for everyone staying at the hotel on Friday to and from the Origin Hotel for scheduled events.</li>
+            <li><strong>Estimated Schedule (subject to slight adjustment):</strong>
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li>Origin Hotel → Denver Botanic Gardens (Depart 10:00am | Arrive 10:30am)</li>
+                <li>Denver Botanic Gardens → Origin Hotel (Depart 2:00pm | Arrive 2:20pm)</li>
+                <li>Origin Hotel → Venice Ristorante (Depart 6:00pm | Arrive 6:30pm)</li>
+                <li>Venice Ristorante → Origin Hotel (Depart 9:30pm | Arrive 10:00pm)</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
       <!-- FAQ Item 6: What Time to Arrive -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 6 ? null : 6"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >What Time to Arrive</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">What Time to Arrive</span>
           <svg
             :class="open === 6 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -219,37 +194,34 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 6"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - When should guests plan to arrive? When do doors
-            open?]
-          </p>
+        <div x-show="open === 6" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>Family only
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li>For family attending the ceremony: The bus will arrive at the gardens around 10:30am.</li>
+                <li>Please make your way to the Woodland Mosaic &amp; Solarium and be seated by 10:45am.</li>
+                <li>The ceremony will begin promptly at 11:00am.</li>
+              </ul>
+            </li>
+            <li>Family &amp; Friends
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li>For guests attending the Friday evening reception: Please arrive at Venice Ristorante by 6:30pm.</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- FAQ Item 7: Plus Ones -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <!-- FAQ Item 7: Plus One -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 7 ? null : 7"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Plus Ones</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Plus One</span>
           <svg
             :class="open === 7 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -257,37 +229,23 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 7"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Policy on plus ones, how to know if invitation
-            includes a guest, who to contact with questions]
-          </p>
+        <div x-show="open === 7" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>Due to venue capacity for the Friday events, we are unable to accommodate additional guests beyond those listed on your invitation.</li>
+          </ul>
         </div>
       </div>
 
       <!-- FAQ Item 8: Hotel and Accommodations -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 8 ? null : 8"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Hotel and Accommodations</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Hotel and Accommodations</span>
           <svg
             :class="open === 8 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -295,37 +253,24 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 8"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Recommended hotels, room blocks, nearby options,
-            booking info]
-          </p>
+        <div x-show="open === 8" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>We kindly ask all guests to stay at the Origin Hotel, as this is where transportation will depart from and where several weekend events will take place. Kelly and John live in the apartments directly across the street.</li>
+            <li>If you have not yet booked your room, please use this link.</li>
+          </ul>
         </div>
       </div>
 
       <!-- FAQ Item 9: Food & Drink -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 9 ? null : 9"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Food & Drink</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Food &amp; Drink</span>
           <svg
             :class="open === 9 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -333,37 +278,31 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 9"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Meal details, dietary restrictions accommodation,
-            bar info (open bar, cash bar, etc.)]
-          </p>
+        <div x-show="open === 9" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>We will be providing most meals throughout the weekend, including:
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li>Thursday welcome buffet (family only)</li>
+                <li>Friday garden lunch following the ceremony (family only)</li>
+                <li>Friday Reception dinner and open bar at Venice (family &amp; friends)</li>
+                <li>Saturday BBQ dinner (family, friends &amp; plus ones)</li>
+              </ul>
+            </li>
+            <li>There are also many great dining options nearby in Downtown Westminster if you have free time. Some of our favorites include Tap &amp; Burger, Vatos Tacos, and Bonchon.</li>
+          </ul>
         </div>
       </div>
 
       <!-- FAQ Item 10: Things to Do in the Area -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 10 ? null : 10"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >Things to Do in the Area</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">Things to Do in the Area</span>
           <svg
             :class="open === 10 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -371,37 +310,23 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 10"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Local attractions, restaurants, activities for
-            out-of-town guests]
-          </p>
+        <div x-show="open === 10" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>If you have free time and would like to explore Downtown Westminster, you'll find a park, movie theater, restaurants, coffee shops, and more.</li>
+          </ul>
         </div>
       </div>
 
       <!-- FAQ Item 11: More Questions? Contact Us! -->
-      <div
-        class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral"
-      >
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-wedding-coral">
         <button
           @click="open = open === 11 ? null : 11"
           class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-wedding-blush transition-colors"
         >
-          <span class="text-2xl font-lora text-wedding-dark-red font-semibold"
-            >More Questions? Contact Us!</span
-          >
+          <span class="text-2xl font-lora text-wedding-dark-red font-semibold">More Questions? Contact Us!</span>
           <svg
             :class="open === 11 ? 'rotate-180' : ''"
             class="w-6 h-6 text-wedding-coral transition-transform duration-200"
@@ -409,25 +334,23 @@
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div
-          x-show="open === 11"
-          x-collapse
-          class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach"
-        >
-          <p class="text-lg text-wedding-dark">
-            [Answer content - Contact information, how to reach out with
-            additional questions]
-          </p>
+        <div x-show="open === 11" x-collapse class="px-6 py-4 bg-wedding-blush border-t border-wedding-peach">
+          <ul class="list-disc list-outside ml-4 space-y-2 text-lg text-wedding-dark">
+            <li>If you have any additional questions, please reach out!</li>
+            <li>Call or text:
+              <ul class="list-disc list-outside ml-6 mt-1 space-y-1">
+                <li>Kelly – (325) 660-3591</li>
+                <li>John – (469) 387-4424</li>
+              </ul>
+            </li>
+            <li>Email: kellyandjohn@foreverandalways.love</li>
+          </ul>
         </div>
       </div>
+
     </div>
   </div>
 </div>
